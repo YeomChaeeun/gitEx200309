@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR"> 
+ <head>
+  <meta charset="UTF-8"> <!--charset 설정값과 파일 내 인코딩 값 통일해야함-->
+   <title>첫번째 테스트 문서</title>
+   <style>
+     h1{background-color:#888}
+     p{color:#77f; margin:0; } 
+     <!--class style 설정시 주의 p.man, p. man, .man-->
+     .man{font-weight:bold; color:#333;} 
+   </style>
+  </head>
+  <body>
+     <h1>문서 테스트</h1>
+     <p>첫번째 웹 문서를 제작해보자.</p> 
+     <p>두번째 내용을 작성해보자.</p>
+     <p> <span class="man">결과는 잘 나올까요?</span></p>
+   <!--script-->
+   <script> 
+     var myH = document.getElementsByTagName('h1')[0];
+     myH.addEventListener('mouseenter',function(){
+        myH.style.backgroundColor="#0DF";
+     });
+   </script>
+  </body>
+</html>
