@@ -8,7 +8,6 @@
     <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
   <![endif]-->
   <title>Layout 연습하기1</title>
-
   <!-- css -->
   <style>
     @charset "utf-8"
@@ -24,11 +23,16 @@
     #box{margin:200px auto; width: 600px; height: auto;}
     #headBox{width: 100%; height: 100px; background-color: pink;}
     #sectionBox{width: 100%; height: auto; background-color: orange;}
-    #asideBox{width: 40%; height: 300px; background-color: yellow; float: left; }
-    #artBox{width: 50%; height: 300px; background-color: blue; float: right;}
-    .more{width: 100px; height: 100px; background-color: #fff;
-        border-width: 1px; border-color: #000; border-style: solid; float: left;}
-    .pan{width: 100%; height: 0px; background-color: #777; clear: both;}
+      .section_child{}
+      .section_child_01{float: left; width: 70%; height: 150px;}
+      .artBox{background-color: blue; }    
+      .container{background-color: #af0; }
+      .asideBox{float: right; margin-top: -150px; width: 30%; height: 300px; background-color: yellow; }
+
+      .more{width: 100px; height: 100px; background-color: #fff;
+          border-width: 1px; border-color: #000; border-style: solid; float: left;}
+      .pan{width: 100%; height: 0px; background-color: #777; clear: both;}
+
     #footBox{width: 100%; height: 100px; background-color: lightblue;}
 
 
@@ -43,10 +47,22 @@
     </header>
     <!-- // #headBox -->
     <!-- sectionBox -->
-    <section id="sectionBox">
-      <aside id="asideBox"></aside>
-      <article id="artBox"></article>
+    <section id="sectionBox"> 
 
+      <div>
+        <article class="artBox section_child_01"></article>
+        <article class="container_area section_child_01"></article>
+      </div>
+      <aside class="asideBox section_child"></aside>
+
+      <!-- 3분할 / tab키로 이동하는 곳 유의하며 순서 배치함 -->
+      <!-- 
+      <aside class="asideBox section_child"></aside>
+      <article class="artBox section_child"></article>
+      <article class="container_area section_child"></article> -->
+
+      <!-- 아래로 추가 상자 생성 -->
+      <!-- 
       <div class="more">임시 추가 상자</div>
       <div class="more">임시 추가 상자</div>
       <div class="more">임시 추가 상자</div>
@@ -54,9 +70,10 @@
       <div class="more">임시 추가 상자</div>
       <div class="more">임시 추가 상자</div>
       <div class="more">임시 추가 상자</div>
-      <div class="more">임시 추가 상자</div>
+      <div class="more">임시 추가 상자</div>-->
 
       <div class="pan"></div>
+
     </section>
     <!-- //sectionBox -->
     <!-- footBox -->  
@@ -73,4 +90,4 @@
       
   </script>
 </body>
-</html>
+</html> 
