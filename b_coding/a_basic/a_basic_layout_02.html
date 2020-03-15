@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- a_basic_layout_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <!--[if IE]
+    <script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <title>Layout 연습하기 2</title>
+  <!-- style -->
+  <style>
+    @charset "utf-8"
+    /* resct.css */
+    html, body{width: 100%; height: 100%;}
+    html, body, h1, h2, h3, h4, h5, h6, p, pre, 
+    div, img, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
+    ul, ol, dl{list-style: none;}
+
+    header, article, section, aside, nav, footer, main, figure{display: block;}
+
+    /* design.css */
+    #wrap{margin: 100px auto; width: 960px; height: 1200px; background-color: #3CF;}
+    #headBox{width: 100%; height: 120px; background-color: #f4f;}
+      #headBox > h1{float:left; margin: 10px; width: 150px; height: 100px; background-color: #333;}
+      #unb{float: right; margin: 10px 10px 5px 290px; width: 220px; height: 40px; background-color: #333;}
+      #gnb{float: right; margin: 5px 10px 10px; width: 500px; height: 50px; background-color: #333;}
+    #sectionBox{width: 100%, height: 100%;}
+      #viewBox{width: 100%; height: 450px; background-color: #f80;}
+      #contentBox{width: 100%; height: 500px; background-color: #2ae;}
+        #listBox {float: left; width: 200px; height: 100%; background-color: #25e;} 
+        #listBox > li {margin-bottom: 20px; width: 100%; height: 100px; background-color: #d5e;}
+        #lnbBox {float: right; width: 760px; height: auto;}
+          .lnb_list{width: 760px; height: 200px; background-color: #2c0;}
+          .lnb_content{width: 760px; height: 300px; background-color: #243;}
+            .lnb_c_child{float: left; width: 380px; height: 100%;}
+            .lnb_c_01{background-color: #c83;}
+            .lnb_c_02{background-color: #c43;}
+    #footBox{width: 100%; height: 130px; background-color: #777; }
+
+
+  </style>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <!-- #headBox -->
+    <header id="headBox">
+      <h1> hello </h1>
+      <div>
+        <nav id="unb"></nav> 
+        <nav id="gnb"></nav>
+      </div>
+    </header>
+    <!-- // #headBox -->
+    <!-- #sectionBox -->
+    <section id="sectionBox">
+      <div>
+        <div id="viewBox"> </div>
+        <div id="contentBox"> 
+          <ul id="listBox">
+            <li> 1 </li>
+            <li> 2 </li>
+            <li> 3 </li>
+            <li> 4 </li>
+          </ul>
+          <div id="lnbBox">
+            <div class="lnb_list">    
+            </div>
+            <div class="lnb_content">
+              <div class="lnb_c_01 lnb_c_child"></div>
+              <div class="lnb_c_02 lnb_c_child"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+    <!-- // #sectionBox -->
+    <!-- #footBox -->
+    <footer id="footBox">
+      
+    </footer>
+    <!-- // #footBox -->
+  </div>
+
+  <!-- script -->
+  <script>
+    
+  </script>
+</body>
+</html>
