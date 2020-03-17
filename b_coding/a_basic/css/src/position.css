@@ -1,0 +1,27 @@
+/* position.css */
+@charset "utf-8"
+
+/* reset.css */
+  html, body{widows: 100%; height: 100%;}
+  html, body, h1, h2, h3, h4, h5, h6, p, pre
+  div, img, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
+  ul, ol, dl{list-style: none;}
+
+  header, article, section, aside, nav, footer, main, figure{display: block;}
+
+/* design.css */
+#wrap{margin: auto; width: 940px; height: auto;
+  min-height: 1500px; background-color: #dfdfdf;}
+h1{width: 100%; height: 40px;
+  font-size:1.2rem; text-align: center;}
+
+.position{margin: auto;width: 90%; height: 400px; background-color: #fff; 
+  border: 1px solid #333; box-sizing: border-box;}
+
+h2{margin-bottom: 1rem;width: 100%; height: auto;
+  border-bottom: 1px solid #acf;}
+
+ul{width: 100%; height: 300px; background-color: #aaf;}
+li{float: left; width: 100px; height: 100px; background-color: #fac;}
+
+li:nth-child(2n){background-color: #afc;}

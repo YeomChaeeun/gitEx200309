@@ -8,6 +8,9 @@
   div, img, ul, ol, li, dl, dt, dd{margin: 0; padding: 0;}
   ul, ol, dl{list-style: none;}
 
+  header, article, section, aside, nav, footer, main, figure{display: block;}
+
+
 /* design.css */
 #wrap {widows: 1900px; height: auto; min-height: 800px; 
   background-color: #ccc;}
@@ -49,5 +52,6 @@
 1. position: 찾아서 내용 정리 해오는 것
 2. 접근성 4원칙 13지침 
 3. 수요일 선답형문제 : 5문제 + 10문제
-     포트폴리오 문제 : 홈페이지 레이아웃 정리(invision) + 스토리보드 그리기 + gitmind 페이지 구성정리(새로운 사이트 / main 1개, sub 4개)
+     포트폴리오 문제 : 홈페이지 레이아웃 정리(invision) + 스토리보드 그리기 + 
+     gitmind 페이지 구성정리(새로운 사이트 / main 1개, sub 4개)
 */
