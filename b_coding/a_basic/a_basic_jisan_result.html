@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <!--[if IE]
     <script src="./ie/html5shiv/dist/html5shiv.min.html"></script>
+    <script src="./ie/pie/PIE.js"></script>
   <![endif]-->
 
   <link rel="stylesheet" href="./css/src/jisan_result.css">
@@ -27,10 +28,10 @@
       <nav id="naviBox">
         <h2>navigation 영역</h2>
 
-        <div id="gnbBox">
+        <div class="gnb">
           <h3>웹페이지 전체 메뉴</h3>
         </div>
-        <div id="unbBox">
+        <div class="unb">
           <h3>사용자 설정 관련 메뉴</h3>
         </div>
       </nav>
@@ -38,26 +39,120 @@
     <!-- //#headBox ===================================================== -->
 
     <!-- #viewBox -->
-    <section id="viewBox">
-      <h2>지산 리조트 2019, 2020 시즌 관련 광고 내용</h2>
+    <section id="viewBox" class="full_size">
+      <div class="guide_area">
+        <h2>지산 리조트 2019, 2020 시즌 관련 광고 내용</h2>
+        <h3>지산포레스트 리조트 2019, 2020</h3>
+        <div id="best_day"> enjoy your best day! </div>
+        <p> 지산리조트에서 즐기는 최고의 하루! </p>
+      </div>
     </section>
     <!-- // #viewBox ===================================================== -->
 
     <!-- #guideBox -->
-    <article id="guideBox"><!-- wai-aria -->
-      <h2>지산 리조트 19 <span aria-hidden="true">&sol;</span> 20 시즌가이드</h2>
+    <article id="guideBox" class="full_size"><!-- wai-aria -->
+      <div class="guide_area">
+        <h2>지산 리조트 19 <span aria-hidden="true">&sol;</span> 20 시즌가이드</h2>
+        <article class="guide_area_main">
+          <h3>19, 20 시즌가이드</h3>
+          <p> 지산리조트에서 하얀 겨울을 즐기세요 </p>
+        </article>
+        <article class="guide_area_content">
+          <article class="total_rev">
+            <div class="total_rev_q">
+              <h4>통합예약</h4>
+              <p>예약을 신속하게 처리해드리겠습니다!</p>
+            </div>
+            <article class="total_rev_area">
+              <div class="rev_c"> 
+                  <div class="rev_img">bus이미지</div>
+                  <p>무료셔틀</p>
+              </div>
+              <div class="rev_c">
+                  <div class="rev_img">리프트이미지</div>
+                  <p>리프트예약</p>
+              </div>
+              <div class="rev_c"> 
+                  <div class="rev_img">강습이미지</div>
+                  <p>강습예약</p>
+              </div>
+              <div class="rev_c"> 
+                  <div class="rev_img">예약이미지</div>
+                  <p>예약확인</p>
+              </div>
+            </article>
+          </article>
+          <article class="guide_service">
+            <h4>서비스 바로가기</h4>
+            <p>지산과 함께 하얀 겨울을 즐겨보세요</p>
+          </article>
+        </article>
+      </div>
     </article>
     <!-- // #guideBox ===================================================== -->
 
     <!-- #saleBox 풀어씀-->
-    <article id="saleBox">
-      <h2>지산만의 특별한 할인 및 서비스 혜택</h2>
+    <article id="saleBox" class="full_size">
+      <div class="guide_area">
+        <h2>지산만의 특별한 할인 및 서비스 혜택</h2>
+        <article class="guide_area_main">
+          <h3>자신만의 특별한 혜택</h3>
+          <p> 나에게 꼭 맞춘 스마트한 할인 정보 </p>      
+        </article>
+        <article class="guide_area_content">
+          <article class="e_01"> 
+            <p> 신한카드 결제시 </p> 
+            <p> 리프트, 렌탈</p>
+            <p> 30% 할인!</p>
+          </article>
+          <article class="e_02">  
+            <p> 시즌권자 할인 </p> 
+            <p> 리프트, 렌탈</p>
+            <p> 30% 할인!</p>
+           </article>
+          <article class="e_03">  
+            <p> 19, 20 season </p> 
+            <p> 리프트, 렌탈</p>
+            <p> 30% 할인!</p>
+           </article>
+        </article>
+      </div>
     </article>
     <!-- // #saleBox ===================================================== -->    
 
     <!-- #newsBox -->
-    <article id="newsBox">
-      <h2>지산 NEWS</h2>
+    <article id="newsBox" class="full_size">
+      <div class="guide_area">
+        <h2>지산 news</h2>
+        <article class="guide_area_main">
+          <h3>지산 news</h3>
+          <p> 신나고 즐거운 지산리조트 winter story </p>
+        </article>
+        <article class="guide_area_content">
+          <ul class="news_c">
+            <li class="news_c_l">
+              <div class="news_img"> <p> 아카데미 이미지 </p> </div>
+              <p>아카데미</p>
+            </li>
+            <li class="news_c_l">
+              <div class="news_img"> <p> 현장스케치 이미지 </p> </div>
+              <p>현장스케치</p>
+            </li>
+            <li class="news_c_l">
+              <div class="news_img"> <p> 실시간 웹캠 이미지 </p> </div>
+              <p>실시간웹캠</p>
+            </li>
+            <li class="news_c_l">
+              <div class="news_img"> <p> 지산sns 이미지 </p> </div>
+              <p>지산sns</p>
+            </li>
+            <li class="news_c_l">
+              <div class="news_img"> <p> 이벤트 이미지 </p> </div>
+              <p>이벤트</p>
+            </li>
+          </ul>
+        </article>
+      </div>
     </article>
     <!-- // #newsBox ===================================================== -->
 
@@ -69,7 +164,19 @@
 
     <!-- #footBox -->
     <footer id="footBox">
-      <h2>지산포레스트 회사 정보</h2>
+      <div class="foot_area">
+        <h2>지산포레스트 회사 정보</h2>
+        <article class="jisan_info">
+          <div class="info_01"> <p> 개인정보 처리방침 </p> </div>
+          <div class="info_02"> <p> 회사정보 </p> </div>
+          <div class="info_03"> <p> 인증마크 </p> </div>
+        </article>
+        <article class="sns_family">
+          <div class="sns_area"> <p> 회사정보 </p> </div>
+          <div class="famaily_area"> <p> 인증마크 </p> </div>
+          
+        </article>
+      </div>
     </footer>
     <!-- // #footBox ===================================================== -->
 
