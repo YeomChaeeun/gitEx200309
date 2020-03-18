@@ -1,6 +1,5 @@
-/* 선생님과 함께 풀이 jisan_result.css */
-
 @charset "utf-8";
+/* 함께 풀이 jisan_result.css */
 
 /* reset.css */
 html,body{width: 100%; height: 100%;}
@@ -12,6 +11,13 @@ ul,ol,li,dl,dt,dd,img{
   behavior:url('../../ie/pie/PIE.htc');}
 
 ul,ol,li{list-style:none;}
+a{color: inherit; text-decoration: none;}
+a:hover{color: #999; text-decoration: underline; }
+a:active{color: #fac;}
+
+/*common.css*/
+.hidden{display: block; position:absolute; z-index: -1; 
+        width: 0; height: 0; overflow: hidden;}
 
 /* design.css */
 #wrap{width:1900px; height:auto; min-height:800px;
@@ -33,44 +39,68 @@ ul,ol,li{list-style:none;}
 
 /* #naviBox ==================== */
 #naviBox{float:right; width:1420px; height:60px;}
-    #naviBox>h2{position:absolute; z-index:-1; 
-              width:0; height:0; overflow:hidden;}
-
+/*#naviBox>h2{position:absolute; z-index:-1; width:0; height:0; overflow:hidden;}*/
 /* IR 기법(image replace): 
 보여주고자하는 이미지는 나타나고 그 해석이되는 설명은 숨김처리하는 기법 */
 
-  .gnb{float:left; width:900px; height:60px; background-color:#aaa;}
-  .unb{float:right; width:450px; height:60px; background-color:#777;}
+  .gnb{float:left; width:900px; height:auto; background-color:#aaa; font-size: 17px;}
+  .unb{float:right; width:450px; height:auto; background-color:#777; font-size: 14px;}
 
+/*#naviBox h3{position: absolute; z-index: -1; width: 0; height: 0; overflow: hidden;}*/
+.header_navi > ul{width: 100%; height: 60px; text-align: center; line-height: 60px;}
+.header_navi > ul > li{float: left; width: auto; height: 100%; background-color: #fff;}
+.header_navi > ul > li:last-child{margin-right: 0;} /*끝에있는 요소 마진 없애줌*/
+.header_navi > ul > li a{display: block; width: auto; height: 100%;}
+
+/* 공통부분 다시 빼내서 조정했다면 기존값 삭제해줘야함 */
+.gnb > ul > li{margin-right: 15px;}
+.gnb > ul > li > a{padding: 0 20px;}
+
+.unb > ul > li{margin-right: 6px;}
+.unb a > i{display: inline-block; width: 30px; height: 30px; margin-right: 5px;background-color: #777;}
+/*#naviBox ul{width: 100%; height: 60px;}
+#naviBox li{}*/
 
 /* 공통으로 적용된 화면에 꽉차는 박스 */
-.full_size{width:100%; height:900px; padding-top:150px; box-sizing:border-box;}
-  .guide_area{width:1100px; height:auto; 
+.full_size {width:100%; height:900px; padding-top:150px; box-sizing:border-box;}
+  .guide_area {width:1100px; height:auto; 
               margin:100px auto; text-align:center;}
-  .guide_area > h2{width:100%; height:60px; text-transform:uppercase; 
-    font-size: 36px; color: #fff; background-color: #222; }
-  .guide_area > p{width: 100%; height: 30px; margin-bottom: 52px;
-    color: #fff; font-size: 16px; text-transform: uppercase; background-color: #555;}
-  .guide_cont{width: 100%; height: 490px; background-color: #333;}
+  .guide_area > h2 {width:100%; height:60px; 
+                  text-transform:uppercase;
+                   font-size:36px; color:#fff; background-color:#222;}
+  .guide_area > p {width: 100%; height: 30px; margin-bottom:57px;
+                  background-color: #ccb; 
+                   color:#fff; font-size:16px; text-transform:uppercase;}
+  .guide_cont {width:100%; height:350px; background-color: #333;}
 
 /* #viewBox ==================== */
 #viewBox{background-color: #555;}
 
+#viewBox h2{height: 115px;}
+/*#viewBox h2>span, 
+#viewBox .guide_cont > p{position: absolute; z-index: -1; width: 0; height: 0; overflow: hidden;} */
+#viewBox p{height: 27px; margin-top: 8px; font-size: 20px; }
+
 /* #guideBox ==================== */
 #guideBox{background-color:#aaa;}
+  .guide_part > div{width: 48%; height: 100%; float: left; background-color: #fff;}
+  .guide_cont div:last-child{float: right;}
 
 /* #saleBox ==================== */
 #saleBox{background-color:#999;}
+  .sale_part > div{width: 33.333333%; height: 100%; float: left; background-color: #fff;}
 
 /* #newsBox ==================== */
 #newsBox{background-color:#ddd;}
+  .news_part > div{width: 20%; height: 100%; float: left; background-color: #fff;}
+
 
 /* #jisanSideBox ==================== */
 #jisanSideBox{display:none;}
 
 /* #footBox ==================== */
 #footBox{width:100%; height:230px; background-color: #131313;}
-#footBox h2{position: absolute; z-index: 1; width: 0; height: 0; overflow: hidden;}
+/*#footBox h2{position: absolute; z-index: 1; width: 0; height: 0; overflow: hidden;}*/
 
 .foot_area{width: 1100px;; height: 100%; margin: auto; }
 
