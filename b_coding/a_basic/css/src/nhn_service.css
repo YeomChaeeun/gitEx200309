@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* nhn_service.css */
+
+/* reset.css */
+html, body{width: 100%; height: 100%;}
+html, body, h1, h2, h3, h4, h5, h6, p, pre,
+div, img, ul, ol, li, dl, dt, dd{margin: 0; padding: 0; border: 0; outline: 0; behavior:url('../../ie/pie/PIE.htc');}
+
+ul, ol, li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+a:hover{color: #999; text-decoration: underline; }
+a:active{color: #fac;}
+
+/* common.css */
+.hidden{display: block; position:absolute; z-index: -1; 
+        width: 0; height: 0; overflow: hidden;}
+
+/* design.css */
+#wrap{width: 1920px; height: auto; min-height: 800px; background-color: #ccc;  }
+   
+/* 공통으로 적용되는 박스 */
+.full_size{width: 100%; height: auto; padding: 20px ; box-sizing:border-box;}
+.guide_area{width: 1160px; height: auto; margin: auto; text-align: center;background-color: #fff;}
+  h2{width: 100%; height: 70px; text-transform: uppercase; font-size: 32px; background-color: #999;}
+.guide_area > p {width: 100%; height: 40px; text-transform: uppercase; font-size: 16px; background-color: #666; }
+
+.guide_area:after, .guide_area::after{content: " "; display: block; width: 100%; height: 0; clear:both;}
+
+/* #headBox =========================== */
+#headBox{width:height: inherit; background-color: #333; padding: 10px 20px;  }
+.head_area{width: 1160px; height: auto; margin: auto; background-color: #889;}
+  h1{float: left; width: 200px; height: 70px; text-align: center; background-color: #fff;}
+.head_area:after, .head_area::after{content: " "; display: block; width: 100%; height: 0; clear:both;}
+
+/* naviBox ============================ */
+#naviBox{float: right; width: 580px; height: 80px; background-color: #fff;}
+  .gnb{float:right; width: auto; height: auto; margin-top:20px; font-size: 16px; text-transform: uppercase;}
+  .gnb > ul{width: 100%; height: 60px; text-align: center; line-height: 60px;}
+  .gnb > ul > li{float: left; width: auto; height: 100%; margin-right: 15px; background-color: #ddd;}
+  .gnb > ul > li:last-child{margin-right: 0;}
+  .gnb > ul > li a{display: block; width: auto; height: 100%; padding: 0 20px;}
+  .gnb a > i{display: inline-block; width: 18px; height: 18px; background-color: #777;}
+
+/* #viewBox ============================*/
+#viewBox{background-color: #443; }
+.view_cont_01{float:left; width: 49.5%; height: 580px; background-color: #777;}
+.view_cont_02{float:right; width: 49.5%; height: 580px; background-color: #777; }
+
+
+/* #serviceBox ========== ===============*/
+#serviceBox{background-color: #355;  }
+.service_cont{width: 100%; height: 750px;}
+.service_cont > ul {width: 100%; height: 100%; padding: 10px; box-sizing: border-box;}
+.service_cont > ul > li{float:left; width: 32%; margin-right:10px; margin-bottom: 10px; height: 50%; background-color: #acf;}
+.service_cont > ul > li:nth-of-type(3n){margin-right: 0px;}
+
+/* #historyBox =========================*/
+#historyBox{background-color: #377;  }
+.history_cont{width: 100%; height: 260px; margin-top: 40px; background-color: #123; }
+.history_cont_01{float:left; width: 33.333333%; height: 100%; background-color: #881;}
+.history_cont_02{float:left; width: 33.333333%; height: 100%; background-color: #772;}
+.history_cont_03{float:left; width: 33.333333%; height: 100%; background-color: #889;}
+
+/* #recruitBox =========================*/
+#recruitBox{width:100%; height: 540px; padding-top: 20px; box-sizing: border-box; background-color: #312;  }
+.recruit_area{width: 100%; height: 400px; margin:50px auto 0; text-align: center; background-color: #acf; }
+.recruit_area > p:first-child{width: 100%; height: auto; padding-top: 120px; font-size: 20px;}
+.recruit_area > p{width: 100%; height: auto; padding: 20px 0;font-size: 30px; }
+
+.recruit_btn a{display: inline-block; width: auto; height: auto; padding: 10px 30px;background-color: #FC3E61;}
+
+
+/* #locationBox ========================*/
+#locationBox{padding-bottom: 124px; box-sizing: border-box; background-color: #455;  }
+.location_cont{width: 100%; height: 680px; padding: 20px; box-sizing: border-box; background-color: #fcd;}  
+.location_cont_01{float:left; width: 49%; height: 100%; background-color: #dcf;}
+.location_cont_02{float:right; width: 49%; height: 100%; background-color: #dcf;}
+
+.map_img{width: 100%; height: 62%; background-color: #cfc;}
+.map_info{width: 100%; height: 34%; margin-top: 20px; background-color: #cff; }
+
+/* #footBox ============================*/
+#footBox{height: 280px; background-color: #999;  }
+.foot_area{width: 1160px; height: 100%; margin:auto;}
+.foot_part_01{width: 100%; height: 69px; border-bottom: 1px solid #d2d2d2; }
+  .notice_part{float:left; width: 630px; height: 100%; background-color: #ffc;}
+  .show_list{float:right; width: auto; height: auto; margin-top: 15px; padding: 10px;background-color: #ffc;}
+  .show_list a{display: block; width: auto; height: 100%;}
+.foot_part_02{width: 100%; height: 120px; }
+  .company_address{float: left; width: 570px; height: 150px ; background-color: #fdc;}
+  .fammily_site{float: right; width: 150px; height: 30px; margin-top: 6px; border: 1px solid #fff; }
