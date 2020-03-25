@@ -12,6 +12,11 @@ header, article, section, nav, footer, aside, main{margin:0; padding:0; border:0
 
 ul, ol, li{list-style:none;}
 a{text-decoration:none; color:inherit;}
+button{border:none; background-color: transparent; cursor:pointer;
+       border-radius: 50px;}
+a:focus, button:focus{outline:3px solid #fa0;}
+
+
 address{font-style:normal;}
 abbr{text-decoration:none;}
 
