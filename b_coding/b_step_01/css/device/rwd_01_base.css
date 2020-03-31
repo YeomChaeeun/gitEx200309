@@ -1,0 +1,7 @@
+/* rwd_01_base.css */
+
+
+#wrap{width: 100%; height: 100%; background-color: #fca;}
+h1{padding: 1rem; background-color: #0cf; text-align: center;}
+p{font-size: 2rem; font-size: 1.5rem; font-weight: bold;}
+p:after{content: "기본형 입니다."; color: #f07;}

@@ -1,0 +1,8 @@
+/* rwd_01_tablet.css */
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #wrap{width: 90%; background-color: #faf;}
+  h1{text-align: left; background-color: #ccc; color: #fa0;}
+  p:after{content: " 모바일 가로 형식으로 481부터 768사이 입니다.";}
+}
