@@ -1,0 +1,26 @@
+/* rwd_02_tablet.css */
+
+/* design data : 640px*/
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+
+body{background-color: #aff;}
+
+#viewBox{
+  height: 405px;
+  height: 25.3125rem;
+  height: 63.28125vw;
+  /* 405 / 640 * 100 */
+  min-height: 405px;
+  min-height: 25.3125rem;
+  max-height: 555px;
+  max-height: 34.6875rem;
+}
+
+#noticeBox{
+  height: 225px;
+  min-height: 14.0625rem;
+}
+
+
+/* @media end */
+}

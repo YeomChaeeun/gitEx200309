@@ -1,0 +1,26 @@
+/* rwd_02_pcfull.css */
+
+/* design data : 1440px */
+@media screen and (min-width: 1440px) {
+
+body{background-color: #faf;}
+
+#viewBox{
+  max-width: 2560px;
+  max-width: 160rem;
+  height: 570px; 
+  height: 39.583333;
+  min-height: 35.625rem; 
+  max-height: 810px;
+  max-height: 50.625px;
+}
+
+#noticeBox{
+  height: 210px;
+  height: 13.125rem;
+}
+
+
+
+/* @media end */
+}
