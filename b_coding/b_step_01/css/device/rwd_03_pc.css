@@ -1,0 +1,25 @@
+/* rwd_03_pc.css */
+
+/* design data : 768px */
+@media screen and (min-width: 768px) and (max-width: 959px){
+#headBox{
+  height: 60px;
+}
+
+#viewBox{
+  height: 450px;
+}
+
+#contentBox{
+  height: 210px;
+}
+
+#infoBox{
+  height: 540px;
+}
+
+#footBox{
+  height: 120px;
+}
+/* @media end*/
+}

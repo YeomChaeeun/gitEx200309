@@ -1,0 +1,54 @@
+/* rwd_03_mob.css */
+
+/* design data : 320px */
+@media screen and (max-width: 479px){
+#headBox{
+  height: 40px; 
+  height: 12.5vw;
+  /* 40/320*100 */
+  min-height: 2.5rem;
+  max-height: 60px;
+}
+
+#viewBox{
+  height: 480px; 
+  height: 150vw;
+  /* 480/320*100 */
+  min-height: 30rem;
+  max-height: 720px;
+}
+
+#contentBox{
+  height: 480px; 
+  height: 150vw;
+  /* 480/320*100 */
+  min-height: 30rem;
+  max-height: 720px;
+}
+
+/*.title_shape{
+  width: 60vw;
+  height: 156px; 
+  height: 48.75vw;*/
+  /* 156/320*100 */
+/*  max-width: 12rem;
+  max-height: 9.75rem;
+  background-color: #33B88F;} */
+
+#infoBox{
+  height: 480px;
+  height: 150vw;
+  /* 480/320*100 */
+  min-height: 30rem;
+  max-height: 720px;
+}
+
+#footBox{
+  height: 40px;
+  height: 12.5vw;
+  /* 40/320*100 */
+  min-height: 2.5rem;
+  max-height: 60px;
+}
+/* @media end*/
+}

@@ -1,0 +1,15 @@
+/* rwd_03_base.css */
+
+#wrap{width: 100%; height: auto;}
+#headBox{width: 100%; height: 40px; background-color: #ffa;}
+.head_area{width: 100%; height: 100%; background-color: #ff5;}
+#viewBox{width: 100%; height: 480px; background-color: #faf;}
+#contentBox{width: 100%; height: 480px; 
+  padding: 24px 16px; box-sizing: border-box; background-color: #afa;}
+.title_shape{width: 192px; height: 156px; background-color: #33B88F;}
+#newsBox{width: 100%; height: 480px; background-color: #aaf;}
+.new_area{width: 100%; height: 100%; background-color: #9533E9;}
+.notice-area{display: none; background-color: #95ABE9;}
+.more_content{display: none; background-color: #95D2E9; }
+#footBox{width: 100%; height: 40px; background-color: #ccc;}
+.foot_area{width: 100%; height: 100%; background-color: #aaa;}

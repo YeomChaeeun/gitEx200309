@@ -1,0 +1,27 @@
+/* rwd_03_result_tab.css */
+
+/* design data : 768px */
+@media screen and (min-width: 768px) and (max-width: 959px){
+
+/*#headBox{}*/
+
+#viewBox{
+  height: 450px;
+}
+
+#contentBox{
+  height: 210px;
+}
+
+#infoBox{
+  height: 540px;
+}
+.infoBox_container{float:left; width: 50%;}
+.new_area{display: block;}
+.notice_area{display: block;}
+
+#footBox{
+  height: 120px;
+}
+/* @media end*/
+}
