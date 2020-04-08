@@ -4,7 +4,9 @@
 /* desigh data : 320px; */
 @media screen and (max-width: 639px){
 
-
+  
+.head_search_btn{display: block;}
+.head_gnb_btn{display: block;}
 
 
 /* @media end*/

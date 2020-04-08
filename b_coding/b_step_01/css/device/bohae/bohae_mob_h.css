@@ -4,7 +4,66 @@
 /* design data : 640px */
 @media screen and (min-width: 640px) and (max-width: 1023px){
 
+.full_size{padding: 10px 20px; box-sizing: border-box;}
+.head_search_btn{display: block;}
+.head_gnb_btn{display: block;}
 
+/* // #headBox ============================================= */
+
+#viewBox{
+  height: 750px;
+  height: 117.1875vw ;
+  /*750/640*100*/
+  max-height: 840px;
+
+}
+
+/* //#viewBox ===================================*/
+
+#contentBox{
+  height: 660px;
+  height: 103.125vw ;
+  /*660/640*100*/
+  max-height: 750px;
+
+}
+/* // #contentBox ================================================ */
+
+
+/* // #sojuBox ================================================ */
+
+
+#historyBox{
+  height: 660px;
+  height: 103.125vw ;
+  /*660/640*100*/
+  max-height: 750px;
+}
+
+/* // #historyBox ================================================ */
+
+#baverageBox{
+  height: 1170px;
+  height: 182.8125vw ;
+  /*1700/640*100*/
+  max-height: 1530px;}
+.baverage_area > ul > li {float: left; width: 48%; height: 450px; height:70.3125vw; max-height: 628px; margin-right: 4%; margin-bottom: 30px;  background-color: #ccc; }
+.baverage_detail{width: 100%; height: 420px; height: 65.625vw; max-height:560px; background-color: transparent;}
+/* // #baverageBox ================================================ */
+
+
+#searchBox{
+  display: block;
+}
+.
+/* //#searchBox ======================================================*/
+
+
+/* // #snsBox ================================================ */
+
+
+
+/* // #footBox ================================================ */
 
 
 /* @media end*/

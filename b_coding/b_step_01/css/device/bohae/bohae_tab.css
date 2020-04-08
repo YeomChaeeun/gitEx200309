@@ -5,7 +5,54 @@
 @media screen and (min-width: 1024px) and (max-width: 1439px){
 
 
+.nav_box{float: right;}
+.gnb{display: block; width: 620px; height: 50px; margin-top: 10px; background-color: #EEDF7F; }
+.gnb > ul > li {float: left;}
 
+/* // #headBox ============================================= */
+
+#viewBox{
+
+}
+
+/* //#viewBox ===================================*/
+
+#contentBox{
+
+}
+/* // #contentBox ================================================ */
+
+#sojuBox{
+
+}
+.soju_area{width: 100%; height: 100%; text-align: center; padding: 60px 30px; box-sizing: border-box;}
+.soju_02{display:inline-block; }
+.soju_03{display:inline-block; }
+
+/* // #sojuBox ================================================ */
+
+
+#historyBox{}
+
+/* // #historyBox ================================================ */
+
+#baverageBox{}
+
+
+/* // #baverageBox ================================================ */
+
+
+#searchBox{}
+/* //#searchBox ======================================================*/
+
+#snsBox{}
+/* // #snsBox ================================================ */
+
+
+#footBox{}
+
+
+/* // #footBox ================================================ */
 
 /* @media end*/
 }
