@@ -13,7 +13,7 @@
   position: fixed;
   z-index: 1000;
   width: 100%;
-  height: 80px; 
+  height: 80px;
   padding: 10px; box-sizing: border-box;
   background-color: #ccc;
 }
@@ -36,7 +36,11 @@ h1{float: left; width: 140px; height: 60px; background-color: #EEDF7F; }
   box-sizing: border-box;
   background-color: #faf;
 }
-.view_area{width: 100%; height: 300px; background-color: #EEDF7F; }
+.view_area{
+  width: 100%; 
+  height: 100%;
+  /*height: 320px; height: 100vw;*/
+  background-color: #EEDF7F; }
 
 /* //#viewBox ======================================================*/
 
@@ -48,8 +52,9 @@ h1{float: left; width: 140px; height: 60px; background-color: #EEDF7F; }
   max-height: 750px;
   background-color: #aaf;
 }
-h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
-.cont_area{width: 100%; height: 300px; margin-top: 5px; background-color: #EEDF7F; }
+h2{width: 300px; height: 60px; margin: auto; margin-top: 30px; text-align: center;background-color: rgba(255,200,200,0.7); }
+#contentBox > h2{position: absolute; z-index: 100;}
+.cont_area{position:relative; z-index:50; top:60px; left:0px; width: 300px; height: 330px; /*height: 104.6875vw;*/ max-height: 665px; padding-top:30px; box-sizing : border-box;background-color: #EEDF7F; }
 .cont_area > p { width: 100%; height: 85%; background-color: transparent; }
 .btn_area{text-align: center;}
 .more_btn_01{width:100px; height:30px; background-color: #82AFB9; }
@@ -63,8 +68,12 @@ h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
   max-height: 750px;
   background-color: #faa;
 }
-.soju_area{text-align: center;}
-.soju_cont{display:inline-block; width: 180px; height: 300px; background-color: #FFCD31;}
+.soju_area{width: 100%; height: 100%; text-align: center; padding: 30px;
+padding: 9.375vw; box-sizing: border-box;}
+.soju_cont{display:inline-block; 
+  width: 180px; width: 56.25vw; /*180/320*100*/ max-width: 300px;
+  height: 310px; height: 96.875vw; /*180/320*100*/ max-height: 510px;
+  background-color: #FFCD31;}
 .soju_02{display: none;}
 .soju_03{display: none;}
 
@@ -79,7 +88,8 @@ h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
   max-height: 750px;
   background-color: #aaf;
 }
-.history_area{width: 100%; height: 300px; margin-top: 5px; background-color: #EEDF7F; }
+#historyBox > h2{position: absolute; z-index: 100;}
+.history_area{position:relative; z-index:50; top:60px; left:0px; width: 100%; height: 300px; height: 104.6875vw; max-height: 665px; margin-top: 5px; padding-top:30px; box-sizing : border-box; background-color: #EEDF7F; }
 .history_area > p { width: 100%; height: 85%; background-color: transparent; }
 /* //#historyBox ======================================================*/
 
@@ -92,17 +102,17 @@ h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
   background-color: #faa;
 }
 .baverage_area {width: 100%; height: 450px;}
-.baverage_area > ul {margin-top: 10px;}
-.baverage_area > ul > li {float: left; width: 145px; height: 210px; margin-right: 10px; margin-bottom: 20px; background-color: #ccc; }
+.baverage_area > ul {margin-top: 30px;}
+.baverage_area > ul > li {float: left; width: 48%; height: 210px; height:65.625vw; margin-right: 4%; margin-bottom: 30px;  background-color: #ccc; }
 .baverage_area > ul > li:nth-child(2n) {margin-right: 0px;}
 .baverage_area > ul > li:nth-child(n+2) {margin-bottom: 0px;}
 
-.baverage_detail{width: 100%; height: 170px; background-color: transparent;}
+.baverage_detail{width: 100%; height: 170px; height: 53.125vw; background-color: transparent;}
 .more_btn_03{width: 100px; height: 30px; background-color: #5BB285;}
 
 /* //#baverageBox ======================================================*/
 
-#searchBox{ /*display: none;*/
+#searchBox{ display: none;
   width: 100%; height: 100px;
   background-color: #333;
 }
@@ -113,6 +123,8 @@ h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
   height: 210px;
   background-color: #aff;
 }
+.sns_area{text-align: center; padding: 30px; box-sizing: border-box;}
+.sns_icon{display: inline-block; width: 30px; height: 30px; margin-right: 10px; background-color: #aaf;}
 /* //#snsBox ======================================================*/
 
 #footBox{
@@ -120,5 +132,11 @@ h2{width: 90%; height: 60px; margin: auto; background-color: #EEDF7F; }
   height: 300px;
   background-color: #ccc;
 }
+
+.foot_area{width:100%; height:100%; text-align: center; padding: 10px; box-sizing: border-box;}
+.foot_cont{display: inline-block; margin-bottom: 30px;}
+.foot_logo{width: 140px; height: 60px; background-color: #aff;}
+.company_info{width: 300px; width: 93.75vw; max-width: 500px; height: 90px; background-color: #aff;}
+.family_site{width: 190px; height: 30px; background-color: #aff;}
 /* //#footBox ======================================================*/
 
