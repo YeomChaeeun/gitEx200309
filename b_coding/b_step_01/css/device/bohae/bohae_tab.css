@@ -4,52 +4,83 @@
 /* design data : 1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
 
+.nav_box{float: right; }
+#gnb{display: block; width: 620px; height: 50px; margin-top: 10px; /*background-color: #f ff; */}
+.menu{width: 100%; height: auto; min-height: 50px; background-color: #EEDF7F;}
+.menu > li {float: left; width: 20%; height: auto; min-height: 50px; background-color: #EEDF7F;}
+.menu dl{width: 100%; height: auto; text-align: center;}
+.menu dt{width: 100%; height: 50px; font-weight: bold; padding: 5px; box-sizing: border-box;}
+.menu dd{width: 100%; height: auto; display: none;}
+.menu dd > ul{width: 100%; height: auto;}
+.menu dd > ul li{width: 100%; height: 50px; padding: 5px; box-sizing: border-box;}
+.menu a{display: block; width: 100%; height: 100%; background-color: #fff; line-height: 40px;}
+.menu a:hover,
+.menu a:focus{background-color: #faf;}
 
-.nav_box{float: right;}
-.gnb{display: block; width: 620px; height: 50px; margin-top: 10px; background-color: #EEDF7F; }
-.gnb > ul > li {float: left;}
-
+/*.menu a:hover dd{display: block;}*/
+.menu:hover dd{display: block;}
 /* // #headBox ============================================= */
 
 #viewBox{
-
+  height: 840px;
+  height: 82.03125vw;
+  max-height: 900px;
 }
-
+ 
 /* //#viewBox ===================================*/
 
 #contentBox{
+  height: 750px;
+  height: ‭73.2421875vw;
+  max-height: 900px;
 
 }
+.cont_allbox{position: relative; z-index: 10; top:60px; left: 0; right: 0; width: auto; height: auto; margin: auto;}
+.cont_img{display: block; position: relative; z-index: 100; top:0; left:0; width: 500px; height: 570px; background-color: #66C6E5;}
+.cont_area{position:absolute; left: 450px; top: 60px;width: 540px; height: 540px;}
 /* // #contentBox ================================================ */
 
-#sojuBox{
-
-}
+#sojuBox{  } 
 .soju_area{width: 100%; height: 100%; text-align: center; padding: 60px 30px; box-sizing: border-box;}
-.soju_02{display:inline-block; }
+.soju_02, 
 .soju_03{display:inline-block; }
 
 /* // #sojuBox ================================================ */
 
 
-#historyBox{}
-
+#historyBox{
+  height: 750px;
+  height: ‭73.2421875vw;
+  max-height: 900px;
+}
+.history_img{display: block;}
 /* // #historyBox ================================================ */
 
-#baverageBox{}
+#baverageBox{
+  height: 1530px;
+} 
+.baverage_area > ul > li:nth-child(2n) {margin-right: 0px;}
+.baverage_area > ul > li:nth-child(n+2) {margin-bottom: 0px;}
 
 
 /* // #baverageBox ================================================ */
+ 
 
-
-#searchBox{}
+#searchBox{
+  display: block;
+}
 /* //#searchBox ======================================================*/
 
-#snsBox{}
+
 /* // #snsBox ================================================ */
 
 
-#footBox{}
+#footBox{
+  height: 120px;
+}
+.foot_full_box{width: auto;}
+.foot_cont{float: left; margin-right: 20px;}
+.family_site{float: right; margin-right: 0px;}
 
 
 /* // #footBox ================================================ */

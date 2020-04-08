@@ -18,46 +18,90 @@
 </head>
 <body>
   <div id="wrap">
-    <header id="headBox" class="full_size">
-    <h1>logo</h1>
-    <div class="nav_box">
-      <button type="button" class="head_search_btn">search</button>
-      <button type="button" class="head_gnb_btn">all</button>
-      <nav class="gnb">
-        <ul>
-          <li>
-            <dl>
-              <dt><a href="">보해양조</a></dt>
-              <dd></dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt><a href="">제품소개</a></dt>
-              <dd></dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt><a href="">기업정보</a></dt>
-              <dd></dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt><a href="">보해네트워크</a></dt>
-              <dd></dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt><a href="">고객참여</a></dt>
-              <dd></dd>
-            </dl>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <header id="headBox">
+      <div class="container">
+        <h1>logo</h1>
+        <button type="button" class="head_search_btn">search</button>
+        <a href="#" id="pull" charset="head_gnb_btn" >Menu</a>
+        <nav id="gnb">
+          <h2 class="hidden">global navigation 영역</h2>
+          <ul class="menu clearfix">
+            <li>
+              <dl>
+                <dt><a href="#">보해양조</a></dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">ceo 인사말</a></li>
+                    <li><a href="#">회사 연혁</a></li>
+                    <li><a href="#">장성 공장</a></li>
+                    <li><a href="#">사회 공헌</a></li>
+                    <li><a href="#">수상 실적</a></li>
+                    <li><a href="#">위치 소개</a></li>
+                    <li><a href="#">CI 소개</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">제품소개</a></dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">부라더 시리즈</a></li>
+                    <li><a href="#">술탄오브 콜라</a></li>
+                    <li><a href="#">천년애</a></li>
+                    <li><a href="#">잎새주</a></li>
+                    <li><a href="#">보해 골드</a></li>
+                    <li><a href="#">복분자</a></li>
+                    <li><a href="#">매취순</a></li>
+                    <li><a href="#">순희</a></li>
+                    <li><a href="#">수출용제품</a></li>
+                    <li><a href="#">보해매원제품</a></li>
+                    <li><a href="#">선물세트</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">기업정보</a></dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">보도자료</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">보해네트워크</a></dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">보해양조지점망</a></li>
+                    <li><a href="#">보해종합기술원</a></li>
+                    <li><a href="#">보해매원</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="">고객참여</a></dt>
+                <dd>
+                  <ul>
+                    <li><a href="">고객문의</a></li>
+                    <li><a href="">문의사항</a></li>
+                    <li><a href="">이벤트</a></li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </nav>
+      </div>
+          
+    
     
     </header>
     <!-- //#headBox -->
@@ -70,12 +114,16 @@
     
     <article id="contentBox" class="full_size">
       <h2>soju</h2>
-      <div class="cont_area">
-        <p> 내용 </p>
-        <div class="btn_area">
-          <button type="button" class="more_btn_01">more</button>
+      <div class="cont_allbox">
+        <div class="cont_img">이미지박스</div>
+        <div class="cont_area">
+          <p> 내용 </p>
+          <div class="btn_area">
+            <button type="button" class="more_btn_01">more</button>
+          </div>
         </div>
       </div>
+     
     </article>
     <!-- //#contentBox -->
     
@@ -94,6 +142,7 @@
     
     <article id="historyBox" class="full_size">
       <h2>history</h2>
+      <div class="history_img">이미지박스</div>
       <div class="history_area">
         <p>내용</p>
         <div class="btn_area">
@@ -104,9 +153,9 @@
     </article>
     <!-- //#historyBox -->
     
-    <article id="baverageBox" class="full_size">
+    <article id="baverageBox" class="full_size ">
       <h2>baverage</h2>
-      <div class="baverage_area">
+      <div class="baverage_area clearfix">
         <ul>
           <li>
             <div class="baverage_detail"></div>
@@ -159,16 +208,18 @@
     <!-- //#snsBox -->
     
     <footer id="footBox">
-      <h2 class="hidden">footer</h2>
-      <div class="foot_area">
-        <div class="foot_full_box">
-          <div class="foot_logo foot_cont"></div>
-        </div>
-        <div class="foot_full_box">
-          <div class="company_info foot_cont"></div>
-        </div>
-        <div class="foot_full_box"> 
-          <div class="family_site foot_cont"></div>
+      <div class="container">
+        <h2 class="hidden">footer</h2>
+        <div class="foot_area">
+          <div class="foot_full_box">
+            <div class="foot_logo foot_cont"></div>
+          </div>
+          <div class="foot_full_box">
+            <div class="company_info foot_cont"></div>
+          </div>
+          <div class="foot_full_box"> 
+            <div class="family_site foot_cont"></div>
+          </div>
         </div>
       </div>
     </footer>

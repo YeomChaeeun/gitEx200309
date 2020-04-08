@@ -1,32 +1,40 @@
 /* bohae_base.css*/
 
 
-#wrap{width: 100%; height: auto; }
+#wrap{width: 100%; height: auto; margin: auto; }
 /* //#wrap ======================================================*/
 
 .full_size{
   padding: 10px; 
   box-sizing: border-box;
+  max-width: 1440px;
+  margin: auto;
 }
 
 #headBox{
   position: fixed;
   z-index: 1000;
+  top:0; left: 0;
   width: 100%;
   height: 80px;
   padding: 10px; box-sizing: border-box;
   background-color: #ccc;
 }
+.container{
+  width: 100%; height: 100%; margin: auto; max-width: 1440px; background-color: rgba(255,255,255,0.2)
+}
+
 h1{float: left; width: 140px; height: 60px; background-color: #EEDF7F; }
-.nav_box{float: right;}
-.head_search_btn{display:none; float: left; width: 60px; height: 60px; margin-left: 10px; background-color: #EEDF7F; }
-.head_gnb_btn{display:none; float: right; width: 60px; height: 60px; margin-left: 10px; background-color: #EEDF7F; }
-.gnb{display: none; }
-/*.gnb > ul { display: none; }*/
+.nav_box{float: right; width: auto; height: auto;}
+.head_search_btn{display:none; float: left; width: 60px; height: 60px; margin-left: 10px; background-color: #EEDF7F;}
+#pull{display:none; float: right; width: 60px; height: 60px; margin-left: 10px; text-align: center; line-height: 60px;background-color: #EEDF7F;}
+
+#gnb{float:right; display: none;}
+#pull{display: none; /*position: relative;*/}
 
 /* //#headBox ======================================================*/
 
-#viewBox{
+#viewBox{  
   width: 100%;
   height: 420px;
   height: 131.25vw;
@@ -52,8 +60,9 @@ h1{float: left; width: 140px; height: 60px; background-color: #EEDF7F; }
   max-height: 660px;
   background-color: #aaf;
 }
+.cont_img{display: none;}
 h2{width: 300px; height: 60px; margin: auto; margin-top: 30px; text-align: center;background-color: rgba(255,200,200,0.7); }
-#contentBox > h2{position: absolute; z-index: 100; left:0; right: 0;}
+#contentBox > h2{position: absolute; z-index: 300; left:0; right: 0;}
 .cont_area{position:relative; z-index:50; top:60px;  width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ max-height: 540px; padding-top:30px; box-sizing : border-box;background-color: #EEDF7F; }
 .cont_area > p { width: 100%; height: 85%; background-color: transparent; }
 .btn_area{text-align: center;}
@@ -88,6 +97,7 @@ padding: 9.375vw; box-sizing: border-box;}
   max-height: 660px;
   background-color: #aaf;
 }
+.history_img{display: none;}
 #historyBox > h2{position: absolute; z-index: 100; left:0; right: 0;}
 .history_area{position:relative; z-index:50; top:60px; left:0px; width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ max-height: 540px; margin-top: 5px; padding-top:30px; box-sizing : border-box; background-color: #EEDF7F; }
 .history_area > p { width: 100%; height: 85%; background-color: transparent; }
@@ -101,11 +111,10 @@ padding: 9.375vw; box-sizing: border-box;}
   max-height: 1170px;
   background-color: #faa;
 }
-.baverage_area {width: 100%; height: auto;}
-.baverage_area > ul {margin-top: 30px;}
+.baverage_area {width: auto; max-width: 1024px; height: auto; margin: auto;}
+.baverage_area > ul {width: auto; height: auto; margin-top: 30px;}
 .baverage_area > ul > li {float: left; width: 48%; height: 210px; height:65.625vw; max-height: 498px; margin-right: 4%; margin-bottom: 30px;  background-color: #ccc; }
-.baverage_area > ul > li:nth-child(2n) {margin-right: 0px;}
-.baverage_area > ul > li:nth-child(n+2) {margin-bottom: 0px;}
+
 
 .baverage_detail{width: 100%; height: 170px; height: 53.125vw; max-height:420px; background-color: transparent;}
 .more_btn_03{width: 100px; height: 30px; background-color: #5BB285;}

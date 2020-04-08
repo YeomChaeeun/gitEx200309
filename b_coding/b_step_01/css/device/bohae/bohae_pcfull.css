@@ -1,8 +1,8 @@
-/* bohae_pc.css*/
+/* bohae_pcfull.css*/
 
 
-/* design data : 1440px */
-@media screen and (min-width: 1440px) and (max-width: 1919px){
+/* design data : 1920px */
+@media screen and (min-width: 1920px){
 
 
 
@@ -31,7 +31,6 @@
 
 #contentBox{
   height: 900px;
-
 }
 /* // #contentBox ================================================ */
 
@@ -53,17 +52,8 @@
 /* // #historyBox ================================================ */
 
 #baverageBox{
-  height: 750px;
-  max-height: 870px;
+  height: 870px;
 }
-.baverage_area {width: auto; max-width: 1920px; }
-.baverage_area > ul > li {float: left; width: 300px; height: 450px; margin-right: 20px; background-color: #ccc; }
-.baverage_area > ul > li:last-child{margin-right: 0px;}
-.baverage_detail{width: 100%; height: 370px;  background-color: transparent;}
-
-
-
-
 
 /* // #baverageBox ================================================ */
 
@@ -72,7 +62,6 @@
   display: block;
 }
 /* //#searchBox ======================================================*/
-
 
 /* // #snsBox ================================================ */
 
