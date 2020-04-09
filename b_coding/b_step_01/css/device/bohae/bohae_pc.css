@@ -33,15 +33,19 @@
   height: 900px;
 
 }
+.cont_allbox{position: relative; z-index: 10; top:60px; left: 0; right: 0; width: 1150px; height: auto; margin: auto;}
+.cont_img{display: block; position: relative; z-index: 100; top:0; left:0; width: 620px; height: 630px; }
+.cont_area{position:absolute; z-index: 50; left: 450px; top: 60px;width: 700px; height: 600px;}
+.cont_area > p{ margin-left: 200px; width: 60%; }
 /* // #contentBox ================================================ */
 
 #sojuBox{
   height: 750px;
 
 }
-.soju_area{width: 100%; height: 100%; text-align: center; padding: 60px 30px; box-sizing: border-box;}
-.soju_02{display:inline-block; }
-.soju_03{display:inline-block; }
+.soju_area{padding: 60px 0; box-sizing: border-box;}
+.soju_cont{display:inline-block; margin-right: 20px;}
+.soju_03{margin-right: 0px;}
 
 /* // #sojuBox ================================================ */
 
@@ -49,6 +53,10 @@
 #historyBox{
   height: 900px;
 }
+.history_allbox{position: relative; z-index: 10; top:60px; left: 0; right: 0; width: 1260px; height: auto; margin: auto;}
+.history_area{position:absolute; z-index: 100; top: 0; left: 0;width: 700px; height: 660px;}
+.history_img{display: block; position:relative; ; z-index: 50; top:0; left:640px; width: 620px; height: 690px;}
+.history_img{display: block;}
 
 /* // #historyBox ================================================ */
 
@@ -56,10 +64,10 @@
   height: 750px;
   max-height: 870px;
 }
-.baverage_area {width: auto; max-width: 1920px; }
-.baverage_area > ul > li {float: left; width: 300px; height: 450px; margin-right: 20px; background-color: #ccc; }
+.baverage_area {width: auto; max-width: 1920px; margin: auto;}
+.baverage_area > ul > li {display: inline-block; float: left; width: 23.5%; height: 500px; height: 34.72vw; max-height: 560px ;margin-right: 2%; margin-bottom:0px; background-color: #ccc; }
 .baverage_area > ul > li:last-child{margin-right: 0px;}
-.baverage_detail{width: 100%; height: 370px;  background-color: transparent;}
+.baverage_detail{width: 100%; height: 400px; height: 27.77778vw; max-height: 460px; background-color: transparent;}
 
 
 

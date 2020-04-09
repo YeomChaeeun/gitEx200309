@@ -13,16 +13,48 @@
 .menu dd > ul li{width: 100%; height: 50px; padding: 5px; box-sizing: border-box;}
 .menu a{display: block; width: 100%; height: 100%; background-color: #fff; text-indent: 25px; line-height: 40px;}
 .menu:hover dd{display: block;}
+/*.menu a:hover dd{display: block;}*/
 
 #pull {
     display: block;
-}
+  }
+/*#pull:hover{display: none;}*/
+#pull:hover+#gnb .menu{display: block;}
+
+
 
 /* //#headBox ================*/
 
+#viewBox{
+  max-height: 750px;
+}
+/* //#viewBox ===================================*/
 
+#contentBox{
+  max-height: 660px;
+}
+.cont_area{max-height: 540px;}
+
+/* //#contentbox ===============*/
+
+/* //#sojuBox =================*/
+
+#historyBox{
+  max-height: 660px;
+}
+.history_area{max-height: 540px;}
+
+/* //#historyBox =============*/
+
+#baverageBox{
+
+  max-height: 1170px;
+}
+.baverage_area > ul > li {max-height: 498px;}
 .baverage_area > ul > li:nth-child(2n) {margin-right: 0px;}
 .baverage_area > ul > li:nth-child(n+2) {margin-bottom: 0px;}
+.baverage_detail{max-height: max-height:420px;}
 
+/* //#baverageBox =========================*/
 /* @media end*/
 }
