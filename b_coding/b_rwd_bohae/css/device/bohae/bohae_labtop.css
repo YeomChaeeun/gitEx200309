@@ -1,4 +1,4 @@
-/* bohae_tab.css*/
+/* bohae_labtop.css*/
 
 
 /* design data : 1024px */
@@ -31,14 +31,16 @@
 
 #contentBox{
   height: 750px;
-  height: ‭73.2421875vw;
+  height: 73.24vw;
   max-height: 900px;
 
 }
 .cont_allbox{position: relative; z-index: 10; top:60px; left: 0; right: 0; width: 990px; height: auto; margin: auto;}
 .cont_img{display: block; position: relative; z-index: 100; top:0; left:0; width: 500px; height: 570px; }
 .cont_area{position:absolute; z-index: 50; left: 450px; top: 20px; width: 540px; height: 540px;}
+.cont_area > .btn_area{padding-left: 50px; box-sizing: border-box; text-align: center; }
 /* // #contentBox ================================================ */
+
 
 #sojuBox{  } 
 .soju_area{padding: 60px 0; box-sizing: border-box;}
@@ -50,7 +52,7 @@
 
 #historyBox{
   height: 750px;
-  height: ‭73.2421875vw;
+  height: 73.24vw;
   max-height: 900px;
 }
 .history_allbox{position: relative; z-index: 10; top:60px; left: 0; right: 0; width: 990px; height: auto; margin: auto;}

@@ -1,29 +1,23 @@
 /* bohae_base.css*/
 
 
-#wrap{width: 100%; height: auto; margin: auto; }
+#wrap{width: 100%; height: 100%; margin: auto; }
 /* //#wrap ======================================================*/
 
 .full_size{
-  width: auto;
-  height: auto;
-  padding: 10px; 
-  box-sizing: border-box;
-  max-width: 1440px;
+  width: auto; height: auto; max-width: 1440px;
+  padding: 10px; box-sizing: border-box;
   margin: auto;
 }
 .full_pc{
-  width: 100%;
-  height: 100%;
-  padding: 10px; 
-  box-sizing: border-box;
+  width: 100%; height: auto; padding: 10px; box-sizing: border-box;
 }
+
 #headBox{
   position: fixed;
   z-index: 1000;
   top:0; left: 0;
-  width: 100%;
-  height: 80px;
+  width: 100%; height: 80px;
   padding: 10px; box-sizing: border-box;
   background-color: #072F32;
 }
@@ -36,8 +30,9 @@ h1{float: left; width: 140px; height: 60px; background-color: transparent; text-
 .head_search_btn{display:none; float: right; width: 60px; height: 60px; margin-left: 10px; background-color: #fcfcfc;}
 
 #gnb{float:right; display: none;}
-#pull{display:none; float: right; width: 60px; height: 60px; margin-left: 10px; text-align: center; line-height: 60px;background-color: #fcfcfc; border-radius: 5px;}
-
+#pull{display:none; float: right; 
+  width: 60px; height: 60px; margin-left: 10px; text-align: center; 
+  border-radius: 5px; line-height: 60px;background-color: #fcfcfc; }
 
 /* //#headBox ======================================================*/
 
@@ -66,14 +61,19 @@ h1{float: left; width: 140px; height: 60px; background-color: transparent; text-
   background-color: #AFD8D8;
 }
 .cont_img{display: none; background-color: #66C6E5; text-align: center; padding: 30px; box-sizing: border-box;}
-h2{width: 100%; height: 60px; max-width:1440px; margin: auto; margin-top: 30px; text-align: center; background-color: #1C545A; text-align: center; line-height: 60px; color: #fcfcfc; border-radius: 5px;}
+h2{width: 100%; height: 60px; max-width:1440px;
+  margin: auto; margin-top: 30px; text-align: center; line-height: 60px; color: #fcfcfc; 
+  border-radius: 5px; background-color: #1C545A;}
 #contentBox > h2{position: absolute; z-index: 300; left:0; right: 0; width:300px;}
-.cont_area{position:relative; z-index:50; top:60px;  width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ padding-top:30px; box-sizing : border-box; background-color: #fcfcfc; border-radius: 5px; }
-.cont_area > p { width: 100%; height: 75%; background-color: transparent; padding: 20px; box-sizing: border-box; text-align: center;}
+
+.cont_area{position:relative; z-index:50; top:60px; 
+  width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ 
+  padding-top:30px; box-sizing : border-box; border-radius: 5px; background-color: #fcfcfc; }
+.cont_area > p {width: 100%; height: 75%; padding: 20px; box-sizing: border-box; text-align: center; background-color: transparent; }
 .btn_area{text-align: center;}
-.more_btn_01{width:200px; height:50px; background-color: #1C545A;  font-size: 1.2rem; color: #fcfcfc;}
+.more_btn_01{width:200px; height:50px; font-size: 1.2rem; color: #fcfcfc; background-color: #1C545A;}
 .more_btn_01:hover{background-color: #fcfcfc; border: 5px solid #1C545A; color: #333;}
-/* //#contentBox ============ ==========================================*/
+/* //#contentBox ======================================================*/
 
 #sojuBox{
   width: 100%;
@@ -83,8 +83,7 @@ h2{width: 100%; height: 60px; max-width:1440px; margin: auto; margin-top: 30px; 
   max-height: 750px;
   background-color: #fcfcfc;
 }
-.soju_area{width: 100%; height: 100%; text-align: center; padding: 20px;
-padding: 6.25vw; box-sizing: border-box;}
+.soju_area{width: 100%; height: 100%; padding: 20px; padding: 6.25vw; box-sizing: border-box; text-align: center;}
 .soju_cont{display:inline-block; 
   width: 200px; width: 62.5vw; /*180/320*100*/ max-width: 300px;
   height: 310px; height: 96.875vw; /*180/320*100*/ max-height: 510px;
@@ -103,9 +102,11 @@ padding: 6.25vw; box-sizing: border-box;}
   /*420/320*100*/
   background-color: #AFD8D8;
 }
-.history_img{display: none; background-color: #66C6E5; text-align: center; padding: 30px; box-sizing: border-box;}
+.history_img{display: none; padding: 30px; box-sizing: border-box; text-align: center; background-color: #66C6E5; }
 #historyBox > h2{position: absolute; z-index: 100; left:0; right: 0; width:300px; }
-.history_area{position:relative; z-index:50; top:60px; left:0px; width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ margin-top: 5px; padding-top:30px; box-sizing : border-box; background-color: #fcfcfc; border-radius: 5px; }
+.history_area{position:relative; z-index:50; top:60px; left:0px; 
+  width: 100%; height: 300px; height: 93.75vw;/*300/320*100*/ 
+  margin-top: 5px; padding-top:30px; box-sizing : border-box; border-radius: 5px; background-color: #fcfcfc; }
 .history_area > p { width: 100%; height: 75%; padding: 20px; box-sizing: border-box; text-align: center; background-color: transparent; }
 /* //#historyBox ======================================================*/
 
@@ -118,36 +119,34 @@ padding: 6.25vw; box-sizing: border-box;}
 }
 .baverage_area {width: auto; max-width: 1024px; height: auto; margin: auto; padding-top: 30px; box-sizing: border-box;}
 .baverage_area > ul {width: 100%; height: auto; }
-.baverage_area > ul > li {float: left; width: 48%; height: 210px; height:65.625vw; margin-right: 4%; margin-bottom: 30px;  background-color: #fcfcfc; 
-border:10px solid #CD4F49; box-sizing: border-box; border-radius: 10px; }
+.baverage_area > ul > li {float: left; width: 48%; height: 210px; height:65.625vw; 
+  margin-right: 4%; margin-bottom: 30px; border:10px solid #FCC762; box-sizing: border-box; border-radius: 10px; background-color: #fcfcfc;  }
 
 .baverage_detail{width: 100%; height: 60%; height: 46.875vw; background-color: transparent;}
-.baverage_detail > p{ width:100%; height: 100%; padding:10px; box-sizing:border-box; text-align: center;  }
+.baverage_detail > p{ width:100%; height: 100%; padding:10px; box-sizing:border-box; text-align: center; }
 
 .more_btn_03{
   width: 100px; width: 32.25vw; max-width: 180px;
   height: 30px; height: 9.375vw; max-height: 60px;
-  background-color: #CD4F49; font-size: 1.2rem; color: #fcfcfc;
+  background-color: #FCC762; font-size: 1.2rem;
 }
-.more_btn_03:hover{background-color: #fcfcfc; border: 5px solid #CD4F49; color: #CD4F49 ;}
+.more_btn_03:hover{background-color: #fcfcfc; border: 5px solid #FCC762; }
 /* //#baverageBox ======================================================*/
 
-#searchBox{ display: none;
-  width: 100%; height: 330px;
+#searchBox{ 
+  display: none;
+  width: 100%; height: 330px; 
   background-color: #ddd;
 }
-.search_area{
-  width: 100%; height: 120px; margin-top:30px; padding: 30px 20px; box-sizing: border-box; text-align: center;
-}
+.search_area{width: 100%; height: 120px; margin-top:30px; padding: 30px 20px; box-sizing: border-box; text-align: center;}
 .input_full_box{display: inline-block; width: auto; height: auto;}
-.input_box{float:left; width:870px; height: 60px ; margin-right:10px; background-color: #fcfcfc; border: 2px solid #333;  }
+.input_box{float:left; width:870px; height: 60px ; margin-right:10px; border: 2px solid #333; background-color: #fcfcfc; }
 .search_btn{float:left;  width: 60px; height: 60px; background-color: #333; color: #fcfcfc; }
 /* //#searchBox ======================================================*/
 
 #snsBox{
-  width: 100%;
-  height: 300px;
-  background-color: #ddd;
+  width: 100%; height: 300px; 
+  background-color: #ddd; 
 }
 .sns_area{text-align: center; padding: 30px; box-sizing: border-box;}
 .sns_icon{display: inline-block; width: 60px; height: 60px; margin-right: 60px; background-color: #fcfcfc;}
@@ -155,11 +154,9 @@ border:10px solid #CD4F49; box-sizing: border-box; border-radius: 10px; }
 /* //#snsBox ======================================================*/
 
 #footBox{
-  width: 100%;
-  height: 300px;
-  background-color: #072F32;
+  width: 100%; height: 300px; 
+  background-color: #072F32; 
 }
-
 .foot_area{width:100%; height:100%; padding: 10px; box-sizing: border-box;}
 .foot_cont{display: inline-block; margin-bottom: 30px;}
 .foot_full_box{width: 100%; height: auto; text-align: center; }

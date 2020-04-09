@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import url("../device/bohae/bohae_base.css");
+@import url("../device/bohae/bohae_mob_v.css");
+@import url("../device/bohae/bohae_tab.css");
+@import url("../device/bohae/bohae_labtop.css");
+@import url("../device/bohae/bohae_pc.css");
+@import url("../device/bohae/bohae_pcfull.css");
+
+
+/* bohae_base.css bohae_mob_v.css bohae_tab.css bohae_pc.css bohae_pcfull.css */

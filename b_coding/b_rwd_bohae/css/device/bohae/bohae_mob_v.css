@@ -5,6 +5,7 @@
 @media screen and (max-width: 639px){
 
 .head_search_btn{display: block;}
+
 #gnb{position:fixed; z-index:1000; top: 80px; left: 0; display: block; width:100%; height:auto; background-color: #ccc;}
 .menu{display:none; width:100%; height: auto;}
 .menu dl{float:left; width: 100%; position: relative;}
@@ -14,10 +15,7 @@
 .menu a{display: block; width: 100%; height: 100%; background-color: #fff; text-indent: 25px; line-height: 40px;}
 .menu dl:hover dd{display: block;}
 
-#pull {
-    display: block;
-  }
-/*#pull:hover{display: none;}*/
+#pull {display: block; }
 #pull:hover+#gnb .menu,
 #pull:focus+#gnb .menu{display: block;}
 
@@ -49,7 +47,6 @@
 /* //#historyBox =============*/
 
 #baverageBox{
-
   max-height: 1170px;
 }
 
