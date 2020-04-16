@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/base/common.css">
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/src/a_basic_form2.css">
+  <title>form 구조이해하기</title>
+</head>
+<body>
+  <h1>html 구조이해하기</h1>
+  <hr />
+  <h2>form2</h2>
+  <div class="form_area">
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>입력</legend>
+        <h3>이전 부터 존재한 기능</h3>
+
+        <label for="inputText">입력할 내용을 작성하세요.</label>
+        <input type="text" id="inputText" name="inputText" value=""
+          placeholder="내용을 입력하세요."
+          required="required"/>
+        <br />
+
+        <label for="pwText">입력할 비밀번호 작성하세요.</label>
+        <input type="password" id="pwText" name="pwText" value=""/>
+        <br />
+
+        <input type="hidden" id="hdText" name="hdText" value=""/>
+        
+        <hr />
+        <h3>HTML5 이후에 존재하는 기능</h3>
+        
+        <label for="searchArea">검색할 내용을 입력하세요.</label>
+        <input type="search" id="searchArea" name="searchArea" value="" required />
+        <br />
+
+        <label for="mailArea">사용하는 이메일주소를 입력하세요.</label>
+        <input type="email" id="mailArea" name="mailArea" value="" required/>
+        <br />
+
+        <label for="urlArea">웹페이지 주소를 입력하세요.</label>
+        <input type="url" id="urlArea" name="urlArea" value="" required/>
+        <br />
+
+        <label for="telArea">생년월일을 입력하세요.</label>
+        <input type="tel" id="telArea" name="telArea" value="" required/>
+        
+        <br />
+        <!-- <input type="submit" value="전송"/> -->
+      </fieldset>
+      <!-- =============================== -->
+      <fieldset>
+        <legend>체크1</legend>
+        <p>다음 중 좋아하는 음식을 고르시오.</p>
+        <ul>
+          <li>
+            <input type="checkbox" id="sel_01" value="치킨" name="food"/>
+            <label for="sel_01">치킨</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sel_02" value="피자" name="food"/>
+            <label for="sel_02">피자</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sel_03" value="족발" name="food"/>
+            <label for="sel_03">족발</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sel_04" value="보쌈" name="food"/>
+            <label for="sel_04">보쌈</label>
+          </li>
+        </ul>
+        <!-- 
+          var food = ["치킨","피자","보쌈"];
+         -->
+      </fieldset>
+      <!-- =============================== -->
+
+      <fieldset>
+        <legend>체크2</legend>
+        <p>다음중 마음에 드는 사람을 고르시오</p>
+        <ul>
+          <li>
+            <input type="radio" id="rsel_01" name="radioSel" value="엄마"/>
+            <label for="rsel_01"><i>*</i>엄마</label>
+          </li>
+          <li>
+            <input type="radio" id="rsel_02" name="radioSel" value="아빠"/>
+            <label for="rsel_02">아빠</label>
+          </li>
+          <li>
+            <input type="radio" id="rsel_03" name="radioSel" value="할머니"/>
+            <label for="rsel_03">할머니</label>
+          </li>
+          <li>
+            <input type="radio" id="rsel_04" name="radioSel" value="할아버지"/>
+            <label for="rsel_04">할아버지</label>
+          </li>
+        </ul>
+      </fieldset>
+      <!-- =============================== -->
+      <fieldset>
+        <legend>버튼</legend>
+        <input type="submit" value="동의"/>
+        <input type="reset" value="취소"/>
+        <input type="image" value="동의" src="./img/android.png" alt="버튼이미지설명"/>
+
+        <label for="postlink">우편번호 검색</label>
+        <input type="button" id="postlink" value="우편번호"/>
+        <br />
+        <label for="dataFile">첨부자료</label>
+        <input type="file" id="dataFile" value=""/>
+      </fieldset>
+      <!-- =============================== -->
+      <fieldset>
+        <legend>멀티/복합</legend>
+        <p>여러줄의 내용을 입력하는 형태</p>
+        <label for="comment"></label>
+        <textarea name="" id="comment" cols="30" rows="10"></textarea>
+      </fieldset>
+      <!-- =============================== -->
+      <fieldset>
+        <legend>HTML5 추가기능</legend>
+
+      </fieldset>
+    </form>
+  </div>
+  
+</body>
+</html>
