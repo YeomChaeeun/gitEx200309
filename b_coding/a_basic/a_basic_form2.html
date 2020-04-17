@@ -118,13 +118,50 @@
       <fieldset>
         <legend>멀티/복합</legend>
         <p>여러줄의 내용을 입력하는 형태</p>
-        <label for="comment"></label>
-        <textarea name="" id="comment" cols="30" rows="10"></textarea>
+        <label for="comment">내용을 입력하세요.</label>
+        <textarea name="" id="comment" cols="20" rows="10"></textarea>
+        <br />
+
+        <p>상품의 옵션을 선택하세요.</p>
+        <label for="optionSelect">상품의 추가 옵션을 선택하세요</label>
+        <select name="optionSelect" id="optionSelect">
+          <option>옵션선택</option>
+          <optgroup label="렌즈 부분">
+            <option value="lenz">카메라렌즈</option>
+            <option value="cover">안경닦이</option>
+          </optgroup>
+          <optgroup label="케이스 부분">
+            <option value="case">안경케이스</option>
+          </optgroup>
+          <optgroup label="기타">
+            <option value="ticket">주차권</option>
+          </optgroup>
+        </select>
+        <br />
+
+        <button type="submit">확인</button>
+        <button type="reset">취소</button>
+        <button type="button">버튼 </button>
+
       </fieldset>
       <!-- =============================== -->
       <fieldset>
         <legend>HTML5 추가기능</legend>
-
+        <!-- email, tel, search, url -->
+        <input type="time">
+        <input type="week">
+        <input type="date">
+        <input type="month">
+        <input type="datetime-local">
+        <input type="color">
+        <input type="number" min="1" max="20" step="3">
+        <input type="range" min="1" max="10" step="2">
+        <hr />
+        <div class="area" oninput="x.value=parseInt(first.value) + parseInt(middle.value)">
+          <input type="range" value="" min="1" max="10" id="first" name="first"> +
+          <input type="number" value="50" id="middle" name="middle"> =
+          <output for="first middle" name="x"></output>
+        </div>
       </fieldset>
     </form>
   </div>

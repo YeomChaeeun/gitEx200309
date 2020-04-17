@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./css/base/common.css">
+  <link rel="stylesheet" href="./css/base/reset.css">
+  <link rel="stylesheet" href="./css/src/a_basic_form_ex.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="form_area">
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>여행지 정보</legend>
+        <label for="tripArea">여행지</label><br />
+        <input type="text" id="tripArea" name="tripArea" value=""/><br /><br />
+        <label for="date_01">체크인</label><br />
+        <input type="month" name="date_01" id="date_01">
+        <label for="daysel"></label>
+        <select name="daysel" id="daysel">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select><br />
+
+        <label for="date_02">체크아웃</label><br />
+        <input type="month" name="date_02" id="date_02">
+        <label for="daysel"></label>
+        <label for="daysel"></label>
+        <select name="daysel" id="daysel">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select><br />
+
+        
+        <input type="checkbox" name="check_01" id="check_01">
+        <label for="check_01">숙박일 미정</label><br /><br />
+
+        <label for="optionSel">인원</label><br />
+        <select name="optionSel" id="optionSel">
+          <option value="성인 1명">성인 1명</option>
+          <option value="성인 2명">성인 2명</option>
+          <option value="가족">가족</option>
+          <option value="단체">단체</option>
+        </select><br /><br />
+
+
+        <div class="select_box">
+          <legend>호텔등급</legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="sel_01" value="1" name="hotel"/>
+              <label for="sel_01">&#9733;</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_02" value="2" name="hotel"/>
+              <label for="sel_02">&#9733;&#9733;</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_03" value="3" name="hotel"/>
+              <label for="sel_03">&#9733;&#9733;&#9733;</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_04" value="4" name="hotel"/>
+              <label for="sel_04">&#9733;&#9733;&#9733;&#9733;</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_05" value="5" name="hotel"/>
+              <label for="sel_05">&#9733;&#9733;&#9733;&#9733;&#9733;</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="select_box">
+          <legend>가격 1박당</legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="sel_01" value="1" name="money"/>
+              <label for="sel_01">&#8361;0 - &#8361;49,999</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_02" value="2" name="money"/>
+              <label for="sel_02">&#8361;50,000 - &#8361;109,999</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_03" value="3" name="money"/>
+              <label for="sel_03">&#8361;110,000 - &#8361;159,999</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_04" value="4" name="money"/>
+              <label for="sel_04">&#8361;160,000 - &#8361;209,999</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_05" value="5" name="money"/>
+              <label for="sel_05">&#8361;210,000 부터</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="select_box">
+          <legend>숙소 유형</legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="sel_01" value="hotel" name="property"/>
+              <label for="sel_01">호텔</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_02" value="apartment" name="property"/>
+              <label for="sel_02">아파트</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_03" value="hostel" name="property"/>
+              <label for="sel_03">호스텔</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_04" value="motel" name="property"/>
+              <label for="sel_04">모텔</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_05" value="bedandbreakfast" name="property"/>
+              <label for="sel_05">베드&amp;브랙퍼스트</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="select_box">
+          <legend>고객평점</legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="sel_01" value="best" name="recommendgrade"/>
+              <label for="sel_01">최고 : 9</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_02" value="nice" name="recommendgrade"/>
+              <label for="sel_02">매우 좋음 : 8</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_03" value="good" name="recommendgrade"/>
+              <label for="sel_03">좋음 : 7</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_04" value="soso" name="recommendgrade"/>
+              <label for="sel_04">무난함 : 6</label>
+            </li>
+            <li>
+              <input type="checkbox" id="sel_05" value="nograde" name="recommendgrade"/>
+              <label for="sel_05">평점없음</label>
+            </li>
+          </ul>
+        </div>
+        <button type="submit">검색</button>
+
+
+      </fieldset>
+
+
+    </form>
+  </div>
+</body>
+</html>
