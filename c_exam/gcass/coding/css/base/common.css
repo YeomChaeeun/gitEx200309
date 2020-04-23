@@ -1,0 +1,17 @@
+/* common.css */
+
+
+.hidden,
+.hidden_wrap a > span {position: absolute; z-index:-1; 
+         width: 0; height: 0; display: block; overflow: hidden;
+         border:0; margin: 0; padding: 0;
+        }
+
+.full,
+.hidden_wrap a {
+  display: block; width: 100%; height: 100%;
+}
+      
+
+.clearfix:after,        
+.clearfix::after {content:" "; display: block; clear: both;}
