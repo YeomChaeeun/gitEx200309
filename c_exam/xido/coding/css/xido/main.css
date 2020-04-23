@@ -101,7 +101,7 @@ h2{
 	float: left; width: 378px; height: 560px;  
 	margin-right: 60px;
 	background-color: #fcfcfc;
-	border: 1px solid #333;
+  box-shadow: 0 0 1rem rgba(51, 51, 51, .7);
 }
 .recommand_cont > ul > li:last-child{
 	margin-right: 0;
@@ -188,13 +188,58 @@ h2{
 /* //#recommandBox ====================================================== */
 
 #graphicMainBox{
+	position: relative;
 	background-image: url(../../img/xido/img_02.jpg);
+	
 }
+#graphicMainBox h3{
+	font-size: 100px;
+	text-transform: uppercase;
+}
+#graphicMainBox p{
+	width: 600px; height: 120px;
+}
+
 .main_01{
-	width: 50%; height: auto;
+	width: auto; height: 100%;
+	float: left;
+	padding:300px 100px; box-sizing: border-box;
+	color: #f2f2f2;
+}
+.main_slide_btn{
+	width: 330px; height: 120px;
+	background-image: url(../../img/xido/1x/Asset\ 13.png);
+	background-repeat: no-repeat;
 }
 .main_02{
-	width: 860px; height: 600px;
+	position: absolute; z-index: 100; top : 0; right: 0;
+	width: 70%; height: 100%;
+	float: right;
+	padding-top:400px;
+	padding-left:500px; 
+	padding-right:100px;
+	box-sizing: border-box;
+	color: #333333;
+	background-image: url(../../img/xido/1x/Asset\ 12.png);
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+}
+.main_02 h3{
+	text-align: right;
+}
+.main_02 p{
+	float: right;
+}
+.line_bg{
+	position: absolute; z-index: 150; top: 250px; right: 70px;
+	width: 850px; height: 600px;
+	background-image: url(../../img/xido/1x/Asset\ 12_1.png);
+	background-repeat: no-repeat;
+}
+.main_btn_area{
+	float: right;
+	width: auto; height: auto;
+	padding: 20px; box-sizing: border-box;
 }
 /* .s_btn{} */
 
@@ -203,6 +248,7 @@ h2{
 #graphicSubBox{
 	background-color: #fcfcfc;
 }
+
 .program_area{
 	width: 100%; height: auto;
 }
@@ -260,7 +306,15 @@ h2{
 }
 
 #programMainBox{
+	position: relative;
 	background-image: url(../../img/xido/img_04.jpg);
+}
+#programMainBox h3{
+	font-size: 100px;
+	text-transform: uppercase;
+}
+#programMainBox p{
+	width: 600px; height: 120px;
 }
 #programSubBox{
 	background-color: #fcfcfc;
