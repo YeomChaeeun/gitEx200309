@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
 
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/fonts/gyeonggi/stylesheet.css">
 
 	<link rel="stylesheet" href="../css/base/reset.css">
 	<link rel="stylesheet" href="../css/base/common.css">
@@ -22,11 +24,186 @@
 <body>
 	<!-- layout -->
 	<div id="wrap">
+    <header id="headBox">
+      <div class="container">
+        <h1><span class="hidden">logo</span></h1>
+        <nav class="gnb">
+          <h2 class="hidden">네비게이션 영역</h2>
+          <ul>
+            <li>
 
-
-
-
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- //#headBox ===================================== -->
     
+    <section id="viewBox" class="fullsize">
+      <h2 class="hidden">메인광고영역</h2>
+      <div class="view_area">
+        <div class="sub_logo"></div>
+        <div class="view_title_img"></div>
+        <div class="view_text_area">
+          <p>project</p>
+          <p>( goodbye-jquery )</p>
+        </div>
+        <div class="more_btn01_w"></div>
+        <div class="view_indicator"></div>
+
+      </div>
+    </section>
+    <!-- //#viewBox ===================================== -->
+    
+    <article id="recommandBox" class="fullsize">
+      <h2>best &amp; new</h2>
+      <div class="recommand_area">
+        <h3 class="hidden">추천 리스트</h3>
+        <div class="recommand_cont">
+          <h4 class="hidden">추천 리스트 슬라이드 영역</h4>
+          <ul class="clearfix">
+            <li>
+              <div class="list_img"></div>
+              <div class="list_num"><span>01</span></div>
+              <div class="list_cont">
+                <dt>cocacla <div><span>B</span><span>N</span></div></dt>
+                <dd><ul>
+                  <li>제작자:</li>
+                  <li>수업과정기간:</li>
+                  <li>웹페이지 타입:</li>
+                </ul></dd>
+                <div class="list_btn_area">
+                  <button type="button" class="list_btn">개인사이트</button>
+                  <button type="button" class="list_btn">포폴페이지</button>
+                </div>
+              </div>
+            </li><li>
+              <div class="list_img"></div>
+              <div class="list_num"><span>02</span></div>
+              <div class="list_cont">
+                <dt>cocacla <div><span>N</span></div></dt>
+                <dd><ul>
+                  <li>제작자:</li>
+                  <li>수업과정기간:</li>
+                  <li>웹페이지 타입:</li>
+                </ul></dd>
+                <div class="list_btn_area">
+                  <button type="button" class="list_btn">포폴페이지</button>
+                </div>
+              </div>
+            </li><li>
+              <div class="list_img"></div>
+              <div class="list_num"><span>03</span></div>
+              <div class="list_cont">
+                <dt>cocacla <div><span>B</span></div></dt>
+                <dd><ul>
+                  <li>제작자:</li>
+                  <li>수업과정기간:</li>
+                  <li>웹페이지 타입:</li>
+                </ul></dd>
+                <div class="list_btn_area">
+                  <button type="button" class="list_btn">포폴페이지</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="slide_btn_area">
+          <h3 class="hidden">내용 슬라이드 버튼</h3>
+          <button type="button" class="next_btn"><span class="hidden">다음내용</span></button>
+          <button type="button" class="prev_btn"><span class="hidden">이전내용</span></button>
+        </div>
+
+        <div class="full_btn_area"><span>best &amp; new 더보기</span><button type="button" class="more_btn02"></button></div>
+      </div>
+    </article>
+    <!-- //#recommandBox ===================================== -->
+    
+    <article id="graphicMainBox" class="fullsize">
+      <h2>그래픽 메인 소개 영역</h2>
+      <div class="main_01">
+        <h3>graphic</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus maxime mollitia deserunt animi fuga ipsam dolor distinctio et quasi corrupti accusantium illo, ea reiciendis hic recusandae doloremque ab necessitatibus.</p>
+        <div class="s_btn"></div>
+      </div>
+      <div class="main_02">
+        <h4>photoshop</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatibus maxime mollitia deserunt animi fuga ipsam dolor distinctio et quasi corrupti accusantium illo, ea reiciendis hic recusandae doloremque ab necessitatibus.</p>
+        <div class="s_btn"></div>
+        <button type="button" class="more_btn01"></button>
+      </div>
+    </article>
+    <!-- //#graphicMainBox ===================================== -->
+    
+    <article id="graphicSubBox" class="fullsize">
+      <h2>graphic tip</h2>
+      <div class="program_area">
+        <div class="program_list">
+          <ul class="clearfix">
+            <li><button type="button" class="more_btn01"></button></li>
+            <li><button type="button" class="more_btn02"></button></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="full_btn_area">
+        <button type="button" class="more_btn02"></button>
+      </div>
+    </article>
+    <!-- //#graphicSubBox ===================================== -->
+    
+    <article id="bannerBox" class="fullsize">
+      <h2 class="hidden">중간 배너 광고 영역</h2>
+      <div class="sub_logo"></div>
+      <div class="banner_cont"></div>
+      <div class="banner_cont"></div>
+      <div class="banner_cont"></div>
+
+
+    </article>
+    <!-- //#banner ===================================== -->
+    
+    <article id="programMainBox" class="fullsize">
+      <h2>프로그램 메인 소개 영역</h2>
+    </article>
+    <!-- //#programMainBox ===================================== -->
+    
+    <article id="programSubBox" class="fullsize">
+      <h2>program tip</h2>
+      <div class="program_area">
+        <div class="program_list">
+          <ul class="clearfix">
+            <li><button type="button" class="more_btn01"></button></li>
+            <li><button  type="button"class="more_btn02"></button></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="full_btn_area">
+          <button type="button" class="more_btn02"></button>
+        </div>
+      </div>
+    </article>
+    <!-- //#programSubBox ===================================== -->
+    
+    <article id="infoBox" class="fullsize">
+      <h2>자격증 정보 영역</h2>
+    </article>
+    <!-- //#infoBox ===================================== -->
+    
+    <footer id="footBox">
+      <div class="container">
+        <h2 class="hidden">footer</h2>
+
+      </div>
+    </footer>
+    <!-- footBox ===================================== -->
+
   </div>
 
 	<!-- script -->
