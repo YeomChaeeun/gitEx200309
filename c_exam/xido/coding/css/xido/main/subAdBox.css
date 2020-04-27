@@ -1,0 +1,21 @@
+/* subAdBox.css */
+
+
+#subAdBox{
+  width: 100%; height: 320px;
+  padding: 30px 90px; box-sizing: border-box;
+  background-color: #f06;
+}
+#subAdBox > h2 {
+  float: left;
+  width: 244px; height: 260px;
+  background-color: #ccc; 
+}
+
+.ad_con{
+  float: left;
+  width: 425px; height: 100px;
+  background-color: #aa8;
+}
+/* //#subviewBox ============================================================= */
+

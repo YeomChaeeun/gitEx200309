@@ -1,0 +1,15 @@
+/* footBox.css */
+
+
+#footBox{
+  width: 100%; height: 60px;
+  text-align: center; color: #fff;
+  line-height: 60px;
+  background-color: #333;
+}
+#footBox > p{
+  width: 100%; height: auto;
+}
+
+
+/* //#footBox ============================================================= */

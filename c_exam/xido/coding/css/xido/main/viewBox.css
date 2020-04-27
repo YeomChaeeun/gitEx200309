@@ -1,0 +1,19 @@
+/* viewBox.css 
+
+ * 메인페이지 광고 영역
+*/
+
+
+
+#viewBox{
+  padding: 150px 90px 100px; box-sizing: border-box;
+  background-color: #ffffff;
+}
+#viewBox .full{
+  overflow: hidden;
+  background-color: #f06;
+  border-radius: 20px; 
+  
+}
+
+/* //#viewBox ============================================================= */
