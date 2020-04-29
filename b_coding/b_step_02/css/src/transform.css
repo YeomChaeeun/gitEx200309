@@ -1,0 +1,128 @@
+/* transform.css */
+
+h1{
+  /* width:100%; height:auto */
+  padding: 1rem; background-color: #0ad;
+  color: #fff; font-size: 3rem; text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sample{
+  width: 800px; height: auto;
+  margin: auto; margin-bottom: 2rem;
+  border: 2px solid #777;
+}
+
+.sample h2{
+  padding: 0.5rem; background-color: #fa0;
+  border-bottom: 2px solid #057;
+}
+
+.sample div{
+  width: 200px; height: 100px;
+  margin-bottom: 2rem;
+  padding: 0.2rem; box-sizing: border-box;
+  background-color: #acc;
+  font-size: 1.2rem; color: #333;
+  border: 1px solid #333;
+  border-radius: 1rem;
+}
+
+/* 
+ * transform
+    1. 이동 - translate
+    2. 크기변경 - scale
+    3. 회전 -  rotate
+    4. 기울이기 - skew
+  
+  * 단위
+    1. 이동 - px | rem | % ...
+    2. 크기변경 - 1 == 100%, 0.5 == 50%, 3 == 300%
+    3. 회전 - deg(각도)
+  
+  * 조건 : block요소, float기능이 되었을때에는 일부 동작하지 않는게 있음
+  * 축 : x | y | z - 대부분 x축을 기본으로 처리(회전은 z축 기본)
+  ------------------------------------------------------------------------
+  perspective:거리값;
+  transform-origin: 축의 기준위치를 변경;
+*/
+
+/* .translate{
+  perspective: 100px;
+} */
+
+.translate > div:nth-of-type(1){transform: translateX(200px);}
+.translate > div:nth-of-type(2){transform: translate(0, -150px);}
+.translate > div:nth-of-type(3){transform: translateZ(-150px)}
+.translate > div:nth-of-type(4){transform: translateX(-150px) translateY(50px);}
+
+/* =================================================== */
+
+.scale > div:nth-of-type(1){transform: scale(1.3);}
+.scale > div:nth-of-type(2){transform: scale(-1);}
+.scale > div:nth-of-type(3){transform: scaleX(1.5) scaleY(2);}
+.scale > div:nth-of-type(4){transform: scale(1.5, 0.5);}
+
+/* ================================================== */
+
+.rotate{
+  position: relative;
+  perspective: 500px; /* 원근법 거리 표시 */
+}
+.rotate > div:nth-of-type(1){transform: rotate(0); transition: all 300ms;}
+.rotate > div:nth-of-type(1):hover{transform: rotate(1150deg);}
+.rotate > div:nth-of-type(2){transform: rotateX(45deg);} 
+.rotate > div:nth-of-type(3){position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotateY(20deg);} 
+.rotate > div:nth-of-type(4){
+  transform-origin: 0 0;
+  transform: rotateY(40deg);
+}
+
+/* ================================================== */
+
+.skew > div:nth-of-type(1){
+  transform: skew(-45deg);
+}
+.skew > div:nth-of-type(2){
+  transform: skewY(45deg);
+}
+.skew > div:nth-of-type(3){
+  transform: skew(-15deg, 45deg);
+  transform-origin: 100% 100%;
+}
+.skew > div:nth-of-type(4){
+  background-color: orange;
+  padding: 2rem; box-sizing: border-box;
+  transform: skew(-60deg);
+}
+/* 글씨 기울어진걸 원래대로 돌림 */
+.skew > div:nth-of-type(4) > span{
+  display: block;
+  transform: skew(60deg);
+}
+
+/* =================================================== */
+
+.per_wrap{position:relative; perspective: 700px; height: 350px;}
+
+.per_wrap >div{position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;}
+
+.per_wrap > div:nth-of-type(1){transform: translateX(-500px) rotateY(50deg);}
+.per_wrap > div:nth-of-type(2){transform: translateX(-250px) rotateY(40deg);}
+.per_wrap > div:nth-of-type(3){transform: translateX(50px) rotateY(-10deg);}
+.per_wrap > div:nth-of-type(4){transform: translateX(300px) rotateY(-50deg);}
+.per_wrap > div{transition: all 1500ms;}
+.per_wrap:hover > div:nth-of-type(1){transform: translateX(-500px) rotateY(480deg);}
+.per_wrap:hover > div:nth-of-type(2){transform: translateX(-250px) rotateY(480deg);}
+.per_wrap:hover > div:nth-of-type(3){transform: translateX(50px) rotateY(-480deg);}
+.per_wrap:hover > div:nth-of-type(4){transform: translateX(300px) rotateY(-540deg);}
+
+
+/* =================================================== */
+
+.pers div:nth-of-type(1){transform:perspective(500px) rotateY(45deg);}
+.pers div{transition: all 1000ms;}
+.pers div:nth-of-type(2):hover{transform:perspective(800px) rotateX(90deg) translate(400px);}
+.pers div:nth-of-type(3):hover{transform:translate(400px) rotateX(60deg);}
+.pers div:nth-of-type(4):hover{transform:rotate(60deg) translate(400px);}
+
