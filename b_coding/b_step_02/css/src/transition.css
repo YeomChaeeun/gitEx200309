@@ -142,7 +142,7 @@ h1{ text-align: center;}
 .exam:hover li:nth-child(1){
   width: 100%; height: 20px;
   background-color: #a56;
-  transition-timing-function: ease;  
+  transition-timing-function: linear;  
   transition-delay: 0ms;
 }
 
@@ -154,7 +154,7 @@ h1{ text-align: center;}
 .exam:hover li:nth-child(2){
   width: 20px; height: 100%;
   background-color: #a56;
-  transition-timing-function: ease;  
+  transition-timing-function: linear;  
   transition-delay: 300ms;
 }
 
@@ -166,7 +166,7 @@ h1{ text-align: center;}
 .exam:hover li:nth-child(3){
   width: 100%; height: 20px;
   background-color: #a56;
-  transition-timing-function: ease;  
+  transition-timing-function: linear;  
   transition-delay: 600ms;
 }
 
@@ -178,7 +178,7 @@ h1{ text-align: center;}
 .exam:hover li:nth-child(4){
   width: 20px; height: 100%;
   background-color: #a56;
-  transition-timing-function: ease;  
+  transition-timing-function: linear;  
   transition-delay: 900ms;
 }
 
@@ -224,3 +224,27 @@ h1{ text-align: center;}
 .test_01 a:hover .line_02{height: 100%; transition-delay: 500ms;}
 .test_01 a:hover .line_03{width: 100%; transition-delay: 1000ms;}
 .test_01 a:hover .line_04{height: 100%; transition-delay: 1500ms;}
+
+
+.test_01 a:before{
+  content: " "; display: block;
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(255, 50, 200, 0.7); 
+}
+
+.test_01 a{
+  background-image: url(../../img/img_02.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #fff;
+}
+
+.test_01 a{transition: all 500ms ease;}
+.test_01 a:hover:before{background-color: rgba(255, 50, 200, 0);}
+.test_01 a:hover{background-size: 130% auto;}
+
+
+
+
