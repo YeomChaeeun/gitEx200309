@@ -18,6 +18,7 @@
 .menu a:hover,
 .menu a:focus{font-weight: bold;  background-color: #fcfcfc; color: #333;}
 .menu:hover dd{display: block; }
+/* .menu li:hover dd{display: block;} */
 
 /* // #headBox ============================================= */
 
