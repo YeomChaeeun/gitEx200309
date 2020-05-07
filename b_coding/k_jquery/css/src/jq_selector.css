@@ -1,0 +1,22 @@
+/* jq_selector.css */
+
+/* 
+ * jquery 코드 참고 사이트
+ * http://code.jquery.com/ 
+ *
+ * jQuery 3.x
+ *  ie 포함 - uncomperssed, minified(용량줄인버전)
+ *  ie 미포함 - slim, slim minified(용량줄인버전)
+ * jQuery 2.x - ie 미포함
+ * jQuery 1.x - ie 포함
+ * jquery migrate - 이전 버전 모두 포함
+ * 
+ * jQuery 3.x ie포함 minified 사용할것
+ * 불러오는 순서 js -> ui.js
+*/
+
+
+
+
+
+
