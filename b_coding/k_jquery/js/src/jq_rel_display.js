@@ -24,6 +24,7 @@
     conLi.eq(i).siblings().stop().hide();
     conLi.eq(i).stop().fadeIn();
 
+    //추가코드 : 12~14, 28~30
     var conCol = conLi.eq(i).css('backgroundColor');
     $(this).siblings().css({'bacogroundColor':liBg});
     $(this).css({'backgroundColor':conCol});
