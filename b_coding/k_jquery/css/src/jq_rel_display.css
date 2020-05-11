@@ -72,3 +72,51 @@ h2{
   font-size: 2rem; color: #fff;
   text-shadow: 0.1rem 0.1rem 0.1rem #333;
 }
+/* ============================================================== */
+.test_tab{width: 100%; height: 350px;}
+.text_tab ul{
+  width: 100%; height: auto;
+}
+.text_tab li{
+  width: 100%; height: auto;
+}
+.test_tab dl{
+  padding: 0.5rem; box-sizing: border-box;
+}
+.test_tab dt{
+  width: 100%; height: 50px; background-color: #999;
+  border-bottom: 1px solid #333; box-sizing: border-box;
+}
+.test_tab a{display:block; width: 100%; height: 100%;}
+.test_tab dd{
+  display: none;
+  width: 100%; height: 100px;
+  margin-top: 0.5rem; 
+  border: 1px solid #333;
+  background-color: #fff; 
+}
+/* ============================================================= */
+.accoordion_menu{
+  width: 100%; height: auto;
+}
+.acc_style_01{
+  width: 100%; height: auto;
+  background-color: #fa0;
+  padding: 0.5rem; box-sizing: border-box;
+}
+
+.acc_style_01 dl{
+  width: 100%; height: auto;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+.acc_style_01 dt{
+  width: 100%; height: 50px;
+  border-bottom: 1px solid #75f;
+}
+.acc_style_01 dd{
+  display: none;
+  width: 100%; height: 200px;
+  padding: 1rem; box-sizing: border-box;
+  background-color: #fafafa;
+}
