@@ -96,8 +96,8 @@ h2{
   background-color: #fff; 
 }
 /* ============================================================= */
-.accoordion_menu{
-  width: 100%; height: auto;
+.accordion_menu{
+  width: 100%; height: 600px;
 }
 .acc_style_01{
   width: 100%; height: auto;
@@ -114,9 +114,116 @@ h2{
   width: 100%; height: 50px;
   border-bottom: 1px solid #75f;
 }
+
+.acc_style_01 button {
+	width: 100%; height: 100%;
+}
+ 
 .acc_style_01 dd{
   display: none;
   width: 100%; height: 200px;
   padding: 1rem; box-sizing: border-box;
   background-color: #fafafa;
 }
+/* ============================================================== */
+.tabtab{width: 100%; height: auto; padding: 1rem; box-sizing: border-box;}
+.style_02{
+  position: relative;
+  width: 100%; height: 300px;
+}
+.style_02 dl{
+  width: 100%; height: auto;
+}
+.style_02 dt{
+  float: left;
+  width: 20%; height: 50px;
+  border-right: 1px solid #333;
+  box-sizing: border-box;
+  background-color: #dad;
+}
+.style_02 button {
+  width: 100%; height: 100%;
+}
+.style_02 dt:last-of-type{
+  border-right: 0;
+}
+.style_02 dd{
+  display: none;
+  position: absolute; top: 50px; left: 0;
+  width: 100%; height: 200px;
+  background-color: #777;
+  border-bottom: 1px solid #333;
+}
+.style_02 dd:nth-of-type(1){background-color: #75f;}
+.style_02 dd:nth-of-type(2){background-color: #f57;}
+.style_02 dd:nth-of-type(3){background-color: #7f5;}
+.style_02 dd:nth-of-type(4){background-color: #5ff;}
+.style_02 dd:nth-of-type(5){background-color: #fa0;}
+
+/* ============================================================== */
+.tab_more{
+  width: 100%; height: auto; 
+  padding: 1rem; box-sizing: border-box; margin-bottom: 10rem;
+}
+.tab_mre h2{width: 100%; border-bottom: 1px solid #000;}
+
+.more_style{
+  width: 100%; height: 500px;
+  border: 2px solid #055;
+  box-sizing: border-box;
+}
+
+.more_style dl{
+  position: relative;
+  width: 100%; height: 100%;
+}
+.more_style dt{
+  float: left;
+  width: 24%; height: 40px;
+  margin-right: 1%;
+}
+.more_style button{
+  width: 100%; height: 100%; background-color: #ccc;
+}
+.more_style button:hover{
+  width: 100%; height: 100%; background-color: #333; color: #fff;
+}
+.more_style dt.action{
+  background-color: #555;
+  color: #fff;
+}
+.more_style dt.action button{
+  background-color: transparent;
+  color: inherit;
+}
+.more_style dd{
+  display: none;
+  position: absolute; left: 0; bottom: 0;
+  width: 100%; height: 454px;
+  padding: 1rem; box-sizing: border-box;
+  background-color: #aca;
+}
+
+.more_style dd:first-of-type{display:block;}
+/* ============================================================== */
+
+.menu{width: 100%; height: 300px; padding: 1rem; box-sizing: border-box;}
+.menu_style{width: 100%; height: auto;}
+
+.menu_style ul{width: 100%; height: auto; line-height: 50px; }
+.menu_style li{
+  float:left; 
+  width: 200px; height: 50px;  
+  margin-right: 5px;
+  background-color: #999; }
+
+.menu_style dt{display:block; width: 100%; height: 100%;}
+.menu_style button{width: 100%; height: 100%;}
+.menu_style dd{display:none; width: 100%; height: auto;}
+.menu_style dd li{
+  height: 40px; 
+  padding-left: 10px; box-sizing: border-box;
+  line-height: 40px;
+  background-color: #bbb; }
+ 
+
