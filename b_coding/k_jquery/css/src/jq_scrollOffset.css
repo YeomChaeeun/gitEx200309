@@ -1,0 +1,121 @@
+/* jq_scrollOffset.css */
+
+#wrap{
+  width: 100%; height: 3500px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+#headBox{
+  position: fixed; top: 100px; left: 50%; z-index: 1000;
+  transform: translateX(-50%);
+  width: inherit; height: 60px;
+  padding: 20px; box-sizing: border-box;
+  background-color: #acf;
+}
+
+#viewBox{
+  width: 100%; height: 800px;
+  background-color: #fca;
+}
+
+/* ============================================== */
+#viewBox{
+  width: 100%; height: 100vh;
+  background-color: #fca; 
+}
+#viewBox > h2{
+  position: absolute;
+  left: 10%; top: 40%; z-index: 100;
+  font-size: 5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
+#conBox{
+  width: 100%; height: 800px;
+  background-color: #fafafa;
+}
+.video_bg{
+  overflow: hidden;
+  position: relative;
+  width: 100%; height: 100%;
+}
+.video_bg > .video{
+  /* full size 만들기 */
+  position: absolute; top: 50%; left: 50%;
+  width: auto; min-width: 100%;;
+  height: auto; min-height: 100%;
+  border: 0;
+  transform: translate(-50%, -50%);
+}
+#conBox{
+  position: relative;
+  width: 100%; height: auto;
+  padding-top: 300px; box-sizing: border-box;
+  background-color: #fafafa;
+}
+#conBox:after{
+  content: "";
+  display: block; clear: both;
+}
+
+.title_bg{
+  position: absolute;
+  top: 500px;
+  width: 60%; min-width: 400px; max-width: 800px;
+  height: 90px;
+  margin-left: 5%;
+  background-color: #cb8;
+}
+.title_bg > h2{
+  position: absolute; top: 100px;
+  font-size: 4rem;
+  color: #333;
+  width: 100%; height: 100%;
+  margin-left: 50%;
+}
+
+.con_img_bg{
+  float: right;
+  width: 60%; height: 1000px;
+  padding: 200px; box-sizing: border-box; 
+  background-color: #ba9;
+}
+.con_img{
+  width: 100%; height: 100%;
+  background-color: #0af;
+  background-image: url('../../img/furniture_02.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 130% auto; 
+}
+
+
+
+/* ============================================== */
+.test_wrap{
+  position: relative;
+  width: 100%; height: 800px;
+  background-color: #ddd;
+  padding: 1rem; box-sizing: border-box;
+}
+
+.sm_box{
+  position:absolute; top: 1rem; left: 1rem; z-index: 10;
+  width: 50%; height: 100px; 
+  background-color: #faa;
+}
+.tt_box{
+  position:absolute; top: 1rem; z-index: 15;
+  width: 100%; height: 100px; 
+  font-size: 4rem; text-align: center;
+  background-color: transparent;
+}
+.lg_box{
+  position:absolute; top: 1rem; right: 1rem; z-index: 5;
+  width:60%; height: 95%; 
+  background-color: tomato;
+}
+ 
+
