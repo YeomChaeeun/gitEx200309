@@ -1,0 +1,115 @@
+/* test_02.css */
+
+#wrap{
+  width: 100%; height: 800px;
+  background-color: #ddd;
+}
+#headBox{
+  width: 90%; min-width: 960px; max-width: 1850px;
+  height: 90px; 
+  margin: auto;
+  padding: 10px; box-sizing: border-box;
+  font-size: 1.3rem;
+  background-color: #333;
+}
+h1{
+  float: left;
+  width: 200px; height: 100%;
+  background-color: #fff;
+}
+h1 a{
+  display: block;
+  width: 100%; height: 100%;
+}
+#navBox{
+  float:right;
+  width: 80%; height: 100%;
+  padding: 10px; box-sizing: border-box;
+}
+#navBox a{
+  display: block;
+  width: 100%; height: 100%;
+}
+
+.gnb{
+  float:left; 
+  width: 80%; height: auto; 
+}
+.gnb>ul{width: 100%; height: 100%;}
+.gnb>ul>li{
+  float: left;
+  width: 25%; height: 50px; 
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+  line-height: 50px;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #333;
+}
+.gnb>ul>li:hover{
+  color: #fa0;
+}
+.gnb>ul>li:last-child{border-right: 0;}
+
+.gnb dt{
+  width: 100%; height: 50px;  text-align: center;
+}
+.gnb dt.action{
+  color: #fa0;
+
+}
+.gnb dd{
+  display: none;
+  width: 100%; height: 300px; 
+  padding: 20px; box-sizing: border-box;
+  margin-top: 20px;
+  color: #000; 
+  text-transform: uppercase;
+  background-color: #fafafa;
+}
+#navBox dd a{
+  padding-left: 20px; box-sizing: border-box;
+}
+#navBox dd a.icon_add{
+  background-image: url('../../img/a_option.png');
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 0 50%;
+  color: red;
+}
+
+
+
+.lang_menu{
+  float:right; 
+  width: 15%; height: auto; 
+}
+.lang_menu>ul>li{
+  float: left;
+  width: 50%; height: 50px; 
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 50px;
+}
+.lang_menu>ul>li:first-child{
+  border-right: 1px solid #fff; 
+  box-sizing: border-box;
+}
+.lang_menu dt{
+  width: 100%; height: 100%;
+ }
+.lang_menu dd{
+  display: none;
+  width: 200%; height: 100%; 
+  padding: 20px; box-sizing: border-box;
+  margin-top: 20px;
+  color: #000; 
+  text-align: left;
+  text-transform: capitalize;
+  background-color: #fafafa;
+}
+.lang_menu li:hover dd,
+.lang_menu li:focus dd{
+  display: block;
+}
