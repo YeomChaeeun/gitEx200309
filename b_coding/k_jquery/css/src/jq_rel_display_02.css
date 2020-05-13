@@ -52,6 +52,7 @@
  .lang_member li{
    display: none;
    width: 100%; height: 40px;
+   background-color:rgba(255,255,255,0.8);
  }
  .lang_member li.action{
    display: block;
@@ -59,6 +60,7 @@
  .lang_member li:first-child{
   display: block;
   height:70px; line-height: 70px;
+  background-color: transparent;
  }
  .lang_member li:first-child a{
    height:100%;
@@ -94,24 +96,44 @@
    padding:5px; box-sizing: border-box;
    line-height:70px;
  }
- .gnb_navi dd{
-   width: 100%; height:auto;
- }
- .gnb_navi dd > ul{
-   width:100%; height:auto;
-   padding-top:15px;
-   background-color:rgba(255,255,255,0.8);
- }
- 
- .gnb_navi dd > li{
-   width:100%; height:40px;
-   line-height:35px;
- }
- 
  .gnb_navi dt a {
+  position: relative;
    height:70px;
  }
- 
+
+  .gnb_navi dt.action a {color: #f00; font-weight: bold;}
+  /* .gnb_navi dt a:focus:before {content:;} */
+  .gnb_navi dt a:after {
+    content: " "; display: block; 
+    position: absolute; top:70%; left: 0; right: 0;
+    width: 0; height: 2px;
+    margin: auto;
+    background-color: #f00;
+    transition: all 300ms ease;
+  }
+  .gnb_navi dt.action a:after {
+    width: 90%;
+  }
+
+  .gnb_navi dd{
+    width: 100%; height:auto;
+  }
+  .gnb_navi dd > ul{
+    width:100%; height:auto;
+    padding-top:15px;
+    background-color:rgba(255,255,255,0.8);
+  }
+  
+  .gnb_navi dd li{
+    width:100%; height:40px;
+    line-height:35px;
+  }
+  .gnb_navi dd li.action{
+    color: #f00;
+    font-weight: bold;
+    background-color: rgb(210,233,243);
+  }
+
  .gnb_navi a{
    display: block;
    width: 100%; height:35px;

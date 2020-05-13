@@ -34,12 +34,17 @@
 
   // ---------------------------------------------
   var gnbNav = $('.gnb_navi');
+  var gnbDl = gnbNav.find('dl');
   var gnbTitle = gnbNav.find('dt');
   var gnbTitleLink = gnbTitle.children('a');
   var gnbContent = gnbNav.find('dd');
+  // var gnbNavLink = gnbNav.find('a');
+  var gnbConLink = gnbContent.find('a');
 
   gnbContent.hide();
 
+  // part 별로 메뉴 나오게 슬라이드
+  /*
   gnbTitleLink.on('mouseenter focus',function(){
     $(this).parentsUntil('ul').siblings('li').find('dd').stop().slideUp();
     $(this).parent('dt').next('dd').stop().slideDown();
@@ -47,10 +52,68 @@
   gnbNav.on('mouseleave',function(){
     gnbContent.stop().slideUp();
   });
-  gnbContent.eq(-1).find('a').eq(-1).on('blur',function(){
+  gnbContent.find('a').eq(-1).on('blur',function(){
     gnbContent.stop().slideUp();
   });
+  */
 
+ gnbDl.on('mouseenter',function(){
+    gnbContent.stop().slideDown();
+    gnbTitle.removeClass('action');
+    $(this).children('dt').addClass('action');
+  });
+  gnbNav.on('mouseleave',function(){
+    gnbContent.stop().slideUp();
+    gnbTitle.removeClass('action');
+  });
+  gnbTitleLink.on('focus',function(){
+    gnbContent.stop().slideDown();
+    gnbTitle.removeClass('action');
+    $(this).parent('dt').addClass('action');
+  });
+  gnbContent.find('a').eq(-1).on('blur',function(){
+    gnbContent.stop().slideUp();
+  });
+  gnbConLink.on('focus',function(){
+    gnbTitle.removeClass('action');
+    $(this).parents('dd').prev('dt').addClass('action');
+    
+    gnbContent.find('li').removeClass('action');
+    $(this).parent('li').addClass('action');
+
+  });
+
+  /*
+  gnbTitleLink.on('focus',function(){
+    gnbContent.stop().slideDown(function(){
+      gnbNavLink.on('keyup',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+
+        console.log(e.keyCode);
+        // 37, 38, 39, 40
+        // var ekey = e.keyCode;
+        // switch(ekey){
+        //   case 37:
+        //     $(this).parentsUntil('li').parentsUntil('ul').prev('li').find('dt').find('a').focus();
+        //     break;
+        //   case 38:
+        //     $(this).parent('li').prev('li').find('a').focus();
+        //     break;
+        //   case 39:
+        //     $(this).parent('li').next('li').find('a').focus();
+        //     break;
+        //   case 40:
+        //     $(this).parentsUntil('li').parentsUntil('ul').next('li').find('dt').find('a').focus();
+        //     break;
+        //   case 27:
+        //     gnbContent.stop().slideUp();
+        //     break;
+        // }
+      });
+    });
+  });
+  */
 
   // ===========================================================================
 
