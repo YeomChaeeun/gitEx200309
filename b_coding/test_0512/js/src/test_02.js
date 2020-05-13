@@ -13,7 +13,7 @@
 
   var langMenu = $('.lang_menu');
 
-  gnbDt.find('a').on('click',function(e){
+  gnbDt.find('a').on('click mouseover',function(e){
     e.preventDefault();
 
     myThis = $(this).parent('dt');
@@ -39,15 +39,15 @@
     gnbLi.eq(pi).find('dd').find('li').children('a').on('click',function(e){
       e.preventDefault();
   
-      myThis = $(this).parent('li');
-      var i = myThis.index();
+      myCThis = $(this).parent('li');
+      var ci = myCThis.index();
       // console.log(i);
       
-      var thisAview = myThis.eq(i).find('a').hasClass('icon_add');
+      var thisAview = myCThis.eq(ci).find('a').hasClass('icon_add');
 
       if(thisAview == false){
         gnbLi.find('dd').find('a').removeClass('icon_add');
-        gnbLi.eq(pi).find('dd').find('li').eq(i).children('a').addClass('icon_add');
+        gnbLi.eq(pi).find('dd').find('li').eq(ci).children('a').addClass('icon_add');
       }else{
         gnbDd.removeClass('icon_add');
       }
