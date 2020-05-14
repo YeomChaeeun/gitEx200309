@@ -95,6 +95,8 @@
    width:100%; height:70px;
    padding:5px; box-sizing: border-box;
    line-height:70px;
+   /* border-right: 2px solid #333;
+   box-sizing: border-box; */
  }
  .gnb_navi dt a {
   position: relative;

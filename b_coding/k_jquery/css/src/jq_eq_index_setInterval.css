@@ -1,0 +1,108 @@
+/* jq_eq_index_setInterval.css */
+
+#wrap{
+  width: 800px; height: auto;
+  margin: auto;
+}
+
+h1{
+  width: 100%; height: 50px;
+  margin-bottom: 20px;
+  text-align: center; font-size: 2rem;
+}
+
+#viewBox{
+  position: relative;
+  width: 100%; height: 31.25rem;
+}
+h2{
+  width: 100%; height: 2.5rem;
+  margin-bottom: 0.25rem;
+  background-color: #777;
+  color: #fff; font-size: 1.5rem;
+}
+.indicator{
+  position: absolute; left: 12.5rem; bottom: 1.25rem;
+  width: 250px; height: 40px;
+  padding: 0.5rem; box-sizing: border-box;
+  border-radius: 1.25rem;
+  background-color: #aaa;
+}
+.indicator ul{
+  width: 100%; height: 100%;
+}
+.indicator li{
+  float: left;
+  margin-right: 1.5rem;
+  width: 24px; height: 24px;
+}
+.indicator li:last-child{
+  margin-right: 0;
+}
+.indicator a{
+  display: block;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  border-radius: 100%;
+  /* border-radius: 24px; */
+  background-color: rgba(255, 255, 255, 0.6);
+
+}
+.indicator a:focus{
+  outline: 0;
+  /* width: 50px; */
+  background-color: rgba(255, 255, 255, 1);
+  border: 3px solid #f06;
+
+}
+
+.indi_narr{
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(40%, -50%);
+  width: 200px; height: auto;
+  background-color: #fcc;
+}
+
+.indi_narr ul{
+  width: 100%; height: auto;
+
+}
+.indi_narr li{
+  width: 100%;  height: 60px;
+  background-color: #acc;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.indi_narr li:first-child{
+  /* display: none; */
+  width: 0; height: 0; overflow: hidden;
+  margin-bottom: 0;
+}
+.indi_narr li:last-child{
+  margin-bottom: 0;
+}
+
+
+.add_view{
+  width: 100%; height: 100%;
+  background-color: #acf;
+  overflow: hidden;
+}
+.add_view_wrap{
+  width: 500%; height: 100%;
+  /* margin-left: -100%; */
+  /* position: relative; left: -200%; */
+  /* transform: translateX(-20%); */
+}
+.add_view_wrap>div{
+  float: left;
+  width: 20%; height: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.add_01{background-color: #5fa;}
+.add_02{background-color: #5ef;}
+.add_03{background-color: #fcd;}
+.add_04{background-color: #5ba;}
+.add_05{background-color: #5af;}
