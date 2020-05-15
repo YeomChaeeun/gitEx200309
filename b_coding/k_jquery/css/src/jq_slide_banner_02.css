@@ -1,0 +1,129 @@
+/* jq_slide_banner_02.css */
+
+
+#wrap {
+	width:100%; height:auto;
+	margin:auto;
+}
+
+h1{
+	width:100%; height:3.125rem;
+	margin-bottom:1.25rem;
+	text-align: center;	font-size:2rem; 
+}
+
+#con_01{
+  width: 100%; height: 100%;
+	background-color: #ddd;
+}
+
+#miniProduct{
+	position: relative;
+	width: 600px; height: 500px; margin: auto;
+	padding-bottom: 50px; box-sizing: border-box;
+  margin-top: 50px;
+}
+
+.indicator{
+	position: absolute; left: 50%; bottom:1rem;
+  width:auto; height:auto; 
+  display: inline-block;
+}
+
+.indicator ul {
+	width: auto; height: auto; 
+}
+
+.indicator li {
+	float: left;
+  width: 1.5rem; height: 1.5rem;
+  margin-left: 1rem;
+}
+
+.indicator li > a{
+  display: block; width: 100%; height: 100%;
+  background-color: #ccc;
+  border-radius: 100%;
+}
+
+.indicator li > a:focus{
+  background-color: #333;
+}
+
+
+.product{
+	width: 100%; height: 100%;
+  background-color:#fff;
+  /* overflow: hidden; */
+}
+.product ul{
+	width: 300%; height: 100%;
+}
+.product li{
+	float: left;
+  /* width: 33.333333%; */
+  width: calc(100% / 3);
+  height: 100%;
+  padding: 2rem; box-sizing: border-box;
+}
+.product li:nth-child(1){background-color: #149;}
+.product li:nth-child(2){background-color: #419;}
+.product li:nth-child(3){background-color: #941;} 
+
+
+/* 
+#miniProduct{
+	position: relative;
+	width: 600px; height: 500px; margin: auto;
+	padding-bottom: 50px; box-sizing: border-box;
+	margin-top: 50px;
+	background-color: #ddd;
+}
+
+.indicator{
+	position: absolute; left: 50%; bottom:1.25rem;
+	transform: translateX(-50%);
+	width:auto; height:2.5rem; 
+	padding:0.5rem; box-sizing: border-box;
+	border-radius:1.25rem;
+}
+.indicator ul {
+	width: auto; height: 100%; 
+}
+
+.indicator li {
+	float: left;
+	margin-right:1.5rem;
+	width: 24px; height: 24px;
+}
+
+.indicator li:last-child{
+	margin-right: 0;  
+	width: 100%; height: 100%; 
+	box-sizing: border-box;
+	border-radius:100%;
+	background-color: rgba(155,155,155,0.9);
+}
+.indicator li.action a{
+	outline:0;
+	background-color: rgba(0,0,0,0.9);
+}
+
+.product{
+	width: 100%; height: 100%;
+	overflow: hidden;
+	font-size:2rem;
+	text-align: left;
+	color:#fff; font-weight: bold;
+}
+.product ul{
+	width: 300%; height: 400px;
+}
+.product li{
+	float: left;
+	width: 33.333333%; height: 100%;
+}
+.product li:nth-child(1){background-color: #149;}
+.product li:nth-child(2){background-color: #419;}
+.product li:nth-child(3){background-color: #941;} 
+*/
