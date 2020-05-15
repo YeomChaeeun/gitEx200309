@@ -107,7 +107,7 @@
     clearInterval(myInterval);
   });
 
-  miniP2.on('mouseenter',function(){
+  miniP2.on('mouseleave',function(){
     MvSlide();
   });
 
