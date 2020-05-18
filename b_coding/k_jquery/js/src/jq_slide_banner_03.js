@@ -54,35 +54,47 @@
   //               .pr_05{background-image: url('../../img/cake/2416_small_img');} ";
   
   // styleEl.text(styleT);
-  
-  
-  // next, prev 각 버튼 클릭시
-  //  miniBtnNext.on('click', function(e){
-  //    e.preventDefault();
-  //    if(check){
-  //      check = false;
-  //      n += 1;
-  //      productUl.stop().animate({left: -n * 100 + '%'}, 300, function(){
-  //        if(n >= proLiLen - 2){	n = -1;	 }
-  //        productUl.css({left: -n * 100 + '%'});
-  //        check = true;
-  //       });
-  //     }
-  //  });
-  //  miniBtnPrev.on('click', function(e){
-  //   e.preventDefault();
-  //   if(check){
-  //     check = false;
-  //     n -= 1;
-  //     productUl.stop().animate({left: -n * 100 + '%'}, 300, function(){
-  //       if(n <= -1){	n = proLiLen - 2;	 }
-  //       productUl.css({left: -n * 100 + '%'});
-  //       check = true;
-  //      });
-  //    }
-  // });
+  var miniProIndiLi = miniProIndiUl.find('li').children('a');
+  miniProIndiUl.find('li').eq(0).addClass('action');
 
-  /*
+  miniProIndiLi.on('click',function(e){
+    e.preventDefault();
+    var thisParent = $(this).parent();
+    n = thisParent.index();
+
+    thisParent.addClass('action');
+    thisParent.siblings().removeClass('action');
+
+    productUl.stop().animate({left: -n * 100 + '%'}, timed);
+  });
+  
+//next, prev 각 버튼 클릭시
+//  miniBtnNext.on('click', function(e){
+//    e.preventDefault();
+//    if(check){
+//      check = false;
+//      n += 1;
+//      productUl.stop().animate({left: -n * 100 + '%'}, 300, function(){
+//        if(n >= proLiLen - 2){	n = -1;	 }
+//        productUl.css({left: -n * 100 + '%'});
+//        check = true;
+//       });
+//     }
+//  });
+//  miniBtnPrev.on('click', function(e){
+//   e.preventDefault();
+//   if(check){
+//     check = false;
+//     n -= 1;
+//     productUl.stop().animate({left: -n * 100 + '%'}, 300, function(){
+//       if(n <= -1){	n = proLiLen - 2;	 }
+//       productUl.css({left: -n * 100 + '%'});
+//       check = true;
+//      });
+//    }
+// });
+
+  
   var prSpan = productLi.find('span');
   // prSpan.css({bottom:-100+'%'});
 
@@ -96,30 +108,37 @@
     if(thisBtn === miniBtnNext[0] && check){
       check = false;
       n += 1;
+      // miniProIndiUl.find('li').eq(n).addClass('action');
+      // miniProIndiUl.find('li').eq(n).siblings().removeClass('action');
+      
       productUl.stop().animate({left: -n * 100 + '%'}, timed, function(){
         if(n >= proLiLen - 2){	n = -1;	 }
         prSpan.css({bottom:0});
         productUl.css({left: -n * 100 + '%'});
         check = true;
        });
-    } 
-    // prev 버튼 클릭시  +
-    else if(check){
+    }else if(check){ // prev 버튼 클릭시
       check = false;
       n -= 1;
+      // miniProIndiUl.find('li').eq(n).addClass('action');
+      // miniProIndiUl.find('li').eq(n).siblings().removeClass('action');
+
       productUl.stop().animate({left: -n * 100 + '%'}, timed, function(){
         if(n <= -1){	n = proLiLen - 2;	 }
+        prSpan.css({bottom:0});
         productUl.css({left: -n * 100 + '%'});
         check = true;
        });
     }
+    miniProIndiUl.find('li').eq(n).addClass('action');
+    miniProIndiUl.find('li').eq(n).siblings().removeClass('action');
   });
   
   // 자동 움직임
   var mvImg;
   var mvSlideGo = function(){
     mvImg = setInterval(function(){
-      miniBtnNext.trigger('click');
+      miniBtn.trigger('click');
     }, timed*4);
   };
   
@@ -131,7 +150,7 @@
   var GoFn = function(){mvSlideGo()};
 
   miniProduct.on({'mouseenter':ClearFn, 'mouseleave':GoFn});
-  */
+  
 
   // miniProduct.css('color','#fff');
 
