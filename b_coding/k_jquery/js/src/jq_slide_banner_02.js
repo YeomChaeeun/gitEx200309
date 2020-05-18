@@ -11,7 +11,8 @@
 	var timed = 700;
 
 	miniPlist.css({'overflow':'hidden'});
-	miniIndi.hide();
+  miniIndi.hide();
+  
   /*
     miniIndiLi.on('click', function(e){
       e.preventDefault();
