@@ -16,7 +16,7 @@
     var selEl = $(selHref).offset().top;
     scrollOffset[i]=selEl;
   }
-  // console.log(scrollOffset);
+  console.log(scrollOffset);
   gnbLi.eq(0).addClass('action');
   gnbLi.eq(0).siblings().removeClass('action');    
 
