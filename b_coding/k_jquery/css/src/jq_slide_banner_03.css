@@ -42,15 +42,15 @@ h1{
 .indi_color a:focus{background-color: rgba(200, 200, 200, 0.5); box-shadow: 0.1rem 0.1rem 0.1rem ease;} 
 
 .product_wrap{ width: 100%; height: 100%; overflow: hidden; }
-.product{width: 500%; height: 100%; background-color: #acc;}
-.product li{float:left;	width:20%; height:100%; position: relative;
+.product{width: 500%; height: 100%;}
+.product li{float:left;	width:20%; height:100%; position: absolute;
 	background-repeat: no-repeat;	background-position: 50%;	background-color: #fff; }
 
-.pr_01{background-image: url('../../img/cake/2412_small_img');}
-.pr_02{background-image: url('../../img/cake/2413_small_img');}
-.pr_03{background-image: url('../../img/cake/2414_small_img');}
-.pr_04{background-image: url('../../img/cake/2415_small_img');}
-.pr_05{background-image: url('../../img/cake/2416_small_img');} 
+.pr_01{background-image: url('../../img/cake/2412_small_img'); z-index: 5;}
+.pr_02{background-image: url('../../img/cake/2413_small_img'); z-index: 4;}
+.pr_03{background-image: url('../../img/cake/2414_small_img'); z-index: 3;}
+.pr_04{background-image: url('../../img/cake/2415_small_img'); z-index: 2;}
+.pr_05{background-image: url('../../img/cake/2416_small_img'); z-index: 1;} 
 
 .product li span {
 	display: block; position: absolute; left: 0; bottom: 0;
