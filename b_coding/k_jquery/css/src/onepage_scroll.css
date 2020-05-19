@@ -17,6 +17,7 @@ h1{
   float: left;
   width: 150px; height: 100%;
   background-color: #fa0;
+  font-size: 1.5rem;
 }
 #gnbBox{
   float: right;
@@ -41,42 +42,42 @@ h1{
 /* #viewBox ============================================================== */
 #viewBox{
   width: 100%; height: 100%; background-color: #a8f;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#viewBox ============================================================= */
 
 /* #aboutBox ============================================================== */
 #aboutBox{
   width: 70%; max-width: 1600px; height: 100%; margin:auto; background-color: #ccf;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#aboutBox ============================================================= */
 
 /* #newBox ============================================================== */
 #newBox{
   width: 100%; height: 100%; background-color: #a85;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#newBox ============================================================= */
 
 /* #bestBox ============================================================== */
 #bestBox{
   width: 100%; max-width: 1600px; height: 100%; margin:auto; background-color: #faf;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#bestBox ============================================================= */
 
 /* #noticeBox ============================================================== */
 #noticeBox{
   width: 100%; max-width: 1200px; height: 100%; margin:auto; background-color: #ddd;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#noticeBox ============================================================= */
 
 /* #asInfoBox ============================================================== */
 #asInfoBox{
   width: 100%; height: 100%; background-color: #7ff;
-  padding-top: 2rem; box-sizing: border-box; font-size: 2rem;
+  padding-top: 8rem; box-sizing: border-box; font-size: 2rem;
 }
 /* //#asInfoBox ============================================================= */
 
