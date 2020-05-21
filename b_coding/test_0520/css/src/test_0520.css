@@ -1,0 +1,101 @@
+/* test_0520.css */
+
+#wrap{
+  width: 100%; height: 100%; 
+  min-width: 960px;
+  margin: auto;
+  min-height: 1300px; 
+}
+#headBox{
+  position: fixed; top: 45px; left:0; right:0; z-index: 1000;
+  width: 100%; height: 90px; min-width: 960px; max-width: 1600px; 
+  margin: auto;
+  background-color: rgba(33, 33, 33, 0.5);
+  padding: 5px; box-sizing: border-box;
+}
+h1{float:left; width: 200px; height: 100%; background-color: #fff;}
+#gnbBox{float: right; width: 70%; height: 100%;}
+#gnbBox ul{width: 100%; height: 100%;}
+#gnbBox li{
+  float: left; width: 25%; height: 100%; 
+  text-align: center; font-size: 1.5rem; 
+  color: #fff; line-height: 80px; 
+}
+#gnbBox li a{
+  display: block; width: 100%; height: 100%;
+}
+
+#viewBox{ 
+  position: absolute;
+  width: 100%; height: 100%;
+  background-color: #faa;
+} 
+#miniProduct{
+  width: 100%; height: 100%;
+}
+.indicator{
+  position: absolute; right: 4rem; bottom: 4rem; z-index: 100;
+  width: 300px; height: 34px;
+  padding: 5px; box-sizing: border-box;
+  border-radius: 34px;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+/* indicator - js로 생성 */
+.indi_color{
+  float: left;
+  width: 170px; height: 100%;
+}
+.indi_color ul{
+  width: auto; height: 100%;
+}
+.indi_color li{
+  float: left;
+  width: 24px; height: 24px;
+  border-radius: 100%;
+  margin-right: 10px;
+  background-color: #fff;
+}
+.indi_color li:last-child{margin-right: 0;}
+.indi_color li a{ display: block; width: 100%; height: 100%; outline: 0;}
+.indi_color li.action{background-color: #ff0;}
+
+/* prev, next 버튼 */
+.product_btn{
+  float: right;
+  width: 50px; height: 100%;
+}
+.product_btn button{
+  float: left;
+  width: 24px; height: 100%;
+  font-size: 1.5rem; color: #fff;
+}
+.product_btn .next{
+  float: right;
+}
+.product_wrap{
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.product{
+  width: 500%; height: 100%;
+}
+.product li{
+  float: left;
+  width: 20%; height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.pr_01{background-image: url('../../img/img_01.jpg');}
+.pr_02{background-image: url('../../img/img_02.jpg');}
+.pr_03{background-image: url('../../img/img_03.jpg');}
+.pr_04{background-image: url('../../img/img_04.jpg');}
+.pr_05{background-image: url('../../img/img_05.jpg');}
+
+#artBox{
+  position: absolute; top: 100%; left: 0; right: 0;
+  width: 960px; height: 600px; margin: auto;
+  background-color: #333;
+}

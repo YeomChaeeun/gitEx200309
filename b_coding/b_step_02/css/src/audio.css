@@ -1,0 +1,33 @@
+#wrap{
+  width: 800px; height: 700px;
+  margin: auto;
+  background-color: #dadada;
+}
+
+.media_data{
+  width: 90%; height: 200px;
+  border: 1px solid #333; 
+}
+
+.btn{
+  display: inline-block;
+  background-color: #fca;
+}
+.btn>button{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #05f;
+  color: #fff;
+}
+.btn>button:hover,
+.btn>button:focus{
+  background-color: #7af; 
+  color: #181818; font-weight: bold;
+  box-shadow: -0.2rem -0.2rem 0.3rem rgba(0, 0, 0, 0.7) inset;
+}
+.btn>button.action{
+  box-shadow: -0.2rem -0.2rem 0.3rem rgba(0, 0, 0, 0.7) inset;
+}
+
+
+
