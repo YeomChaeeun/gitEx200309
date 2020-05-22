@@ -2,22 +2,29 @@
 
 (function($){
   // start
-
   var m1 = $('.motion_01');
   var m2 = $('.motion_02');
 
-  var MotionM1 = function(){
-    m1.on('mouseenter',function(){
-      $(this).animate({'backgroundColor':'#078'});
-      $(this).append('<p>내용이 추가로 담아졌습니다.</p>');
-    });
+  var MotionM1 = function(myC){
+    var myColor;
+		(myC  == undefined) ? myColor = '#078' : 	myColor = myC;
+		// var myColor = myC | '#078';
+		var j = 0;
+		m1.on('mouseenter', function(){
+			j++;
+			var sel = $(this);
+			sel.stop().animate({'backgroundColor':myColor});	
+			sel.prepend('<p>'+j+'. 내용이 추가로 담아졌습니다.</p>');
+		});
+		console.log(myColor);
   };
 
+  deviceName = ['mobile','tablet','laptop','pcfull'];
   var deviceWidth = [
-    {'size' : 640, "title" : 'mobile'},
-    {'size' : 1280, "title" : 'tablet'},
-    {'size' : 1600, "title" : 'laptop'},
-    {'size' : 2560, "title" : 'pcfull'}
+    {'size' : 640, "title" : deviceName[0]},
+    {'size' : 1280, "title" : deviceName[1]},
+    {'size' : 1600, "title" : deviceName[2]},
+    {'size' : 2560, "title" : deviceName[3]}
   ];
   
   var win = $(window);
@@ -47,17 +54,33 @@
   // consoli.lot('1.'+beforeDevice+'---');
   // console.log(DeviceAction(ww));
 
+  // ----------------------------------------------------------------------------
+
+  var ActiveStyle = function(widthSize){
+    if(widthSize < deviceWidth[0].size){
+      MotionM1();
+    }else if(widthSize < deviceWidth[1].size){
+      MotionM1('#ccc'); 
+    }else if(widthSize < deviceWidth[2].size){ 
+      MotionM1('#076');
+    }else{
+      MotionM1('#cca'); 
+    }
+  };
+
+  // ----------------------------------------------------------------------------
+
   win.on('resize',function(){
     var nw = win.outerWidth(true);
-    afterDevice = DeviceAction(nw);
-
-    if(beforeDevice!=afterDevice){
-      // 디바이스 상황에따른 변경내용을 수행
-      $('.motion_01').append('<p>추가 텍스트 입력</p>');
-      beforeDevice = afterDevice;
-      // console.log(beforeDevice+' : '+afterDevice);
+		afterDevice = DeviceAction(nw);
+		if(beforeDevice !== afterDevice){
+			// 디바이스 상황에따른 변경내용을 수행
+			var i = deviceName.indexOf(afterDevice);
+			console.log(i);
+			ActiveStyle(deviceWidth[i].size);
+			beforeDevice = afterDevice;
+			console.log( 'changed : ' + beforeDevice);
     }
-    console.log(beforeDevice+' : '+afterDevice);
   });
 
 
