@@ -62,9 +62,9 @@
     //   check = false;
     // }
   };
+  // 처음 새로고침 된 디바이스의 이름 값을 beforeDevice에 저장해줌
   beforeDevice = DeviceAction(ww);
-  // consoli.lot('1.'+beforeDevice+'---');
-  console.log('....'+DeviceAction(ww));
+  console.log('beforeDevice : ' + DeviceAction(ww));
 
   // ----------------------------------------------------------------------------
 
@@ -73,32 +73,48 @@
     if(widthSize <= deviceWidth[0].size){
       MotionM1('#333');
       MotionM2(100);
+      conStyle();
     }else if(widthSize <= deviceWidth[1].size){
       MotionM1('#fa0'); 
       MotionM2(30);
+      conStyle('#acf,#caf');
     }else if(widthSize <= deviceWidth[2].size){ 
       MotionM1('#0af');
       MotionM2(300);
+      conStyle('#caf,#faa');
     }else{
       MotionM1('#6f7'); 
       MotionM2(255);
+      conStyle('#faa,#fa0');
     } 
   };
 
   // ----------------------------------------------------------------------------
-
   win.on('resize',function(){
     var nw = win.outerWidth(true);
-		afterDevice = DeviceAction(nw);
+    // 현재 리사이즈 된 디바이스 가로 길이의 범위값을 가이용해서 title을 afterDevice에 저장함
+    afterDevice = DeviceAction(nw);
+    
+    // 최초 디바이스 title과 리사이즈 된 디바이스 title 이 다르다면 if조건문이 true가 되어 다음을 수행함
 		if(beforeDevice !== afterDevice){
-			// 디바이스 상황에따른 변경내용을 수행
+			// 변경된 디바이스 명의 index값을 i에 저장함
 			var i = deviceName.indexOf(afterDevice);
       // console.log(deviceName[i]);
 			ActiveStyle(deviceWidth[i].size);
 			beforeDevice = afterDevice;
-			// console.log( 'changed : ' + beforeDevice);
+			console.log( 'changed : ' + beforeDevice);
     }
   });
+
+  var conBox = $('.con_box');
+
+  var conStyle = function(linearG){
+    var lG = linearG;
+		(lG  == undefined) ? lG = '#fa0,#acf' : lG = linearG;
+    conBox.on('click',function(){
+      $(this).css({'backgroundImage':'linear-gradient('+ lG +')'});
+    });
+  };
 
 
   // end
