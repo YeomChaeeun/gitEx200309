@@ -19,7 +19,19 @@
 		console.log(myColor);
   };
 
-  deviceName = ['mobile','tablet','laptop','pcfull'];
+  var MotionM2 = function(wc){  
+    var wC = wc;
+    m2.on('click',function(){
+      $(this).stop().animate({width:wC+'px'});
+      if($(this).width()==wC){
+        $(this).stop().animate({width:'48%'});
+      }
+    });
+
+  };
+
+
+  var deviceName = ['mobile','tablet','laptop','pcfull'];
   var deviceWidth = [
     {'size' : 640, "title" : deviceName[0]},
     {'size' : 1280, "title" : deviceName[1]},
@@ -32,7 +44,7 @@
   var beforeDevice, afterDevice;
   // var check = true;
 
-  // 디바이스 환경이 바뀔때마다 새로고침 해주는 기능을 위한 작업
+  // 디바이스 환경이 바뀔때마다 1번만 실행시키게 하기 위해서 nowDevice에 기기 title을 저장하여 리턴해줌
   var DeviceAction = function(widthSize){
     var nowDevice;
     if(widthSize < deviceWidth[0].size){
@@ -52,20 +64,25 @@
   };
   beforeDevice = DeviceAction(ww);
   // consoli.lot('1.'+beforeDevice+'---');
-  // console.log(DeviceAction(ww));
+  console.log('....'+DeviceAction(ww));
 
   // ----------------------------------------------------------------------------
 
   var ActiveStyle = function(widthSize){
-    if(widthSize < deviceWidth[0].size){
-      MotionM1();
-    }else if(widthSize < deviceWidth[1].size){
-      MotionM1('#ccc'); 
-    }else if(widthSize < deviceWidth[2].size){ 
-      MotionM1('#076');
+    // console.log(widthSize);
+    if(widthSize <= deviceWidth[0].size){
+      MotionM1('#333');
+      MotionM2(100);
+    }else if(widthSize <= deviceWidth[1].size){
+      MotionM1('#fa0'); 
+      MotionM2(30);
+    }else if(widthSize <= deviceWidth[2].size){ 
+      MotionM1('#0af');
+      MotionM2(300);
     }else{
-      MotionM1('#cca'); 
-    }
+      MotionM1('#6f7'); 
+      MotionM2(255);
+    } 
   };
 
   // ----------------------------------------------------------------------------
@@ -76,10 +93,10 @@
 		if(beforeDevice !== afterDevice){
 			// 디바이스 상황에따른 변경내용을 수행
 			var i = deviceName.indexOf(afterDevice);
-			console.log(i);
+      // console.log(deviceName[i]);
 			ActiveStyle(deviceWidth[i].size);
 			beforeDevice = afterDevice;
-			console.log( 'changed : ' + beforeDevice);
+			// console.log( 'changed : ' + beforeDevice);
     }
   });
 
