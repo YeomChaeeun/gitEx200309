@@ -132,15 +132,15 @@
         var keyCode = evt.keyCode;
         // console.log(keyCode);
         // 왼37, 오른39, 빠져나가기27
-        if(keyCode ==37){
+        if(keyCode ===37){
           n-=1;
           if(n<0){n=galleryList.thumList.length-1;}
           bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
-        }else if(keyCode ==39){
+        }else if(keyCode ===39){
           n+=1;
           if(n>galleryList.thumList.length-1){n=0;}
           bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
-        }else if(keyCode ==27){
+        }else if(keyCode ===27){
           bigModal.fadeOut(400,function(){
             p03Link.eq(0).focus();
           });
