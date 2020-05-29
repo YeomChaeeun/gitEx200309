@@ -29,7 +29,7 @@
     });
 
   };
-
+ 
 
   var deviceName = ['mobile','tablet','laptop','pcfull'];
   var deviceWidth = [
