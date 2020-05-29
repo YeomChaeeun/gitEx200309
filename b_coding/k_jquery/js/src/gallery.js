@@ -142,7 +142,7 @@
           bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
         }else if(keyCode ==27){
           bigModal.fadeOut(400,function(){
-            part03Li.eq(0).focus();
+            p03Link.eq(0).focus();
           });
         }
       });
