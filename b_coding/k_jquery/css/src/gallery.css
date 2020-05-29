@@ -1,0 +1,153 @@
+#wrap{
+  width: 100%; max-width: 1440px;
+  height: auto; min-height: 700px;
+  margin: auto;
+}
+
+.part{
+  width: 90%; height: auto;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 1rem; box-sizing: border-box;
+}
+
+.big_rec{
+  width: 100%; height: 500px;
+  background-color: #ddd;
+  border-radius: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.part > ul{
+  width: 70%; height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.part li{
+  position: relative;
+  display: inline-block;
+  width: 100px; height: 100px;
+  margin: 0.1rem;
+  border-radius: 100%; background-color: #ccc;
+}
+
+.part li>a{
+  display: block; width: 100%; height: 100%;
+}
+
+.part li>a>span{
+  display: block; 
+  position: absolute; left: 0; right: 0; bottom: -3rem;
+  height: auto; padding: 0.3rem; background-color: #acc;
+}
+.part .big_rec, .part li{
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50% 50%;
+  transition: all 500ms ease;
+}
+.part_01 .big_rec{background-image: url('../../img/gallery/big/gallery_01.jpg');}
+.part_01 li:nth-child(1){background-image: url('../../img/gallery/gallery_01.jpg');}
+.part_01 li:nth-child(2){background-image: url('../../img/gallery/gallery_02.jpg');}
+.part_01 li:nth-child(3){background-image: url('../../img/gallery/gallery_03.jpg');}
+.part_01 li:nth-child(4){background-image: url('../../img/gallery/gallery_04.jpg');}
+.part_01 li:nth-child(5){background-image: url('../../img/gallery/gallery_05.jpg');}
+
+.part li a span{display: none;}
+.part li a:hover span{display: block;}
+.part li a:hover{background-size: 240%;}
+
+
+
+/* 3. 모달 popup */
+
+.big_modal{position: fixed; top: 0; left: 0; z-index: 1500;
+  width: 100%; height: 100%;
+}
+.big_img{
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;
+  width: 1200px; height: 600px;
+  border: 1rem solid #fff;
+  box-sizing: border-box;
+  background-color: #ddd;
+  border-radius: 0.7rem;
+}
+.close_btn{
+  position: absolute; right: -2rem; top: -2rem;
+  width: 4rem; height: 4rem;
+  border: 0.3rem solid #fff;
+  box-sizing: border-box;
+  background-color: #333;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+}
+.close_btn>button{
+  position: relative;
+  display: block;
+  width: 100%; height: 100%; border-radius: 100%;
+}
+.close_btn>button:before,
+.close_btn>button:after{
+  content: " "; display: block; position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+  width: 70%; height: 4px; background-color: #fff;
+  border-radius: 2px;
+  transition: transform 500ms ease;
+}
+.close_btn>button:before{
+  transform: rotate(45deg);
+}
+.close_btn>button:after{
+  transform: rotate(-45deg);
+}
+.close_btn>button:hover:before,
+.close_btn>button:focus:before{
+  transform: rotate(180deg) translateY(-10px);
+}
+.close_btn>button:hover:after,
+.close_btn>button:focus:after{
+  transform: rotate(180deg) translateY(10px);
+}
+.big_bg{
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* chaeeun v */
+/*
+.part_03{
+  position: relative;
+  height: 600px;
+}
+.big_modal{
+  display: none;
+  position: relative; z-index: 100;
+  width: 100%; height: 600px;
+}
+.big_bg{
+  width: 100%; height: 100%;
+  background-color: rgba(170, 170, 55, 0.2);
+}
+.big_img{
+  position: absolute; top: 50%; left: 0; right: 0; z-index: 150;
+  margin:auto; margin-top: -150px;
+  width: 400px; height: 300px;
+  background-color: #acc;
+}
+.close_btn{float: right;}
+.part_03>.thum_img{
+  position: absolute; top: 50%; left: 0; right: 0; z-index: 50;
+  margin:auto; margin-top: -50px;
+  text-align: center;
+}
+
+.part_03 li:nth-child(1){background-image: url('../../img/gallery/gallery_01.jpg');}
+.part_03 li:nth-child(2){background-image: url('../../img/gallery/gallery_02.jpg');}
+.part_03 li:nth-child(3){background-image: url('../../img/gallery/gallery_03.jpg');}
+.part_03 li:nth-child(4){background-image: url('../../img/gallery/gallery_04.jpg');}
+.part_03 li:nth-child(5){background-image: url('../../img/gallery/gallery_05.jpg');}
+*/
