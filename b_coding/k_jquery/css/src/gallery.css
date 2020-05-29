@@ -9,6 +9,7 @@
   border: 1px solid #ccc;
   margin-top: 1rem;
   padding: 1rem; box-sizing: border-box;
+  margin-bottom: 10rem;
 }
 
 .big_rec{
@@ -61,8 +62,9 @@
 
 
 /* 3. 모달 popup */
-
-.big_modal{position: fixed; top: 0; left: 0; z-index: 1500;
+.big_modal{
+  display: none;
+  position: fixed; top: 0; left: 0; z-index: 1500;
   width: 100%; height: 100%;
 }
 .big_img{

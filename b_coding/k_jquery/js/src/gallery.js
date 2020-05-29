@@ -104,6 +104,62 @@
   */
 
   // 3. gallery를 응용하여, popup창(모달 윈도우) 만들기
+  var part03 = $('.part_03');
+  var bigModal = part03.children('.big_modal');
+  var bigModalBtn = bigModal.find('.close_btn');
+  var part03Ul = part03.find('ul');
+
+  var part03Li = '<li><a href="#"><span></span></a></li>';
+
+  var bigImg = bigModal.find('.big_img');
+  var bigBg = bigModal.find('.big_bg');
+  
+  for(i=0;i<galleryList.thumList.length;i++){
+    part03Ul.append(part03Li);
+    part03Ul.find('li').eq(i).css({backgroundImage:'url('+thumUrl+thumList[i]+')'});
+  }
+
+  var n = 0;
+  var p03Link = part03Ul.find('li').children('a');
+  p03Link.on('click',function(e){
+    e.preventDefault();
+    var itIndex = $(this).parent('li').index();
+    n = itIndex;
+
+    bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[itIndex]+')',backgroundSize:'cover',backgroundPosition:'50% 50%',backgroundRepeat:'no-repeat'});
+    bigModal.fadeIn(function(){
+      $(window).on('keyup',function(evt){
+        var keyCode = evt.keyCode;
+        // console.log(keyCode);
+        // 왼37, 오른39, 빠져나가기27
+        if(keyCode ==37){
+          n-=1;
+          if(n<0){n=galleryList.thumList.length-1;}
+          bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
+        }else if(keyCode ==39){
+          n+=1;
+          if(n>galleryList.thumList.length-1){n=0;}
+          bigImg.css({backgroundImage:'url('+bigUrl+galleryList.bigList[n]+')'});
+        }else if(keyCode ==27){
+          bigModal.fadeOut(400,function(){
+            part03Li.eq(0).focus();
+          });
+        }
+      });
+    });
+  });
+
+  bigModalBtn.on('click',function(e){
+    e.preventDefault();
+    bigModal.fadeOut();
+  });
+
+
+
+
+
+
+
 
   // chaeeun v
   /*
