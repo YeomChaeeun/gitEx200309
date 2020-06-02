@@ -26,9 +26,9 @@
 	<!-- layout -->
 	<div id="wrap">
 		<h1><a href="./content.html">jQuery 기능이해하기</a></h1>
-
+		
 		<p class="fixed_text">스크롤의 위치값: <span></span></p>
-
+		
 		<div class="part_01">
 			<h2>기능 처리에따른 표시 01</h2>
 			<div class="p1">하나만 슬라이드로 나타나게</div>
@@ -40,22 +40,42 @@
 		</div>
 		<div class="part_03">
 			<h2>기능 처리에따른 표시 03</h2>
-			<div class="p3_01">fade로 나타나게</div>
-			<div class="p3_02">왼쪽에서 움직이면서 나타나게</div>
-			<div class="p3_03">오른쪽에서 움직이면서 나타나게</div>
+			<div class="p3">
+				<div class="p3_01">fade로 나타나게</div>
+				<div class="p3_02">왼쪽에서 움직이면서 나타나게</div>
+				<div class="p3_03">오른쪽에서 움직이면서 나타나게</div>
+			</div>
 		</div>
+
 		<div class="part_04">
 			<h2>기능 처리에따른 표시 04</h2>
-			<ul>
-				<li>Y축 회전</li>
-				<li>Y축 회전</li>
-				<li>Y축 회전</li>
-				<li>Y축 회전</li>
+			<ul class="clearfix">
+				<li>
+					<div class="front">Y축 회전 앞면</div>
+					<div class="back">뒷면</div>
+				</li>
+				<li>
+					<div class="front">Y축 회전 앞면</div>
+					<div class="back">뒷면</div>
+				</li>
+				<li>
+					<div class="front">Y축 회전 앞면</div>
+					<div class="back">뒷면</div>
+				</li>
+				<li>
+					<div class="front">Y축 회전 앞면</div>
+					<div class="back">뒷면</div>
+				</li>
 			</ul>
 		</div>
 		<div class="part_05">
 			<h2>기능 처리에따른 표시 05</h2>
-			<p><span>2020년 6월 2일 날짜가 카운트로 나타나게 처리</span></p>
+      <p><span>2020년 6월 2일 날짜가 카운트로 나타나게 처리</span></p>
+      <p class="day">
+        <span class="yy"></span> 년
+        <span class="mm">06</span> 월
+        <span class="dd">02</span> 일
+      </p>
 		</div>
 	</div>
 
@@ -64,4 +84,4 @@
 <script src="../js/base/jquery-ui.min.js"></script>
 	<script src="../js/src/landing.js"></script>
 </body>
-</html> 
+</html>

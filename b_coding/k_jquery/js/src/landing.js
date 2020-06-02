@@ -1,6 +1,5 @@
 // landing.js
 (function($){
-
 	var ft = $('.fixed_text').find('span');
 	var part = [];
 	    part[0] = $('.part_01');
@@ -14,27 +13,85 @@
 	for(; i < part.length; i += 1){
 		partOffset[i] = part[i].offset().top;
 	}
+// -----------------------------------------
+var win = $(window);
+var winH = win.innerHeight();
+var thisTop = win.scrollTop() + (winH/4*3);
+ft.text(thisTop);
 
-	part[0].css({backgroundImage: 'linear-gradient(30deg, #acf, #afc)'});
+// ----------------------------------------
+// 추가 내용 세팅
+var p1 = $('.p1');
+var p2 = $('.part_02').children('div');
+var p3 = $('.part_03');
+var p4 = $('.part_04').find('li');
+var p5 = $('.part_05');
 
-	var thisTop = $(window).scrollTop();
-	ft.text(thisTop);
+var p5Day = p5.find('.day');
+var yy = p5Day.find('.yy');
+var mm = p5Day.find('.mm');
+var dd = p5Day.find('.dd');
+var myDay = [2020, 6, 2];
 
-	var win = $(window);
+var z = 0;
+var setIY;
+var myCount = function(){
+  setIY = setInterval(function(){
+    if(z<=(myDay[0]-50)){
+      z+=5;
+    }else if(z<myDay[0]){
+      z+=1;
+    }
+    yy.text(z);
+  }, 10);
+};
+// -----------------------------------------
+var ScrollView = function(){
+	thisTop = win.scrollTop() + (winH/4*3);
+	for(var j=0; j<partOffset.length; j++){
+		if(thisTop > partOffset[j]){
+			part[j].find('h2').slideDown();
 
-	var ViewSet = function(n){
-		if(thisTop < partOffset[n]){
-			// part[n].siblings().find('h2').hide();
-			part[n].find('h2').fadeIn();
+			switch(j){
+				case 0:
+					p1.slideDown(500);
+          break;
+				case 1:	
+          setTimeout(function(){
+            p2.css({display:'block', opacity:0, position:'relative'});
+            p2.eq(0).delay(500).animate({opacity:1, top:'50px'}, 800);
+            p2.eq(1).delay(600).animate({opacity:1, top:'70px'}, 700);
+          }, 100);
+          break;
+				case 2:
+					p3.addClass('active');
+          break;
+        case 3:
+          setTimeout(function(){p4.eq(0).addClass('active');},0);
+          setTimeout(function(){p4.eq(1).addClass('active');},400);
+          setTimeout(function(){p4.eq(2).addClass('active');},800);
+          setTimeout(function(){p4.eq(3).addClass('active');},1200);
+          // for(var k=0; k<p4.length; k++){
+          //   setTimeout(function(){p4.eq(k).addClass('active');},k*400);
+          // }
+          break;
+        case 4:
+          myCount();
+          break;
+			}
 		}
-	};
-	ViewSet(0);
+	}
+};
+ScrollView();
 
-	win.on('scroll', function(e){
-		thisTop = $(this).scrollTop() - 500;
-		ft.text(thisTop);
-		var j=0;
-		for(; j < partOffset.length; j++ ){	ViewSet(j);	}
-	});
+// -----------------------------------------
+win.on('scroll', function(e){
+	ft.text(thisTop);
+	ScrollView();
+});
 
-})(jQuery); 
+
+
+
+// -----------------------------------------
+})(jQuery);
