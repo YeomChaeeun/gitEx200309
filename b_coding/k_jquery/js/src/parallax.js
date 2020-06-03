@@ -2,6 +2,7 @@
 
 (function($){
   //start
+  // $('html, body').css({overflowX:'hidden'});
 
   var win = $(window);
   var winW = win.innerWidth();
