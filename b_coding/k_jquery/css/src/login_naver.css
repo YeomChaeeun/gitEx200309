@@ -1,0 +1,34 @@
+/* login_naver.css */
+
+#wrap{
+  width: 100%; min-width: 1024px; height: auto;
+  margin: auto;
+}
+h1{text-align: center; margin: 20px;}
+#content{
+  width: 50%; max-width: 600px; height: auto;
+  margin: auto;
+  background-color: #eee;
+}
+#joincontent{
+  width: 100%; height: auto;
+  padding: 2rem 3rem; box-sizing: border-box;
+}
+
+.join_group{width: 100%; height: auto;}
+.join_row{width: 100%; height: auto;}
+.join_input{width: 100%; height: auto;}
+
+h3{font-size: 1.2rem; margin: 1rem 0 0.5rem;}
+input{display:block; width: 100%; height: 50px;}
+.error_text{display:block; width: 100%; height: 20px; background-color: #ddd;}
+
+.bir_wrap{
+  width: 100%; height: auto;
+}
+.bir_wrap span{display: block;}
+.bir_yy, .bir_mm, .bir_dd{float:left; width: 30%; height: auto; margin-right: 5%;}
+.bir_dd{margin-right: 0;}
+.join_bir_input select{width: 100%; height: 50px;}
+
+.join_sex select{display:block; width: 100%; height: 50px;}
