@@ -1,0 +1,52 @@
+/* login.css */
+
+/* result */
+
+
+
+
+
+
+/* chaeeun version */
+/* 
+#wrap{
+  width: 100%; min-width: 1200px;
+  height: 100%; min-height: 900px;
+  background-image: linear-gradient(90deg, #afc, #acf);
+}
+
+.login_area{
+  width: 80%; height: 60%;
+  transform: translateY(20%);
+  margin: auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.login_img_area{
+  float: left;
+  width: 50%; height: 100%;
+}
+.login_img_area>div{
+  width: 300px; height: 300px; 
+  transform: translateY(120px);
+  margin: auto;
+  border-radius: 50%; 
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(100, 100, 100, 0.9);
+  font-size: 180px; text-align: center;
+}
+
+.login_form{
+  float: right;
+  width: 50%; height: 100%;
+  padding: 5rem; box-sizing: border-box;
+}
+
+.login_form fieldset{width: 100%; height: auto;}
+.login_form p{display: block; text-align: center; text-transform: capitalize; font-size: 2rem; margin-bottom: 2rem;}
+.login_form p:last-child{font-size: 1rem; margin-top: 1rem;}
+
+.login_form>div{position:relative; width: 100%; height: auto;}
+.login_form .icon{position: absolute; font-size: 1.5rem; line-height: 50px; margin-left: 1rem;}
+.login_form input{display:block; width: 100%; height: 50px; margin-bottom: 2rem; border-radius: 20px; text-indent: 3rem;}
+.login_form button{width: 100%; height: 50px; background-color: #33f; border-radius: 20px; text-transform: capitalize; font-size: 1rem; color: #fff;} 
+*/
