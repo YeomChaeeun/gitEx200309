@@ -20,7 +20,43 @@
 <body>
   <!-- layout -->
   <!-- result -->
+  <div id="wrap">
+    <h1>로그인 페이지 만들기</h1>
+    <div id="loginBox">
+      <h2><span class="hidden">로그인 페이지</span></h2>
+      <form action="#" method="POST">
+        <fieldset class="user_input">
+          <legend><span>user log in</span></legend>
+          <ul>
+            <li>
+              <label for="userId"><i></i>
+                <span class="hidden">이메일 형식의 아이디를 입력하세요.</span>
+              </label>
+              <input type="text" name="userId" id="userId" value="">
+            </li>
+            <li>
+              <label for="userPw"><i></i>
+                <span class="hidden">사용자의 비밀번호를 입력하세요.</span>
+              </label>
+              <input type="text" name="userPw" id="userPw" value="">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="user_check">
+          <legend>확인 및 사용자 정보체크</legend>
+          <div class="send">
+            <input type="submit" name="sendBtn" value="login">
+          </div>
+          <div class="refind">
+            forgot <a href="#">username</a> / <a href="#">password</a> ?
+          </div>
+        </fieldset>
+      </form>
 
+    </div>
+
+
+  </div>
 
 
 
