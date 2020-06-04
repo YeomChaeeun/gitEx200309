@@ -1,2 +1,0 @@
-// login_naver.js
-
