@@ -26,19 +26,19 @@
       <h2><span class="hidden">로그인 페이지</span></h2>
       <form action="#" method="POST">
         <fieldset class="user_input">
-          <legend><span>user log in</span></legend>
+          <legend>user <span>log in</span></legend>
           <ul>
             <li>
-              <label for="userId"><i></i>
+              <input type="text" name="userId" id="userId" value="" placeholder="Email Id" required="required">
+              <label for="userId"><i class="fas fa-envelope"></i>
                 <span class="hidden">이메일 형식의 아이디를 입력하세요.</span>
               </label>
-              <input type="text" name="userId" id="userId" value="">
             </li>
             <li>
-              <label for="userPw"><i></i>
+              <input type="text" name="userPw" id="userPw" value="" placeholder="Password" required="required">
+              <label for="userPw"><i class="fas fa-lock"></i>
                 <span class="hidden">사용자의 비밀번호를 입력하세요.</span>
               </label>
-              <input type="text" name="userPw" id="userPw" value="">
             </li>
           </ul>
         </fieldset>
