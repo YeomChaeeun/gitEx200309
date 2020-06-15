@@ -36,8 +36,46 @@
 		if(st >= 50){
 			SetIntervalImg();
 		}
+  });
+  
+  // -------------------------------------------------------------
+  var win = $(window);
+  var winH = win.outerHeight();
+  var splitText_01 = $('.split_text_01');
+  var stT01_Img = splitText_01.find('img');
+	var spT01Offset = splitText_01.offset().top;
+
+  stT01_Img.css({position:'absolute',top:0,left:0,width:'100%',height:'auto'});
+  var imgP = [];
+  for(var k=0;k<42;k++){
+    imgP[k]=-380*k;
+  }
+	console.log(imgP);
+	
+	var stTInterval = {};
+	var SplitTestInterval = function(){
+		stTInterval = setInterval(function(){
+			l++;
+			stT01_Img.css({top:imgP[l]},3000);
+			if(l>=42){clearInterval(stTInterval);}
+		},30);
+	};
+	
+  var l=0;
+  win.on('scroll',function(e){
+    var st = $(this).scrollTop() + (winH/2);
+    if(st>=spT01Offset){
+      SplitTestInterval();
+		}
 	});
+	// 문제점(수정해야 할 사항) : 스크롤시 setInterval 기능이 반복 수행됨.
+
+	// 이중배열
+	var arr2 = [[],[]];
+
+	for(var i=0;i<4;i++){arr2[0][i]=429*-i;}
+	for(var j=0;j<11;j++){arr2[1][j]=378*-j;}
+	console.log(arr2);
 
 
-
-})(jQuery)
+})(jQuery);
