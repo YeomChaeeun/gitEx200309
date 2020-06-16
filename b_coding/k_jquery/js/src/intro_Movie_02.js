@@ -106,7 +106,8 @@ var splitText02Img = split_text_02.find('img');
 var splitText02_offset = split_text_02.offset().top;
 
 var s2 = (arr2[0].length * arr2[1].length) -2;
-// console.log(s2);
+// console.log(s2); // 전체 가로*세로 -2 값
+
 var s2_01 = 0;
 var s2_02 = 0;
 var count = 0;
@@ -118,13 +119,14 @@ var Set2Interval = function(){
 	if(scroll2Bool){
 		scroll2Bool = false;
 		scroll2Go = setInterval(function(){
-			var l = parseInt(count / 4);
-			var l2 = parseInt(count % 4);
-			count += 1;
+			var l = parseInt(count / 4); 	// y
+			var l2 = parseInt(count % 4); // x
+			count += 1; 
+			// count 값은 0~42로 계속 1씩 더해줌
 			// 나누기 4를 통해 몫과, 나머지값을 구하고, 
 			// 나머지값을 이용하여 x값의 위치를 처리 후
 			// 몫의 값을 이용하여  y값의 위치를 처리
-			// console.log(l2, l);
+			console.log(l2, l);
 			splitText02Img.css({left:arr2[0][l2] + 'px', top:arr2[1][l] + 'px'});
 			if(count >= s2){	clearInterval(scroll2Go);		}
 		}, 30);
