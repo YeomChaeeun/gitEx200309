@@ -67,7 +67,7 @@
 
   $li('grape','apple','banana','melon');
   @for $i from 1 through length($li) { 
-    #{nth($li,$i)}_coffee{color:#fac;}
+    #{nth($li,$i)}_coffee{color:#fac; }
   }
 
 

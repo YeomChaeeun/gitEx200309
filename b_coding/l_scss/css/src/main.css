@@ -1,4 +1,8 @@
 /* main.css */
+#gnb {
+  font-family: "myriad pro", "din", "arial", "malgun gothic", "noto sand", dotum, sans-serif;
+}
+
 #headBox {
   width: 100%;
   height: 100%;

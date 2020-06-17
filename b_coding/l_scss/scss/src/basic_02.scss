@@ -1,0 +1,114 @@
+/* basic_02.css */
+
+@import "../setting/variable";
+
+
+// -------------------------------------------------
+
+#wrap{
+  background-color: map-get($sampleColor, yellow);
+  color: map-get($fontColor, black);
+  background-image: url($url+'img001.jpg');
+}
+
+$juice : ('apple', 'mango', 'kiwi', 'grape', 'orange');
+$juiceC : (#acc,#1ff,#faa,#fa5,#345);
+// 1
+// @for $i from 1 through length($juice) {
+//   .#{nth($juice,$i)}_juice{
+//     color:nth($juiceC,$i);
+//   }
+// }
+
+// 2
+// @each $j in $juice{
+//   .#{$j}_juice{background-color: #aff;}
+// }
+
+$myJuice : (
+  'apple' : #f33,
+  'mango' : #fc9,
+  'kiwi' : #7a6,
+  'grape' : #a4a,
+  'orange' : #f70
+);
+
+@each $key, $val in $myJuice {
+  .#{$key}_juice{background-color: $val;}
+}
+
+$mainSlide : (
+  'event' : 'eventMain.jpg',
+  'best' : 'bestCut.jpg',
+  'info' : 'infoMessage.jpg',
+  'guide' : 'guideThum.png'
+);
+
+@each $sel, $img in $mainSlide {
+  .slide_#{$sel}{
+    background-image: url($url+$img);
+  }  
+}
+$color : #acc, #fac, #acf;
+$wire : (
+  ('#headBox',100px,200px,nth($color,1)),
+  ('#sectionBox',100%,300px,nth($color,2)),
+  ('#conBox',100%,200px,nth($color,3))
+);
+
+@each $sel, $wid, $height, $color in $wire{
+  #{$sel}{
+    width: $wid; height: $height; background-color: $color;
+  }
+}
+
+// function --------------------------------------------------------
+$device : (
+  mobile : 640,
+  tab : 1024,
+  laptop : 1280, 
+  pcfull : 1920
+);
+
+@function Mob($val){
+  $convert : $val / map-get($device, mobile) * 100;
+  @return $convert + vw;
+}
+
+@function Tab($val){
+  $convert : $val / map-get($device, tab) * 100;
+  @return $convert + vw;
+}
+
+@function Laptop($val){
+  $convert : $val / map-get($device, laptop) * 100;
+  @return $convert + vw;
+}
+
+@function Pc($val){
+  $convert : $val / map-get($device, pcfull) * 100;
+  @return $convert + vw;
+}
+
+@function vw($val, $device){
+  $convert : $val / $device * 100;
+  @return $convert + vw;
+}
+
+@mixin Rec($s){
+  width: $s+px; height: $s+px; border-radius: ($s/3)+px;
+  width: ($s/16)+rem; height: ($s/16)+rem; border-radius: ($s/3/16)+rem;
+
+  &>a{
+    display: block;
+    width: 100%; height: 100%; background-color: inherit;
+  }
+}
+
+.box_01{
+  width: Pc(500); height: vw(200,800);
+}
+
+.box_02{
+  @include Rec(100);
+}

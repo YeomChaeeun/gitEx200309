@@ -8,3 +8,41 @@ $white : #fff;
 $black : #333;
 
 $baseline : 1px solid $black;
+
+// map 만들기 ---------------------------------------
+$color : #acf;
+$colorList : (#acf, #fca, #aaf, #faa, #f08);
+$colorMap : (blue:#0cf, yellow:#fa0, red:#a00);
+
+$baseColor : (yellow:#ff0, grey:#aaa, black:#333);
+$natureColor : (yellow:#fc0, grey:#ccc, black:#171717);
+$fontColor : (yellow:#a70, grey:#777, black:darken(map-get($natureColor, black), 5%));
+$sampleColor : (yellow:map-get($fontColor, yellow), grey:map-get($natureColor, grey));
+
+
+$url : "../../img/";
+
+// font 설정 
+// font-family
+$fontLink : "http://font.google.com/font.woff";
+$english : "myriad pro", "din", "arial";
+$korean : "malgun gothic", "noto sand", dotum;
+$otherFont : sans-serif;
+$fontFamily : $english, $korean, $otherFont;
+
+// font-size
+$h1:3rem;
+$h2:2.5rem;
+$h3:2.2rem;
+$h4:2rem;
+$h5:1.5rem;
+$h6:1.2rem;
+$p:$h6;
+
+// -----------------------------------------
+// background, shadow
+$gr_01 : linear-gradient(45deg, nth($colorList,5), nth($colorList,3));
+$shadow_01 : 1rem 1rem 1rem $black;
+$radius_01 : 0.5rem;
+
+#gnb{font-family: $fontFamily;}
