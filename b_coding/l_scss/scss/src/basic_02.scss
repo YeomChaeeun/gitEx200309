@@ -112,3 +112,50 @@ $device : (
 .box_02{
   @include Rec(100);
 }
+
+
+// ------------------------------------------------------
+
+#fnb{
+  background-color: #fff;
+  color: #333;
+}
+
+$b : #faa;
+@function IfColor($color){  
+  @if $b == #333{
+    @return #fff;
+  }@else if $b == #fff{ 
+    @return #333;
+  }@else{
+    @return #676767;
+  }
+}
+
+@mixin myColor($c){
+  background-color: $c;
+  color: IfColor($c);
+
+}
+
+// 어디에도 존재하지 않는 가상선택자, 소규모일땐 사용하지만 주로 사용하지 않음
+%Selcet{border: 1px solid #fff; box-sizing: border-box;}
+
+// p{}
+// .p{}
+// #p{}
+// %p{} 
+
+#footBox{
+  @include myColor($b);
+  // background-color: $b;
+  // color: IfColor($b);
+}
+
+// extend css상에서 순서가 바뀌는 단점이 있음
+h1{font-size: 1rem;}
+h2{@extend h1;}
+h3{@extend h1;}
+h4{@extend #footBox;}
+h5{@extend %Selcet;}
+h6{@extend %Selcet;}
