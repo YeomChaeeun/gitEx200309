@@ -1,0 +1,52 @@
+// basic_03.scss
+
+@import "../setting/mixin";
+
+
+// h1{@include Img('logo.png',no-repeat, 10px 60px, contain)};
+h1{@include Img('logo.png',$r:repeat-x)};
+
+#headBox{@include Size(200,400);}
+
+.conBox{
+  @include Con{width: 100px; height: 500px;};
+}
+
+#wrap{
+  width: 100%; max-width: 1200px;
+  margin: auto;
+  background-color: #fca;
+
+  @include Mob{
+    width: 90%;
+    max-width: 620px;
+    background-color: #acc;
+  }
+
+  @include Tab{
+    width: 80%;
+    max-width: 960px;
+    background-color: #fcf;
+  }
+}
+
+p{
+  @include myDevice(500){
+    font-size: 1.2rem;
+  }
+}
+
+#test{
+  width: myFn(10,'mob');
+}
+
+.box ul{
+  width: auto;
+  @include Clearfix();
+}
+
+.link{
+  width: 100px; height: 100px;
+  border-radius: 5px;
+  @include LinkBg('logo.png');
+}
