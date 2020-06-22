@@ -69,9 +69,11 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
   margin: auto;
 }
 #viewBox .btn {
+  z-index: 500;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
+  margin-left: 50%;
   margin-top: -28px;
   width: 1520px;
   height: 0;
@@ -91,7 +93,201 @@ h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
 #viewBox .btn > button:first-child {
   background-position: -180px -90px;
 }
+#viewBox .indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 2.5rem;
+  z-index: 500;
+  width: 13.625rem;
+  height: 0.625rem;
+  transform: translateX(-50%);
+}
+#viewBox .indicator > ul {
+  width: 100%;
+  height: 100%;
+}
+#viewBox .indicator > ul > li {
+  float: left;
+  width: 0.625rem;
+  height: 100%;
+  margin-right: 1rem;
+  padding: 1px;
+  box-sizing: border-box;
+}
+#viewBox .indicator > ul > li:last-child {
+  margin-right: 0;
+}
+#viewBox .indicator > ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  border-radius: 100%;
+}
+#viewBox .indicator > ul a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+#viewBox .indicator > ul li.active a {
+  background-color: #4c4c4c;
+}
+#viewBox .view_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#viewBox .view_area > ul {
+  width: 1000%;
+  height: 100%;
+  margin-left: -100%;
+}
+#viewBox .view_area > ul li {
+  float: left;
+  width: 10%;
+  height: 100%;
+}
+#viewBox .view_area .banner_01 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_0421.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_02 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_0429don.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_03 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_0608.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_04 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_200601.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_05 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_200616.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_06 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_200618.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_07 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_SSE.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_08 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w_yejidong.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+#viewBox .view_area .banner_09 {
+  background-image: url("../../img/stco/stcoImg/adbanner//main_rolling_w2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+
 /* trendOn */
+#trendBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 780px;
+  padding-bottom: 100px;
+  background-color: #999;
+}
+
+.trend_area {
+  width: 100%;
+  max-width: 1400;
+  margin: 50px auto;
+}
+.trend_area .btn {
+  z-index: 500;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  margin-top: -28px;
+  width: 1540px;
+  height: 0;
+}
+.trend_area .btn > button {
+  width: 50px;
+  height: 56px;
+  float: left;
+  background-image: url("../../img/stco/stcoImg/etc/icon.png");
+  background-repeat: no-repeat;
+  background-position: -10px -170px;
+  background-size: auto auto;
+}
+.trend_area .btn > button:first-child {
+  float: right;
+}
+.trend_area .btn > button:first-child {
+  background-position: -180px -170px;
+}
+.trend_area .indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 1.875rem;
+  z-index: 500;
+  width: 25rem;
+  height: 0.625rem;
+  transform: translateX(-50%);
+}
+.trend_area .indicator > ul {
+  width: 100%;
+  height: 100%;
+}
+.trend_area .indicator > ul > li {
+  float: left;
+  width: 0.625rem;
+  height: 100%;
+  margin-right: 1rem;
+  padding: 1px;
+  box-sizing: border-box;
+}
+.trend_area .indicator > ul > li:last-child {
+  margin-right: 0;
+}
+.trend_area .indicator > ul a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  border-radius: 100%;
+}
+.trend_area .indicator > ul a > span {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.trend_area .indicator > ul li.active a {
+  background-color: #4c4c4c;
+}
+
 /* keyword */
 /* bestItem */
 /* hotDeal */

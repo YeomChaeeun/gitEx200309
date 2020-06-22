@@ -19,8 +19,8 @@ $baseWidth:1400;
 @mixin centerBtn($fw:100, $w:50, $h:56){
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  // margin-left: 50%;
+  transform: translateX(-50%);
+  margin-left: 50%;
   margin-top: -$h/2+px;
   width: $baseWidth+$fw+px; 
   height: 0;
@@ -32,4 +32,45 @@ $baseWidth:1400;
     // @include bg();
     &:first-child{float:right;}
   }
+}
+
+@mixin hidden(){
+  display: block;
+  position: absolute; z-index: -1;
+  width: 0; height: 0; overflow: hidden;
+}
+
+@mixin full($c){
+  display: block; width: 100%; height: 100%;
+  background-color: $c;
+  @content;
+  >span{@include hidden();}  
+}
+
+@mixin lastMargin0{
+  float: left;
+  @content;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+@mixin indicator($c:10, $w:10, $mr:16, $h:10, $b:33) {
+  position: absolute;
+  left: 50%; bottom: rem($b); z-index: 500;
+  width: rem($c*($w+$mr)-$mr); height: rem($h);
+  transform: translateX(-50%);
+  >ul{
+    width: 100%; height: 100%;
+    >li{
+      @include lastMargin0(){
+        width: rem($w); height: 100%;
+        margin-right: rem($mr);
+        padding: 1px; box-sizing: border-box;
+      };
+    }
+    a{@include full($indicator){border-radius: 100%;};}
+    li.active a{background-color: $indiPoint;}
+  }  
 }
