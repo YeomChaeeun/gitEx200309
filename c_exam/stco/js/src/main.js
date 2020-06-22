@@ -1,6 +1,5 @@
 // main.js
 
-
 (function($){
   // start
   var viewBox = $('#viewBox');
@@ -62,7 +61,7 @@
   }
 
   // slide clone
-  
+
 
 
 

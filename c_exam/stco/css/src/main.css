@@ -1,95 +1,105 @@
+@charset "UTF-8";
 /* main.css */
-#gnb {
-  font-family: "myriad pro", "din", "arial", "malgun gothic", "noto sand", dotum, sans-serif;
+h2 {
+  font-size: 1.75rem;
 }
 
-#headBox {
-  width: 100%;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+h3 {
+  font-size: 1.3125rem;
 }
 
-#footBox {
-  width: 100%;
-  height: 300px;
-  background-color: #333;
+h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd {
+  font-family: "Noto Sans KR", "Nanum Gothic", "돋움", "Dotum", Helvetica, "AppleGothic";
 }
 
 #wrap {
   width: 100%;
+  min-width: 1400px;
+  height: auto;
+  min-height: 900px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+/* popup */
+#popupBox {
+  width: 100%;
+  height: 90px;
+  background-color: #8e8e8e;
+}
+#popupBox .popup_area {
+  width: 100%;
+  max-width: 1400px;
   height: 100%;
-  background-color: #999;
+  margin: auto;
+  background-image: url("../../img/stco/stcoImg/popup/top_banner_8e8e8e_200618.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto auto;
 }
 
-#viewBox {
-  position: relative;
+/* headBox */
+#headBox {
   width: 100%;
-  height: 600px;
-  background-color: #777;
+  height: 87px;
+  padding-top: 36px;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #666666;
 }
-
-.indicator_area {
-  position: absolute;
-  bottom: 5%;
+#headBox.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#headBox .head_area {
   width: 100%;
-  height: 50px;
+  max-width: 1400px;
+  height: 100%;
   margin: auto;
 }
 
-.indicator {
+/* viewBox */
+#viewBox {
+  position: relative;
   width: 100%;
-  height: 100%;
-  text-align: center;
+  height: 700px;
+  margin: auto;
 }
-
-.indicator li {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
-  border-radius: 100%;
-  background-color: #f0a;
+#viewBox .btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: -28px;
+  width: 1520px;
+  height: 0;
 }
-
-.indicator li:last-child {
-  margin-right: 0;
-}
-
-.product_wrap {
-  width: 100%;
-  height: 500px;
-  background-color: #fac;
-}
-
-.pruduct_list {
-  width: 800%;
-  height: 100%;
-  background-color: #ddd;
-}
-
-.pruduct_list li {
+#viewBox .btn > button {
+  width: 50px;
+  height: 56px;
   float: left;
-  width: 6%;
-  height: 100%;
-  margin-right: 0.25%;
+  background-image: url("../../img/stco/stcoImg/etc/icon.png");
+  background-repeat: no-repeat;
+  background-position: -10px -90px;
+  background-size: auto auto;
 }
-
-.pruduct_list li:nth-child(1) {
+#viewBox .btn > button:first-child {
+  float: right;
+}
+#viewBox .btn > button:first-child {
+  background-position: -180px -90px;
+}
+/* trendOn */
+/* keyword */
+/* bestItem */
+/* hotDeal */
+/* category */
+/* sns */
+/* footBox */
+#footBox {
+  width: 100%;
+  height: 300px;
   background-color: #333;
-}
-
-.pruduct_list li:nth-child(2) {
-  background-color: #444;
-}
-
-.pruduct_list li:nth-child(3) {
-  background-color: #555;
-}
-
-.pruduct_list li:nth-child(4) {
-  background-color: #666;
-}
-
-.pruduct_list li:nth-child(5) {
-  background-color: #777;
 }

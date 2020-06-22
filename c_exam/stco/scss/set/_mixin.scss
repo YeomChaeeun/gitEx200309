@@ -1,0 +1,35 @@
+// _mixin.scss
+
+@mixin max1400(){
+  width: 100%; max-width: 1400px;
+  height: 100%;
+  margin: auto;
+  @content;
+}
+
+$Imgurl:'../../img/stco/stcoImg/'; // css 문서 기준
+@mixin bg($i, $r:no-repeat, $p:0 0, $s:auto auto){
+  background-image: url($Imgurl+$i);
+  background-repeat: $r;
+  background-position: $p;
+  background-size: $s;
+}
+
+$baseWidth:1400;
+@mixin centerBtn($fw:100, $w:50, $h:56){
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // margin-left: 50%;
+  margin-top: -$h/2+px;
+  width: $baseWidth+$fw+px; 
+  height: 0;
+  >button{
+    width: $w + px;
+    height: $h + px;
+    float: left;
+    @content();
+    // @include bg();
+    &:first-child{float:right;}
+  }
+}

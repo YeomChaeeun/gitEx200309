@@ -1,54 +1,37 @@
 // main.scss
 /* main.css */
 
+// base setting
+@import "../set/variable";
+@import "../set/function";
+@import "../set/mixin";
 
-@import "../setting/variable";
-@import "../page/header";
-@import "../page/footer";
+// ----------------------------------------------------------------------------
+h2{font-size: $titleFont;}
+h3{font-size: $titleFont2;}
+h2,h3,h4,h5,h6,p,div,ul,li,ol,dl,dt,dd{font-family: $fontFamily;}
+
+// ----------------------------------------------------------------------------
 
 #wrap{
-  width: 100%; height: 100%;
-  background-color: #999;
-}
+  // overflow: visible; overflow-x: hidden;
+  width: 100%; min-width: 1400px;
+  height: auto; min-height: 900px;
+  margin: auto;
+  background-color: $sample;
+} // #wrap
 
-#viewBox{
-  position: relative;
-  width: 100%; height: 600px; 
-  background-color: #777;
-}
+  // popup
+  @import "../parts/popup";
 
-.indicator_area{
-  position: absolute; bottom: 5%;
-  width: 100%; height: 50px; margin: auto;
-}
-.indicator{
-  width: 100%; height: 100%;
-  text-align: center;
-}
-.indicator li{
-  display: inline-block;
-  width: 20px; height: 20px;
-  margin-right: 20px;
-  border-radius: 100%;
-  background-color: #f0a;
-}
-.indicator li:last-child{margin-right: 0;}
+  // design layout
+  @import "../parts/headBox";
+  @import "../parts/viewBox";
+  @import "../parts/trendOn";
+  @import "../parts/keyword";
+  @import "../parts/bsetItem";
+  @import "../parts/hotDeal";
+  @import "../parts/category";
+  @import "../parts/sns";
+  @import "../parts/footBox";
 
-.product_wrap{
-  width: 100%; height: 500px;
-  background-color: #fac;
-}
-.pruduct_list{
-  width: 800%; height: 100%;
-  background-color: #ddd;
-}
-.pruduct_list li{
-  float: left;
-  width: 6%; height: 100%;
-  margin-right: 0.25%;
-}
-.pruduct_list li:nth-child(1){background-color: #333;}
-.pruduct_list li:nth-child(2){background-color: #444;}
-.pruduct_list li:nth-child(3){background-color: #555;}
-.pruduct_list li:nth-child(4){background-color: #666;}
-.pruduct_list li:nth-child(5){background-color: #777;}
