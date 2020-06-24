@@ -4,6 +4,7 @@
   min-height: 3000px;
   margin: auto;
   background-image: linear-gradient(#dfdfdf, #afafaf);
+  padding-top: 2rem;
 }
 
 #headBox {
@@ -18,19 +19,78 @@
 }
 
 #openLaptop {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
   width: 1400px;
   height: 2000px;
   margin: auto;
 }
 #openLaptop > h2 {
+  position: relative;
+  z-index: 500;
   width: 70%;
   height: auto;
   margin: auto;
   margin-bottom: 1rem;
   padding-top: 2rem;
   text-align: center;
-  font-size: 4rem;
+  font-size: 4.5rem;
+  font-weight: 900;
 }
 #openLaptop > h2 > span {
   font-size: 0.5em;
+}
+#openLaptop .macbook {
+  position: relative;
+  width: 1100px;
+  height: 400px;
+  margin: auto;
+  background-color: #fff;
+}
+#openLaptop .macbook > img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+#openLaptop p {
+  width: 1400px;
+  height: auto;
+  margin-top: 5rem;
+  font-size: 3rem;
+  color: #777;
+  font-weight: bold;
+  word-break: keep-all;
+}
+#openLaptop .movie_link {
+  width: 1400px;
+  font-size: 2rem;
+  color: #777;
+}
+
+#laptopSize {
+  margin-top: 2000px;
+  width: 1400px;
+  height: auto;
+  min-height: 1000px;
+  margin-bottom: 5rem;
+  background-color: #faf;
+}
+
+#retinaDisplay {
+  width: 1400px;
+  height: auto;
+  min-height: 500px;
+  margin-bottom: 5rem;
+  background-color: #ffa;
+}
+
+.dermi {
+  width: 1400px;
+  height: auto;
+  min-height: 1000px;
+  margin-bottom: 5rem;
+  background-color: #aff;
 }
