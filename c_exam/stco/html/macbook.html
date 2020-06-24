@@ -1,51 +1,110 @@
 <!DOCTYPE html>
+<!-- macbook.html -->
 <html lang="ko-KR">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
 
-  <link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
-  <link rel="stylesheet" href="../css/base/reset.css">
-  <link rel="stylesheet" href="../css/base/common.css">
-  <link rel="stylesheet" href="../css/mac/src/macbook.css">
+<!-- <link rel="stylesheet" href="../font/gyeonggi/gyeonggi.css"> -->
+<link rel="stylesheet" href="../fonts/fontawesome-5/css/all.min.css">
 
-  <!--[if IE]>
-    <meta src="../ie/html5shiv/dist/html5shive.min.js">
-    <meta src="../ie/pie/PIE.js">
-    <meta src="../ie/respond/dist/respond.min.js">
-  <![endif] -->
-  <title>macbook page 제작하기</title>
+	<link rel="stylesheet" href="../css/base/reset.css">
+	<link rel="stylesheet" href="../css/base/common.css">
+
+	<link rel="stylesheet" href="../css/mac/src/macbook.css">
+
+	<!--[if IE]>
+		<script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+		<script src="../ie/pie/PIE.js"></script>
+		<script src="../ie/respond/dist/respond.min.js"></script>
+	<![endif]-->
+
+	<title>macbook page 제작하기</title>
 </head>
 <body>
-  <!-- layout -->
-  <div id="wrap">
-    <header id="headBox"></header>
-    <section id="openLaptop">
+	<!-- layout -->
+	<div id="wrap">
+		<header id="headBox"></header>
+		<section id="openLaptop">
+			<h2>
+				<span>MacBook Pro</span> <br />
+				프로를 위해 프로가 <br />
+				만든 프로 노트북.
+			</h2>
+			<div class="macbook">
+				<!-- <img src="../img/mac/large_0000.jpg" alt=""> -->
+			</div>
+			<p>주어진 한계를 단호히 거부하고 세상을 바꿔나가는 선구자들. 그들을 위해 탄생한 새로운 MacBook Pro. 지금까지 Apple이 만든 노트북 중 가장 강력한 파워를 자랑합니다. 몰입감 넘치는 16형 Retina 디스플레이, 초고속 프로세서, 차세대 그래픽, MacBook Pro 사상 가장 큰 배터리 용량, 새로운 Magic Keyboard, 그리고 방대한 저장 용량까지. 궁극의 프로를 위한 궁극의 노트북이죠.
+			</p>
+			<div class="movie_link">
+				<a href="#">동영상보기 <i></i></a>
+			</div>
+		</section>
+
+		<article id="laptopSize">
+
+			<div class="macbook">
+				<div class="macbook_option">
+					<div class="option_part_01">
+						<dl>
+							<dt>16형 Retina 디스플레이</dt>
+							<dd>화면에 빠져드는 시각적 경험</dd>
+						</dl>
+						<dl>
+							<dt>최대 8TB SSD 저장 장치</dt>
+							<dd>노트북 사상 가장 큰 용량</dd>
+						</dl>
+						<dl>
+							<dt>AMD Radeon Pro<br />5000M 시리즈 그래픽</dt>
+							<dd>고속 렌더링 및 매끄러운 재생 성능</dd>
+						</dl>
+					</div>	
+					<div class="option_part_02">
+						<dl>
+							<dt>최대 8코어 프로세서</dt>
+							<dd>막대한 작업량도 너끈히 처리하는 파워</dd>
+						</dl>
+						<dl>
+							<dt>최대 64GB 메모리</dt>
+							<dd>대용량 파일 편집 및 부드러운 멀티태스킹 능력</dd>
+						</dl>
+						<dl>
+							<dt>6 스피커 사운드 시스템 및 <br />스튜디오급 마이크</dt>
+							<dd>극적인 사운드 재생 및 월등히 깨끗한 녹음 품질</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="macbook_video" aria-hidden="true">
+					<video poster="../img/mac_other/hero_stats_before.jpg" preload="auto" muted>
+						<source src="../img/mac_other/hero_stats_video.mp4" type="video/mp4" />
+					</video>
+				</div>
+			</div>
+
+		</article>
+		<article id="retinaDisplay">
       <h2>
-        <span>MackBook Pro</span><br />
-        프로를 위해 프로가 <br />
-        만든 프로 노트북.
+        <em>Retina 디스플레이</em>
+        아이디어를 <br class="mobile"/>광활하게 펼칠<br/> 
+        아름답고 광활한 작업 공간.
       </h2>
-      <div class="macbook">
-        <img src="../img/mac/large_0000.jpg" alt="">
+      <div class="retina_image">
+        <div class="people"></div>
+        <div class="artwork"></div>
       </div>
       <p>
-        주어진 한계를 단호히 거부하고 세상을 바꿔나가는 선구자들. 그들을 위해 탄생한 새로운 MacBook Pro. 지금까지 Apple이 만든 노트북 중 가장 강력한 파워를 자랑합니다. 몰입감 넘치는 16형 Retina 디스플레이, 초고속 프로세서, 차세대 그래픽, MacBook Pro 사상 가장 큰 배터리 용량, 새로운 Magic Keyboard, 그리고 방대한 저장 용량까지. 궁극의 프로를 위한 궁극의 노트북이죠.
+        새로운 MacBook Pro는 매혹적인 <span>16형 Retina 디스플레이</span>를 갖추고 있습니다. 이는 Mac 노트북 사상 가장 큰 Retina 디스플레이죠. <span>500 니트 밝기</span>로 극적인 하이라이트와 밝은 화이트를 보여주는 동시에, 정교한 광배향 기술이 적용된 액정 분자들을 통해 짙은 블랙을 구현합니다. 여기에 <span>P3급 넓은 색영역</span>으로 사진과 동영상에 선명하고 생생한 느낌을 선사하죠. 이제 어디에서든 당신의 작업물을 가능한 한 최고의 모습으로 확인할 수 있습니다.
       </p>
-      <div class="movie_link">
-        <a href="#">동영상 보기</a> 
-      </div>
-    </section>
-    <article id="laptopSize"></article>
-    <article id="retinaDisplay"></article>
-    <div class="dermi"></div>
-  </div>
-  
-  <!-- script -->
-  <script src="../js/base/jquery-3.5.1.min.js"></script>
-  <script src="../js/base/jquery-ui.min.js"></script>
-  <script src="../js/src/macbook.js"></script>
-  
+
+
+    </article>
+		<div class="dermi"></div>
+	</div>
+
+	<!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+	<script src="../js/src/macbook.js"></script>
 </body>
 </html>
