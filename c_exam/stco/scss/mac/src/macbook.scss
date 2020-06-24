@@ -1,0 +1,29 @@
+// macbook.scss
+
+@import "./setting";
+
+#wrap{
+  width: 1400px; height: auto; min-height: 3000px;
+  margin: auto;
+  background-image: linear-gradient(#dfdfdf, #afafaf);
+}
+
+#headBox{
+  position: fixed; top: 0; left: 0; z-index: 1500;
+  width: 100%; height: 90px; background-color: #fff;
+  border-bottom: 1px solid #aaa;
+}
+
+#openLaptop{
+  width: $baseWidth; height: 2000px;
+  margin: auto;
+  >h2{
+    width: 70%; height: auto;
+    margin: auto; margin-bottom: 1rem; padding-top: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    >span{
+      font-size: 0.5em;
+    }
+  }
+}
