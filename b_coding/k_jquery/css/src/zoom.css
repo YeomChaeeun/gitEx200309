@@ -63,3 +63,14 @@ h1{
   background-repeat: no-repeat;
   background-size: 200% auto;
 }
+.zoom2{
+  display: none;
+  position: fixed;
+  width: 200px; height: 200px;
+  border: 5px solid #ccc;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.7);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 600%;
+  background-position: 0 0;
+}

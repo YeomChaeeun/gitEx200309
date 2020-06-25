@@ -12,6 +12,7 @@
   var big = product.find('.big');
   var thum = product.find('.thum');
   var zoom = product.find('.zoom');
+  var zoom2 = product.find('.zoom2');
 
   thum.append('<ul></ul>');
   var thumUl = thum.find('ul');
@@ -48,10 +49,20 @@
       backgroundImage:'url('+url+'big/'+galleryImg.big[index]+')',
       backgroundPosition: xPer + '%' + ' ' + yPer + '%' 
     });
+
+    var evtPageX = e.originalEvent.pageX;
+    var evtPageY = e.originalEvent.pageY;
+    zoom2.css({top:evtPageY+10,left:evtPageX+10});
+    zoom2.stop().fadeIn(100);
+    zoom2.css({
+      backgroundImage:'url('+url+'big/'+galleryImg.big[index]+')',
+      backgroundPosition: xPer + '%' + ' ' + yPer + '%' 
+    });
   });
 
   big.on('mouseleave',function(e){
     zoom.stop().hide();
+    zoom2.stop().fadeOut(100);
   });
 
 })(jQuery);
