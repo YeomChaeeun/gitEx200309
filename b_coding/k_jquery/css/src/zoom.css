@@ -11,7 +11,7 @@ h1{
   background-color: #333;
 }
 
-.product{width: 100%; height: auto;}
+.product{width: 100%; height: auto; }
 .product:after{content: " "; display: block; clear: both;}
 
 .gallery{
@@ -19,27 +19,46 @@ h1{
   width: 49%; height: 600px;
 }
   .big{
-    width: 100%; height: 400px;
+    width: 100%; height: 500px;
     border: 2px solid #555;
     box-sizing: border-box;
+    background-position: 0 0;
+    background-size: cover;
   }
   .thum{
     width: 100%; height: 100px;
     padding: 1rem;
     box-sizing: border-box;
+    background-color: #fff;
   }
   .thum>ul{width: 100%; height: auto;}
   .thum>ul:after{content: " "; display: block; clear: both;}
   .thum li{
+    float: left;
     width: 70px; height: 70px; border-radius: 1rem;
     margin-right: 1rem; background-color: #caa;
   }
-  .thum a{display: block; width: 100%; height: 100%;}
-  .thum span{display: block; position: absolute; z-index: -1; width: 0; height: 0; overflow: hidden;}  
+  .thum a{
+    display: block; width: 100%; height: 100%;
+    border-radius: 1rem; background-position: 50% 50%; background-size: auto 120%;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    filter: blur(0.05rem) sepia;
+  }
+  .thum a:hover, .thum a:focus{
+    transform: scale(1.3); filter: blur(0) sepia(0);
+    border: 3px solid #07a;
+    background-size: auto 140%;
+  }
+  .thum span{
+    display: block; 
+    position: absolute; z-index: -1; width: 0; height: 0; overflow: hidden;
+  }  
 
 .zoom{
+  display: none;
   float: right;
-  width: 40%; height: 600px;
+  width: 49%; height: 600px;
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: 200% auto;
