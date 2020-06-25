@@ -195,7 +195,7 @@ body {
 }
 #retinaDisplay .retina_image > div.people {
   z-index: 10;
-  background-image: url("../../../img/mac_other/retina_people.jpg");
+  background-image: url("../../img/mac_other/retina_people.jpg");
   background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -203,7 +203,7 @@ body {
 }
 #retinaDisplay .retina_image > div.artwork {
   z-index: 5;
-  background-image: url("../../../img/mac_other/retina_laptop.jpg");
+  background-image: url("../../img/mac_other/retina_laptop.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: contain;
@@ -220,7 +220,7 @@ body {
   width: 68%;
   height: 80%;
   background-position: 50% bottom;
-  background-image: url("../../../img/mac_other/retins_bg_img.jpg");
+  background-image: url("../../img/mac_other/retins_bg_img.jpg");
 }
 #retinaDisplay p {
   width: 1050px;
