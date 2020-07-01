@@ -21,6 +21,7 @@
     console.log(data);
     var i = 0;
     var person;
+    var firstView = 10;
     var myView = 5;
     var maxN = 30;
     var LoadData = function(n){
@@ -36,7 +37,7 @@
       if(i>=maxN){moreBtn.hide();}
     }
 
-    LoadData(10);
+    LoadData(firstView);
     
     moreBtn.on('click',function(e){
       e.preventDefault();
