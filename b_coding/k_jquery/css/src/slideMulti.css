@@ -1,0 +1,153 @@
+/* slideMulti.css */
+:root{
+	--base-color:#17aaff;
+}
+
+
+
+#wrap{
+	width: 90%; min-width:900px; max-width:1600px; height:auto;
+	margin:auto;	
+}
+
+h1{
+	padding: 1rem; 
+	text-align: center; 
+	/* background-color: #555; */
+	background-color: var(--base-color);
+	/* color:#fff;  */
+	color:var(--text-color);
+}
+
+.viewBox{
+	width: 100%; height:auto;
+}
+.viewBox h2{
+	padding: 0.5rem;
+	border-bottom: 1px solid #000;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+}
+
+.slide_banner{
+	position: relative; z-index:100;
+	width: 100%; height: 800px;
+	background-color: #ccc;
+}
+
+.slide_banner:after{
+	content:" "; display: block;
+	position: absolute; top: 0; left: 0;
+	z-index:300;
+	width: 100%; height: 100%;
+	background-color:rgba(0,0,0,0.7);
+}
+
+/* -----------------------------------------  */
+.btn{
+	position: absolute; top: 50%; left: 50%; z-index:1000;
+	width:60%; height:0; 
+	transform:translateX(-50%);
+}
+
+.btn > button {
+	/* display: block; */
+	float:left;
+	font-size:4rem;	transform:translateY(-50%);
+	color:#fff;
+}
+.btn > button.next {	float:right; }
+/*  ---------------------------------------- */
+
+.slide_banner ul{
+	position: absolute; top:50%; left:50%; z-index:500;
+	width: 55%; height:10px;
+	transform:translateX(-50%);
+	perspective:50rem;
+}
+
+.slide_banner li {
+	position: absolute; top:0; bottom:0; left:0; right:0; 
+	z-index:100;
+	width: 40%; height:600px;
+	margin:auto;	box-sizing: border-box;	padding-top:250px;
+	background-color: #fff;
+	background-repeat: no-repeat;	background-position: 50% 50%;	background-size: cover;
+
+	/* transition:all 500ms linear; */
+}
+
+.slide_banner li:first-child{	
+	z-index:-1;
+	transform:translateX(-100%) rotateY(45deg) scale(0.8);	
+}
+
+.slide_banner li:last-child{	
+	z-index:-1;
+	transform:translateX(100%) rotateY(-45deg) scale(0.8);	
+}
+
+.banner_01{ background-image:url('../../img/gallery/thum/gallery_01.jpg');}
+.banner_02{ background-image:url('../../img/gallery/thum/gallery_02.jpg');}
+.banner_03{ background-image:url('../../img/gallery/thum/gallery_05.jpg');}
+
+/* ---------------------------------------------------------------------- */
+.slide_banner li p{	
+	position: absolute; top: 50%; left: -2rem;
+	width:200%; height:	auto;
+	font-size:4rem; font-weight: bold;
+	color:var(--base-color);
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.slide_banner li.active p {	opacity: 1;	}
+
+.slide_banner li span {	display: block; width: 100%; height:auto;	margin-bottom: 1rem;}
+.slide_banner li .con_01{	text-transform: uppercase;}
+.slide_banner li .con_02{
+	position: relative; left:50px;
+	text-transform: uppercase;
+	font-size:3rem;
+	margin-bottom: 2rem;
+}
+
+.slide_banner li .con_02:before{
+	content:""; 
+	position: absolute; top: 50%; left:-50px;
+	width:40px; height:0.5rem; 
+	background-color: #171717;
+	background-color: var(--base-color);
+}
+.slide_banner li .con_02:after{
+	content:""; position: absolute;
+	left:-50px; bottom:-0.5rem; width:80px; height:0.2rem;
+	background-color: #171717;
+	background-color: var(--base-color);
+}
+
+.slide_banner li .con_03{
+	font-size:1.2rem;
+}
+
+.slide_banner li  span{
+  transform: translateY(1.5rem);
+  transition: all 600ms ease;
+}
+.slide_banner li.active span{transform: translateY(0);}
+.slide_banner li.active .con_01{transition-delay: 0;}
+.slide_banner li.active .con_02{transition-delay: 150ms;}
+.slide_banner li.active .con_03{transition-delay: 300ms;}
+
+.slide_banner li.up span{
+  transform: translateY(-3rem);
+  transition: all 500ms ease-out;
+}
+.slide_banner li.up .con_01{transition-delay: 0;}
+.slide_banner li.up .con_02{transition-delay: 150ms;}
+.slide_banner li.up .con_03{transition-delay: 300ms;}
+
+/* -------------------------------- */
+.back_img{
+	width: 100%; height: 100%; background-color: #aca;
+}
