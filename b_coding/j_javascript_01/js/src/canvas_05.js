@@ -67,31 +67,45 @@ ctx.fillStyle = baseColor;
 }// MyGraph(x좌표, y좌표, percent, 스킬명);
 
 var MyBar = function(x, y, p, t){
+  var per = p * 2;
+  var animationBar;
+  var i = 0;
+  var BarGraph = function(){
+    animationBar = function(per){      
 
-	var per = p * 2;
+      ctx.clearRect(x, y-15, 300, 100);
+           
+      ctx.globalAlpha = 0.3;
+      ctx.lineWidth = 30;
+      ctx.beginPath();
+      ctx.moveTo(x,y);
+      ctx.lineTo(x+200, y);
+      ctx.stroke();
 
-	ctx.globalAlpha = 0.3;
-	ctx.lineWidth = 30;
+      ctx.lineWidth = 30;
+      ctx.globalAlpha = 1;
+      ctx.beginPath();
+      ctx.moveTo(x,y);
+      ctx.lineTo(x+ per, y);
+      ctx.stroke();
 
-	ctx.beginPath();
-	ctx.moveTo(x,y);
-	ctx.lineTo(x+200, y);
-	ctx.stroke();
-	
-	ctx.globalAlpha = 1;
-	ctx.beginPath();
-	ctx.moveTo(x,y);
-	ctx.lineTo(x+ per, y);
-	ctx.stroke();
+      ctx.fillStyle = baseColor;
+      ctx.font = "bold 30px myriadPro";
+      ctx.textAlign = "left";
+      ctx.fillText(t, x-15, y+55);
 
-	ctx.fillStyle = baseColor;
-	ctx.font = "bold 30px myriadPro";
-	ctx.textAlign = "left";
-	ctx.fillText(t, x-15, y+55);
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#f07";
+      ctx.fillText(p + '%', x+225, y+55)
+    };
 
-	ctx.textAlign = "right";
-	ctx.fillStyle = "#f07";
-	ctx.fillText(p + '%', x+225, y+55)
+    i += 1;
+    animationBar( i );
+    (i < per) ? requestAnimationFrame(BarGraph): 
+                cancelAnimationFrame(BarGraph);
+  }
+  BarGraph();
+
 }
 
 
