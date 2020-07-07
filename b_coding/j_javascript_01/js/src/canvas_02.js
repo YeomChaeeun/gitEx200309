@@ -24,9 +24,20 @@
   // lineCap = 'butt' | 'round' | 'square' ;
 
   ctx.stroke();
+  // ctx.fill();
   
   ctx.moveTo(700,700);
   ctx.lineTo(500,700);
   ctx.stroke();
+
+  var i = 0;
+  ctx.moveTo(100, 100);
+  setInterval(function(){
+    if(i<500){
+      i+=10;
+      ctx.lineTo(100,100+i);
+      ctx.stroke();
+    }
+  },50);
 
 })(jQuery);
