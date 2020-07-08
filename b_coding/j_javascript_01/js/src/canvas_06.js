@@ -54,8 +54,80 @@ var Deg = function(d){
 	return Math.PI * Pi;
 };
 
+// 시계 원으로 표현
+// var RenderTime = function(){
+//   // 시간파악기능 ----------------------
+// 	var now = new Date();
+// 	var today = now.toDateString();
+// 	var nowTime = now.toLocaleTimeString();
+// 	var h  = now.getHours();
+// 	var m  = now.getMinutes();
+// 	var s  = now.getSeconds();
+
+// 	// -----------------------------------
+
+// 	var centerX = canvas.width/2;
+// 	var centerY = canvas.height/2;
+
+// 	// ctx.fillStyle = '#171717';
+// 	var gr = ctx.createRadialGradient(centerX, centerY, 0 , centerX, centerY, 300);
+// 			gr.addColorStop(0, "rgba(0,100,255,0.2)");
+// 			// gr.addColorStop(0.5, "rgba(255,250,255,0.5)");
+// 			// gr.addColorStop(0.7, "rgba(0,0,0,0.5)");
+// 			gr.addColorStop(1, "#171717");
+// 	ctx.fillStyle = gr;
+
+// 	ctx.fillRect(0,0, canvas.width, canvas.height);
+	
+
+// 	ctx.strokeStyle = "#0cf";
+// 	ctx.lineWidth = 30;
+// 	ctx.lineCap = 'round';
+// 	ctx.shadowBlur = 10;
+// 	ctx.shadowColor = "#0cf";
+
+// 	// Hours
+//   ctx.beginPath();
+// 	ctx.arc(centerX, centerY, 300, Deg(0) , Deg(h * 15));
+// 	ctx.stroke();
+
+// 	// Minutes
+// 	ctx.beginPath();
+// 	ctx.arc(centerX, centerY, 250, Deg(0), Deg(m * 6));
+// 	ctx.stroke();
+
+// 	// Seconds
+// 	ctx.beginPath();
+// 	ctx.arc(centerX, centerY, 200, Deg(0), Deg(s * 6));
+// 	ctx.stroke();
+
+// 	// console.log( Deg(s * 6) );
+
+// 	// font세팅 -----------------------------
+
+// 	// today
+// 	ctx.font = "bold 30px Arial";
+// 	ctx.fillStyle = "#fff";
+// 	ctx.textAlign = 'center';
+// 	ctx.fillText(today, centerX, centerY);
+	
+// 	// nowTime
+// 	ctx.font = "normal 25px Arial";
+// 	ctx.fillText(nowTime, centerX, centerY+40);
+
+//   // var imgData = canvas.toDataURL('image/jpeg');
+//   var imgData = canvas.toDataURL('');
+//   canvasImg.src = imgData;
+  
+// 	requestAnimationFrame( RenderTime );
+// }
+// setInterval(function(){
+//   RenderTime();
+// },40);
+
+
 var RenderTime = function(){
-  // 시간파악기능 ----------------------
+	// 시간파악기능 ----------------------
 	var now = new Date();
 	var today = now.toDateString();
 	var nowTime = now.toLocaleTimeString();
@@ -68,13 +140,13 @@ var RenderTime = function(){
 	var centerX = canvas.width/2;
 	var centerY = canvas.height/2;
 
-	// ctx.fillStyle = '#171717';
-	var gr = ctx.createRadialGradient(centerX, centerY, 0 , centerX, centerY, 300);
-			gr.addColorStop(0, "rgba(0,100,255,0.2)");
-			// gr.addColorStop(0.5, "rgba(255,250,255,0.5)");
-			// gr.addColorStop(0.7, "rgba(0,0,0,0.5)");
-			gr.addColorStop(1, "#171717");
-	ctx.fillStyle = gr;
+	ctx.fillStyle = '#171717';
+	// var gr = ctx.createRadialGradient(centerX, centerY, 0 , centerX, centerY, 300);
+	// 		gr.addColorStop(0, "rgba(0,100,255,0.2)");
+	// 		// gr.addColorStop(0.5, "rgba(255,250,255,0.5)");
+	// 		// gr.addColorStop(0.7, "rgba(0,0,0,0.5)");
+	// 		gr.addColorStop(1, "#171717");
+	// ctx.fillStyle = gr;
 
 	ctx.fillRect(0,0, canvas.width, canvas.height);
 	
@@ -82,22 +154,33 @@ var RenderTime = function(){
 	ctx.strokeStyle = "#0cf";
 	ctx.lineWidth = 30;
 	ctx.lineCap = 'round';
-	ctx.shadowBlur = 10;
-	ctx.shadowColor = "#0cf";
+	// ctx.shadowBlur = 10;
+	// ctx.shadowColor = "#0cf";
 
+
+	
 	// Hours
-  ctx.beginPath();
-	ctx.arc(centerX, centerY, 300, Deg(0) , Deg(h * 15));
+	ctx.beginPath();
+	ctx.lineWidth = 40;
+	ctx.moveTo(centerX, centerY);
+	ctx.strokeStyle = "#0af";
+	ctx.arc(centerX, centerY, 150, Deg(h * 30), Deg(h * 30));
 	ctx.stroke();
 
 	// Minutes
 	ctx.beginPath();
-	ctx.arc(centerX, centerY, 250, Deg(0), Deg(m * 6));
+	ctx.lineWidth = 30;
+	ctx.strokeStyle = "#fa0";
+	ctx.moveTo(centerX, centerY);
+	ctx.arc(centerX, centerY, 250, Deg(m * 6), Deg(m * 6));
 	ctx.stroke();
 
 	// Seconds
 	ctx.beginPath();
-	ctx.arc(centerX, centerY, 200, Deg(0), Deg(s * 6));
+	ctx.lineWidth = 5;
+	ctx.moveTo(centerX, centerY);
+	ctx.strokeStyle = "#f0a";
+	ctx.arc(centerX, centerY, 300, Deg(s * 6), Deg(s * 6));
 	ctx.stroke();
 
 	// console.log( Deg(s * 6) );
@@ -108,20 +191,20 @@ var RenderTime = function(){
 	ctx.font = "bold 30px Arial";
 	ctx.fillStyle = "#fff";
 	ctx.textAlign = 'center';
-	ctx.fillText(today, centerX, centerY);
+	ctx.fillText(today, centerX, centerY+100);
 	
 	// nowTime
 	ctx.font = "normal 25px Arial";
-	ctx.fillText(nowTime, centerX, centerY+40);
+	ctx.fillText(nowTime, centerX, centerY+140);
+
+	
+	var imgData   = canvas.toDataURL();  // png
+	// var imgData   = canvas.toDataURL('image/jpeg'); // jpg
+	canvasImg.src = imgData;
+	canvasImg.alt = nowTime;
 
 	requestAnimationFrame( RenderTime );
+};
 
-  var imgData = canvas.toDataURL();
-  canvasImg.src = imgData;
-
-}
-// setInterval(function(){
-//   RenderTime();
-// },40);
-
+canvas.style = 'display:none';
 RenderTime();
