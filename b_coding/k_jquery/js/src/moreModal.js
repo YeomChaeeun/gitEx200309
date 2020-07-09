@@ -2,6 +2,7 @@
 
 var listData;
 var colorArr;
+var NowListLen;
 
 (function($){
   var listView = $('#listViewBox');
@@ -13,14 +14,19 @@ var colorArr;
   var i = 0;
 
   var InsertLi = function(db, color){
-    var NowListLen = i+3;
+    NowListLen = i+3;
     for(i;i<NowListLen;i+=1){
-      listUl.append(liCode);
-      // console.log(i);
-      listUl.find('li').eq(i).children('a').css({
-        backgroundColor:color[i]
-      });
-      listUl.find('li').eq(i).find('span').text(db[i].displayName);
+      if(i>=db.length){
+        moreBtn.hide();
+        break;
+      }else{				
+				listUl.append(liCode);
+				// console.log(i);
+				listUl.find('li').eq(i).children('a').css({
+					backgroundColor:color[i]
+				});
+				listUl.find('li').eq(i).find('span').text(db[i].displayName);
+			}
     }
   };
 
