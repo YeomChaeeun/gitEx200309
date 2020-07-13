@@ -64,7 +64,42 @@
     // console.log('end: ', posX);
   });
 
- 
+  // 터치 이동시 처리
+  var touchOn = false;
+  var part_02 = $('.part_02');
+  var part_02Wrap = part_02.find('.slide_wrap');
+  var p02Width = part_02Wrap.outerWidth();
+  var part02minWidth = part_02Wrap.find('div').eq(0).outerWidth();
+  var part_02Left = parseInt(part_02Wrap.css('marginLeft'));
+  
+  part_02.css({cursor:'move'});
+
+  // 최초위치(marginLeft) - (터치첫지점-터치이동지점)*-1
+
+  var startPosX;
+  
+  part_02.on('touchstart',function(e){
+    var start = e.touches[0].pageX;
+    part_02Left = parseInt(part_02Wrap.css('marginLeft'));
+    startPosX = part_02Left - start;
+  });
+
+  part_02.on('touchmove',function(e){
+    var nowPosX = e.changedTouches[0].pageX;
+    var nowMoveX = parseInt(startPosX-nowPosX * -1);
+    // console.log(nowMoveX);
+    if(nowMoveX > 0){
+      nowMoveX = 0;
+    }else if(nowMoveX < -(p02Width-part02minWidth)){
+      nowMoveX = p02Width-part02minWidth;
+    }else{
+      part_02Wrap.css({marginLeft:nowMoveX+'px'});
+    }
+
+  });
+
+
+
 
 
 })(jQuery);
