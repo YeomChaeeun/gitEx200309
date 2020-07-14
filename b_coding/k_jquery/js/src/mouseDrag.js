@@ -141,48 +141,62 @@
   for(; i < p03List.length; i++){
     p03MarginLeft[i] = p03List.eq(i).offset().left - p03List.eq(0).offset().left;
   }
-  console.log(p03MarginLeft);
+  // console.log(p03MarginLeft);
 
-  var beforePoint;// 마우스 클릭하기전 margin-left값
   var startPoint; // 클릭시 위치값(pageX) 최초의 계산값
   var movePoint;  // 마우스 이동시(pageX) 계산 결과값
-  var endPoint;
 
   p03Wrap.css({position:'relative'});
 
-  var p03True = true;
   var l = 0;
+  var p03True = true;
+  var p03MoveOn = false;
   
   part_03.on('touchstart mousedown', function(e){
     if(p03True){
-      p03True=false;
+      p03True = false;
+      
       var eType = e.type;
-      var posX = e.touches[0].pageX;	
+      var posX;
+      
+      if(eType == 'touchstart'){
+        posX = e.touches[0].pageX;
+      }else if(eType == 'mousedown'){
+        p03moveOn = true;
+        posX = e.originalEvent.pageX;
+      }
       startPoint = posX;
     }
   });
 
   part_03.on('touchmove mousemove', function(e){
     var eType = e.type;
-    var posX = e.changedTouches[0].pageX;	
+    var posX;
+    if(eType == 'touchmove'){
+      posX = e.changedTouches[0].pageX;	
+    }else if(eType == 'mousemove' && p03MoveOn == true){
+      posX = e.originalEvent.pageX;	
+    }
     movePoint = startPoint - posX;
-    console.log(movePoint);
+    // console.log(movePoint);
     p03Wrap.css({left:-movePoint+'px'});  
+    
   });
 
 
   part_03.on('touchend mouseup', function(e){
-    if(movePoint>70 && l<p03List.length-1){
+    if(movePoint>150 && l<p03List.length-1){
       l+=1;
-    }else if(movePoint<-70 && l>0){
+    }else if(movePoint<-150 && l>0){
       l-=1;
     }else{
       l=1;
     }
+
+    p03MoveOn = false;
     // console.log(-p03MarginLeft[l]);
     p03Wrap.animate({left:0, marginLeft:-p03MarginLeft[l]},300,function(){
       p03True = true;
-      endPoint = undefined;
     });
 
   });
