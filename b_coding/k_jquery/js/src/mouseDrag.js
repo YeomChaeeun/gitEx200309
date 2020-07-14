@@ -149,9 +149,9 @@
   p03Wrap.css({position:'relative'});
 
   var l = 0;
-  var p03True = true;
-  var p03MoveOn = false;
-  
+  var p03True = true;   // 마우스 수행에따라 중복처리현상을 막기위함
+  var p03moveOn = false;// 마우스를 누르고있는 상황에서 마우스를 움직일때 수행하기 위한 처리(드래그처리)
+
   part_03.on('touchstart mousedown', function(e){
     if(p03True){
       p03True = false;
@@ -168,38 +168,81 @@
       startPoint = posX;
     }
   });
-
+  
   part_03.on('touchmove mousemove', function(e){
-    var eType = e.type;
+    var eType = e.type;	
     var posX;
-    if(eType == 'touchmove'){
-      posX = e.changedTouches[0].pageX;	
-    }else if(eType == 'mousemove' && p03MoveOn == true){
+    
+    if(eType == 'touchmove'){	
+      posX = e.changedTouches[0].pageX;		
+    }else if(eType == 'mousemove' && p03moveOn == true){
       posX = e.originalEvent.pageX;	
     }
-    movePoint = startPoint - posX;
-    // console.log(movePoint);
-    p03Wrap.css({left:-movePoint+'px'});  
-    
+  
+    movePoint = startPoint - posX;		
+    p03Wrap.css({left: -movePoint +'px'});
   });
-
-
-  part_03.on('touchend mouseup', function(e){
-    if(movePoint>150 && l<p03List.length-1){
-      l+=1;
-    }else if(movePoint<-150 && l>0){
-      l-=1;
-    }else{
-      l=1;
-    }
-
-    p03MoveOn = false;
-    // console.log(-p03MarginLeft[l]);
-    p03Wrap.animate({left:0, marginLeft:-p03MarginLeft[l]},300,function(){
+  
+  part_03.on('touchend mouseup', function(e){	
+    if(movePoint > 150 && l < p03List.length-1){
+      l += 1; 
+    }else if(movePoint < -150 && l > 0){
+      l -= 1; 
+    }else{	
+      l = l;	
+    }		
+  
+    p03moveOn = false;
+    p03Wrap.animate({left:0, marginLeft : -p03MarginLeft[l]}, 300, function(){
       p03True = true;
     });
-
   });
+
+  // part_03.on('touchstart mousedown', function(e){
+  //   if(p03True){
+  //     p03True = false;      
+  //     var eType = e.type;
+  //     var posX;      
+  //     if(eType == 'touchstart'){
+  //       posX = e.touches[0].pageX;
+  //     }else if(eType == 'mousedown'){
+  //       p03moveOn = true;
+  //       posX = e.originalEvent.pageX;
+  //     }
+  //     startPoint = posX;
+  //   }
+  // });
+
+  // part_03.on('touchmove mousemove', function(e){
+  //   var eType = e.type;
+  //   var posX;
+  //   if(eType == 'touchmove'){
+  //     posX = e.changedTouches[0].pageX;	
+  //   }else if(eType == 'mousemove' && p03moveOn == true){
+  //     posX = e.originalEvent.pageX;	
+  //   }
+  //   movePoint = startPoint - posX;
+  //   // console.log(movePoint);
+  //   p03Wrap.css({left:-movePoint+'px'});  
+    
+  // });
+
+
+  // part_03.on('touchend mouseup', function(e){
+  //   if(movePoint>150 && l<p03List.length-1){
+  //     l+=1;
+  //   }else if(movePoint<-150 && l>0){
+  //     l-=1;
+  //   }else{
+  //     l=1;
+  //   }
+
+  //   p03moveOn = false;
+  //   // console.log(-p03MarginLeft[l]);
+  //   p03Wrap.animate({left:0, marginLeft:-p03MarginLeft[l]},300,function(){
+  //     p03True = true;
+  //   }); 
+  // });
 
   // part_03.one : 1번만 수행하는 메소드
   // part_03.off : 수행하지 못하게하는 메소드
