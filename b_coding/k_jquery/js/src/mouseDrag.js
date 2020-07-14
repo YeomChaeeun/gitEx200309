@@ -34,38 +34,39 @@
     console.log(mvResult); 
   }
 
-  // touchstart : 터치를 시작하는 시점
-  part_01.on('touchstart mousedown',function(e){
-    // console.log(e);
-    var eType = e.type;
-    var posX;
-    if(eType == 'touchstart'){
-      posX = e.changedTouches[0].pageX;
-    }else if(eType == 'mousedown'){
-      posX = e.originalEvent.screenX;
+	// touchstart: 터치를 시작하는 지점
+	part_01.on('touchstart mousedown', function(e){
+		// console.log(e);
+		var eType = e.type;
+		var posX;		
+		if(eType == 'touchstart'){	
+      posX = e.touches[0].pageX;	
     }
-    beforePosX = posX;
-    // console.log('start: ', posX);
-    TouchDrag();
-  });
-  
-  part_01.on('touchend mouseup',function(e){
-    // console.log(e);
-    var eType = e.type;
-    var posX;
-    (function(){
-      if(eType == 'touchend'){
-        posX = e.changedTouches[0].pageX;  
-      }else if(eType == 'mousedown'){
-        posX = e.originalEvent.screenX;
-      }
-      return afterPosX = posX;
-    })();
-    // console.log('end: ', posX);
-  });
+		else if(eType == 'mousedown'){
+      posX = e.originalEvent.pageX;	
+    }
+		beforePosX = posX;
+		// console.log('start: ', posX);
+	});
 
-  // 터치 이동시 처리
-  var touchOn = false;
+	// touchend:터치를 띄는 시점
+	part_01.on('touchend mouseup', function(e){
+		var eType = e.type;
+		(function(){
+			var posX;
+			if(eType == 'touchend'){
+        posX = e.changedTouches[0].pageX;	
+      }
+			else if(eType == 'mouseup'){	
+        posX = e.originalEvent.pageX;	
+      }
+			return afterPosX = posX;
+		})()
+		// console.log( beforePosX, afterPosX );
+		TouchDrag();
+	});
+
+  // 터치 이동시 처리 ==============================================================
   var part_02 = $('.part_02');
   var part_02Wrap = part_02.find('.slide_wrap');
   var p02Width = part_02Wrap.outerWidth();
@@ -77,29 +78,116 @@
   // 최초위치(marginLeft) - (터치첫지점-터치이동지점)*-1
 
   var startPosX;
+  var touchOn = false;
+  var doubleClick = true;
   
-  part_02.on('touchstart',function(e){
-    var start = e.touches[0].pageX;
-    part_02Left = parseInt(part_02Wrap.css('marginLeft'));
+  part_02.on('touchstart mousedown',function(e){
+    var start;
+    var part_02Left;
+    var eType = e.type;
+  
+    // e.which 기능으로 마우스 왼버튼,오른버튼,가운데버튼 등 다양한 옵션설정을 추가로 해야한다.
+  
+    if(eType == 'touchstart'){
+      start = e.touches[0].pageX;
+    }else if(eType == 'mousedown' && e.which == 1 && doubleClick){
+      start = e.originalEvent.pageX;
+      touchOn = true;
+      doubleClick = false;
+    }
+  
+    part_02Left = parseInt( part_02Wrap.css('marginLeft') );
     startPosX = part_02Left - start;
   });
 
-  part_02.on('touchmove',function(e){
-    var nowPosX = e.changedTouches[0].pageX;
-    var nowMoveX = parseInt(startPosX-nowPosX * -1);
-    // console.log(nowMoveX);
+  part_02.on('touchmove mousemove',function(e){
+    var nowPosX;
+    var nowMoveX;
+    var eType = e.type;
+    
+    if(eType == 'touchmove'){
+      nowPosX = e.changedTouches[0].pageX;
+    }else if(eType == 'mousemove' && touchOn == true){
+      nowPosX = e.originalEvent.pageX;
+    }
+  
+    nowMoveX = parseInt(startPosX - nowPosX * -1);
+  
     if(nowMoveX > 0){
       nowMoveX = 0;
-    }else if(nowMoveX < -(p02Width-part02minWidth)){
-      nowMoveX = p02Width-part02minWidth;
+    }else if( nowMoveX <= -(p02Width - part02minWidth) ){
+      nowMoveX = p02Width - part02minWidth;
     }else{
-      part_02Wrap.css({marginLeft:nowMoveX+'px'});
+      part_02Wrap.css({marginLeft:nowMoveX + 'px'});
     }
 
   });
 
+  part_02.on('touchend mouseup', function(e){	
+    e.preventDefault();
+    touchOn = false;
+    doubleClick = true;
+  });
+  
+  // ========================================================================
+  // part_03
+
+  var part_03 = $('.part_03');
+  var p03Wrap = part_03.children('.slide_wrap');
+  var p03List = p03Wrap.children('div');
+  
+  var p03MarginLeft = [];
+  var i=0; 
+  for(; i < p03List.length; i++){
+    p03MarginLeft[i] = p03List.eq(i).offset().left - p03List.eq(0).offset().left;
+  }
+  console.log(p03MarginLeft);
+
+  var beforePoint;// 마우스 클릭하기전 margin-left값
+  var startPoint; // 클릭시 위치값(pageX) 최초의 계산값
+  var movePoint;  // 마우스 이동시(pageX) 계산 결과값
+  var endPoint;
+
+  p03Wrap.css({position:'relative'});
+
+  var p03True = true;
+  var l = 0;
+  
+  part_03.on('touchstart mousedown', function(e){
+    if(p03True){
+      p03True=false;
+      var eType = e.type;
+      var posX = e.touches[0].pageX;	
+      startPoint = posX;
+    }
+  });
+
+  part_03.on('touchmove mousemove', function(e){
+    var eType = e.type;
+    var posX = e.changedTouches[0].pageX;	
+    movePoint = startPoint - posX;
+    console.log(movePoint);
+    p03Wrap.css({left:-movePoint+'px'});  
+  });
 
 
+  part_03.on('touchend mouseup', function(e){
+    if(movePoint>70 && l<p03List.length-1){
+      l+=1;
+    }else if(movePoint<-70 && l>0){
+      l-=1;
+    }else{
+      l=1;
+    }
+    // console.log(-p03MarginLeft[l]);
+    p03Wrap.animate({left:0, marginLeft:-p03MarginLeft[l]},300,function(){
+      p03True = true;
+      endPoint = undefined;
+    });
 
+  });
+
+  // part_03.one : 1번만 수행하는 메소드
+  // part_03.off : 수행하지 못하게하는 메소드
 
 })(jQuery);
