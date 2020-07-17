@@ -72,8 +72,7 @@ app.get('/product',function(req,res){
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "express": "^4.17.1",
-    "exxpress": "^1.0.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "description": ""
@@ -120,8 +119,7 @@ https://www.heroku.com/
   "license": "ISC",
   "keywords": [],
   "dependencies": {
-    "express": "^4.17.1",
-    "exxpress": "^1.0.0"
+    "express": "^4.17.1"
   },
   "devDependencies": {},
   "description": ""
@@ -129,3 +127,45 @@ https://www.heroku.com/
 
 ```
 
+- 사용할 기능을 install 해줌
+
+```shell
+$npm install jquery
+$npm install jquery-ui
+$npm install react
+$npm install react-cli
+```
+
+
+
+- 결과 pakage
+
+```json
+{
+  "name": "j_future",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "react": "^16.13.1",
+    "react-cli": "^0.3.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
+
+```
+
+
+
+## docker?
+
+쿠버네티스

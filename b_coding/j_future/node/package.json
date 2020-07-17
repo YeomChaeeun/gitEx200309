@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
     "express": "^4.17.1",
-    "exxpress": "^1.0.0"
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "react": "^16.13.1",
+    "react-cli": "^0.3.1"
   },
   "devDependencies": {},
   "description": ""
