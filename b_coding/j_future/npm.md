@@ -22,7 +22,9 @@ npm WARN j_future@1.0.0 No repository field.
   added 50 packages from 37 contributors and audited 50 packages in 1.78s
   found 0 vulnerabilities
   
-$ yarn add express
+// $ yarn add express
+$ npm express -v
+6.13.4
 ```
 
 
@@ -53,4 +55,77 @@ app.get('/product',function(req,res){
 ```
 
 - ctrl + C 키로 껏다가, npm app 으로 구동시킴
+
+
+
+### pakage.json
+
+```json
+{
+  "name": "j_future",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "testFile": "패키지 json 기능 일부를 구현"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.17.1",
+    "exxpress": "^1.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
+
+```
+
+
+
+## nodemon
+
+```shell
+$ nodemon --version
+$ npm install -g nodemon
+$ nodemon --version
+2.0.4
+
+$ npm run testFile
+$ yarn testFile
+
+
+
+```
+
+
+
+
+
+## 서버
+
+https://www.heroku.com/
+
+- script에 start를 적어줘야함
+
+```json
+{
+  "name": "j_future",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.17.1",
+    "exxpress": "^1.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
+
+```
 
