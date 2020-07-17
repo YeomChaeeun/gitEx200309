@@ -1,5 +1,10 @@
 // vue
 
-var Vue = function(){
-  console.log('기능만들기');
-}
+var app = new Vue({
+  el: '.wrap',
+  data: {
+    msg: '안녕하세요',
+    class:'active'
+  }
+});
+

@@ -1,0 +1,16 @@
+{
+  "name": "j_future",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vue01.js",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
