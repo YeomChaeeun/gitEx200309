@@ -2,7 +2,8 @@
 # * : 모든 -> *.* 파일명 모든것, 확장자 모든것 | ** 모든 폴더
 # ! : 제외
 
-**/media/youtube
+**/media/youtube/
+**/node_modules
 
 # **/*.ai
 # **/*.psd

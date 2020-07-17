@@ -1,0 +1,15 @@
+{
+  "name": "j_future",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"node js start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
